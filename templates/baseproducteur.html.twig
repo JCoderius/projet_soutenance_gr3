@@ -5,7 +5,7 @@
         <title>{% block title %}Front Office{% endblock %}</title>
 
         <!-- Le STYLE.CSS -->
-        <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
+        <link rel="stylesheet" href="{{ asset('asset/css/styleproducteur.css') }}">
 
         <!-- Font Awesome JS -->
         {% block stylesheets %}{% endblock %}
@@ -14,11 +14,13 @@
         <header>
             <div class="wrap-w1200 wrap-header">
 
-                <div class="inscription">
+                <div class="deconnexion">
                     <ul>
-                        <li><a href="#">Inscription</a></li>
-                        <li><a href="#">Connexion</a></li>
+                        <li><a href="#">Deconnexion</a></li>
                     </ul>
+                </div>
+                <div class="logo">
+                  <img src="asset/img/logoprojet.png" />
                 </div>
                 <div class="clear"></div>
 
@@ -35,8 +37,12 @@
                         </li>
                     </ul>
                 </div>
+
+                <div class="titre">
+                    <h1>Trouves ta ferme</h1>
+                </div>
+
             </div> <!-- end wrap-w1200 wrap-header-->
-            <div class="clear"></div>
         </header>
         {% block body %}{% endblock %}
         <footer>
