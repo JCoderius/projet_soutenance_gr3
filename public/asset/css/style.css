@@ -39,12 +39,37 @@ header a {
     margin: 0 auto;
     max-width: 1200px;
     width: 100%;
+    text-align: center;
 }
+
+#accueil img{
+    width: 100%;
+    z-index: 1;
+    position: relative;
+    opacity: 0.7;
+}
+
+#accueil .search{
+    z-index: 1000;
+    position: absolute;
+    top: 32%;
+    left: 16%;
+    width: 68%;
+}
+
+/* navbar de recherche */
+.navbar{
+    background-color: darkorange;
+    margin: 20px auto;
+    text-align: center;
+    padding: 10px 0;
+    opacity: 0.6;
+}
+
+
 /* CSS concernant la carte de France */
-#map {
-    max-width: 100%;
-    max-height: 100%;
-    margin: 50px auto;
+.carte{
+    margin: 100px auto;
 }
 #map path {
     fill:green;
@@ -75,10 +100,17 @@ path{width: 100%;}
 
 footer {
     background-color: #f7f7ca; /* par defaut les cotés du back-ground du footer sont 'beige' */
+    text-align: center;
+    padding: 20px 0;
 }
 
 .wrap-footer {
     background-color: grey; /* par defaut le back-ground du header est 'gris foncé' */
+}
+
+.box-footer{
+    float: left;
+    width: 25%;
 }
 
 /* ******************************************* */
