@@ -29,4 +29,8 @@ $(document).ready(function(){
     slideshowSpeed: 15000
     });
 
+    $('#sidebarCollapse').on('click', function () {
+        $('#sidebar').toggleClass('active');
+    });
+
 })
