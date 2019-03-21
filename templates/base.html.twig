@@ -3,7 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Front Office{% endblock %}</title>
+
+        <!-- Le STYLE.CSS -->
         <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
+
+        <!-- Font Awesome JS -->
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
@@ -37,7 +41,7 @@
         <footer>
             <div class="wrap-w1200 wrap-footer">
                 <div class="bigbox-footer">
-                    <div class=" box-footer a_propos_de_nous">
+                    <div class="box-footer a_propos_de_nous">
                         <h2>A PROPOS DE NOUS</h2>
                         <p>lorem lorem lorem</p>
                         <p>lorem lorem lorem</p>
@@ -45,7 +49,7 @@
                         <p>lorem lorem lorem</p>
                         <p>lorem lorem lorem</p>
                     </div>
-                    <div class=" box-footer informations_legales">
+                    <div class="box-footer informations_legales">
                         <h2>INFORMATIONS LEGALES</h2>
                         <p>lorem lorem lorem</p>
                         <p>lorem lorem lorem</p>
@@ -70,12 +74,18 @@
                         <p>lorem lorem lorem</p>
                     </div>
                 </div> <!-- end bigbox-footer -->
-            </div> <!-- end wrap-w1200 wrap-footer -->
+            </div>
+            <div class="clear"></div>
+
+            <!-- end wrap-w1200 wrap-footer -->
         </footer>
-        <!-- jQuery -->
-        <script src="asset/js/jquery-3.3.1.min.js"></script>
-        <!-- main.js -->
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- Bootstrap min -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <!-- flexslider -->
         <script src="asset/flexslider/jquery.flexslider.js"></script>
+        <!-- main.js -->
         <script src="asset/js/main.js"></script>
         {% block javascripts %}{% endblock %}
     </body>
