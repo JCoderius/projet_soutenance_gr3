@@ -58,7 +58,7 @@ header a {
 #accueil .search{
     z-index: 1000;
     position: absolute;
-    top: 35%;
+    top: 33%;
     left: 16%;
     width: 68%;
 }
