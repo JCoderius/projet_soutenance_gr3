@@ -1,21 +1,39 @@
 @import "reset.css";
 
-/* Définition d'un wrap à 1200 px en place sur le <header> et le <footer> */
+/* Définition d'un wrap à 1200 px sur le <header> et le <footer> */
 .wrap-w1200 {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
+/* ****************************************** */
+/* ***************** HEADER ***************** */
+/* ****************************************** */
 
+.wrap-header {
+    background-color: #e2e204; /* par defaut le back-ground du header est 'jaune' */
+}
 
 header {
-    background-color: grey; /* par defaut le back-ground du header est 'GREY' */
+    background-color: #f7f7ca; /* par defaut les cotés du back-ground du header sont 'beige' */
 }
 
-footer {
-    background-color: grey; /* par defaut le back-ground du footer est 'GREY' */
+header .inscription {
+    float: right;
+    margin: 5px 15px 20px;
 }
+
+header a {
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+
+
+
+
+
 
 
 /* CSS concernant la carte de France */
@@ -44,3 +62,16 @@ footer {
 }
 
 path{width: 100%;}
+
+
+/* ******************************************* */
+/* *************** FOOTER ******************** */
+/* ******************************************* */
+
+footer {
+    background-color: #f7f7ca; /* par defaut les cotés du back-ground du footer sont 'beige' */
+}
+
+.wrap-footer {
+    background-color: grey; /* par defaut le back-ground du header est 'gris foncé' */
+}

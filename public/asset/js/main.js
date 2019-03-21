@@ -17,6 +17,16 @@ $(document).ready(function(){
             })
         }
     });
-
+    
+    // ///////////////////////////////////
+    // ////// FLEXSLIDER DU HEADER ///////
+    // ///////////////////////////////////
+    $('.flexslider-header').flexslider({
+    controlNav: false,
+    directionNav: false,
+    animation: "slide",
+    animationSpeed: 2000,
+    slideshowSpeed: 15000
+    });
 
 })
