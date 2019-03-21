@@ -2,12 +2,91 @@
 <html>
     <head>
         <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
+        <title>{% block title %}Front Office{% endblock %}</title>
+
+        <!-- Le STYLE.CSS -->
         <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
+
+        <!-- Font Awesome JS -->
         {% block stylesheets %}{% endblock %}
     </head>
     <body>
+        <header>
+            <div class="wrap-w1200 wrap-header">
+
+                <div class="inscription">
+                    <ul>
+                        <li><a href="#">Inscription</a></li>
+                        <li><a href="#">Connexion</a></li>
+                    </ul>
+                </div>
+                <div class="clear"></div>
+
+                <div class="flexslider-header">
+                    <ul class="slides">
+                        <li>
+                            <img src="asset/img/background1.jpg" />
+                        </li>
+                        <li>
+                            <img src="asset/img/background2.jpg" />
+                        </li>
+                        <li>
+                            <img src="asset/img/background3.jpg" />
+                        </li>
+                    </ul>
+                </div>
+            </div> <!-- end wrap-w1200 wrap-header-->
+        </header>
         {% block body %}{% endblock %}
+        <footer>
+            <div class="wrap-w1200 wrap-footer">
+                <div class="bigbox-footer">
+                    <div class="box-footer a_propos_de_nous">
+                        <h2>A PROPOS DE NOUS</h2>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                    </div>
+                    <div class="box-footer informations_legales">
+                        <h2>INFORMATIONS LEGALES</h2>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                    </div>
+                    <div class="box-footer des_questions">
+                        <h2>DES QUESTIONS ?</h2>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                    </div>
+                    <div class="box-footer sociaux">
+                        <h2>SOCIAUX</h2>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                        <p>lorem lorem lorem</p>
+                    </div>
+                </div> <!-- end bigbox-footer -->
+            </div>
+            <div class="clear"></div>
+
+            <!-- end wrap-w1200 wrap-footer -->
+        </footer>
+        <!-- jQuery CDN - Slim version (=without AJAX) -->
+        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- Bootstrap min -->
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+        <!-- flexslider -->
+        <script src="asset/flexslider/jquery.flexslider.js"></script>
+        <!-- main.js -->
+        <script src="asset/js/main.js"></script>
         {% block javascripts %}{% endblock %}
     </body>
 </html>
