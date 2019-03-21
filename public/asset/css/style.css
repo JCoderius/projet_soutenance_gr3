@@ -1,0 +1,46 @@
+@import "reset.css";
+
+/* Définition d'un wrap à 1200 px en place sur le <header> et le <footer> */
+.wrap-w1200 {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+
+
+header {
+    background-color: grey; /* par defaut le back-ground du header est 'GREY' */
+}
+
+footer {
+    background-color: grey; /* par defaut le back-ground du footer est 'GREY' */
+}
+
+
+/* CSS concernant la carte de France */
+#map {
+    max-width: 100%;
+    max-height: 100%;
+}
+#map path {
+    fill:green;
+    stroke:#FFFFFF;
+    stroke-width:0.6;
+    transition: fill 0.2s, stroke 0.3s;
+}
+#map path:hover {
+    fill: red;
+    stroke: red;
+}
+#map .separator {
+    stroke: #ccc;
+    fill: none;
+    stroke-width:1.5;
+}
+#map .separator:hover {
+    stroke: #ccc;
+    fill: none;
+}
+
+path{width: 100%;}
