@@ -107,11 +107,14 @@ path{width: 100%;}
 /* ******************************************* */
 
 footer {
-    background-color: #f7f7ca; /* par defaut les cotés du back-ground du footer sont 'beige' */
+    background-color: #e2e204; /* par defaut les cotés du back-ground du footer sont 'beige' */
     text-align: center;
     padding: 20px 0;
 }
-
+h2 {
+  font-weight: bold;
+  padding-bottom: 5px;
+}
 .wrap-footer {
     background-color: grey; /* par defaut le back-ground du header est 'gris foncé' */
 }
@@ -120,6 +123,7 @@ footer {
     float: left;
     width: 25%;
 }
+
 
 /* ******************************************* */
 /* *************** RESPONSIVE ******************** */
