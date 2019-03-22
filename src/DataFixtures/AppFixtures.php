@@ -9,10 +9,9 @@ class AppFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-<<<<<<< HEAD
         // $product = new Product();
         // $manager->persist($product);
-=======
+
         ////////////////////////
         /////// USER ///////////
         ////////////////////////
@@ -45,8 +44,6 @@ class AppFixtures extends Fixture
             $user->setPassword($this->passwordEncoder->encodePassword($user,'user'.$i));
             $manager->persist($user);
         }
->>>>>>> 84c19a601a2c7a4ba182637d2a3f55f639e7ce4f
-
         $manager->flush();
     }
 }
