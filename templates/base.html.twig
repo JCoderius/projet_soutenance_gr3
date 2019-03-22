@@ -3,8 +3,13 @@
     <head>
         <meta charset="UTF-8">
         <title>{% block title %}Front Office{% endblock %}</title>
+<<<<<<< HEAD
         <!-- fontawesome  -->
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css"
+=======
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+>>>>>>> 84c19a601a2c7a4ba182637d2a3f55f639e7ce4f
         <!-- Le STYLE.CSS -->
         <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
 
@@ -17,8 +22,8 @@
 
                 <div class="inscription">
                     <ul>
-                        <li><a href="#">Inscription</a></li>
-                        <li><a href="#">Connexion</a></li>
+                        <li><a href="{{ path('app_register') }}">Inscription</a></li>
+                        <li><a href="{{ path('app_login') }}">Connexion</a></li>
                     </ul>
                 </div>
                 <div class="clear"></div>

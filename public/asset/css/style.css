@@ -8,6 +8,11 @@
     margin: 0 auto;
 }
 
+body{
+    width:100%;
+    height: 100%;
+}
+
 /* ****************************************** */
 /* ***************** HEADER ***************** */
 /* ****************************************** */
@@ -18,11 +23,17 @@
 
 header {
     background-color: #f7f7ca; /* par defaut les cotés du back-ground du header sont 'beige' */
+    position: relative;
 }
 
 header .inscription {
     float: right;
     margin: 5px 15px 20px;
+}
+
+header .inscription ul li{
+    float: left;
+    margin: 0 20px;
 }
 
 header a {
@@ -42,6 +53,7 @@ header a {
 #accueil{
     margin: 0 auto;
     max-width: 1200px;
+    position: relative;
     width: 100%;
     height: 100%;
     text-align: center;
@@ -51,16 +63,16 @@ header a {
     width: 100%;
     height: 100%;
     z-index: 1;
-    position: relative;
     opacity: 0.7;
 }
 
 #accueil .search{
     z-index: 1000;
     position: absolute;
-    top: 33%;
-    left: 16%;
-    width: 68%;
+    top: 1%;
+    left:10%;
+    width: 80%;
+    height: 95%;
 }
 
 /* navbar de recherche */
@@ -76,7 +88,9 @@ header a {
 
 /* CSS concernant la carte de France */
 .carte svg{
-    width: 55%;
+    width: 62%;
+    height: 100%;
+    margin-top: 20px;
 }
 
 #map path {
@@ -128,50 +142,28 @@ h2 {
 /* ******************************************* */
 /* *************** RESPONSIVE ******************** */
 /* ******************************************* */
-@media screen and (max-width: 1000px){
-    #accueil .search{
-        z-index: 1000;
-        position: absolute;
-        top: 32%;
-        left: 16%;
-        width: 68%;
+@media screen and (max-width: 1024px) {
+    .carte img{
+        width: 50%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    #accueil .search{
-        z-index: 1000;
-        position: absolute;
-        top: 28%;
-        left: 16%;
-        width: 68%;
-    }
-}
-
-@media screen and (max-width: 568px) {
-    #accueil .search{
-        z-index: 1000;
-        position: absolute;
-        top: 27%;
-    }
-    .navbar{
-        display: none;
-    }
-    .carte svg{
-        width: 70%;
-    }
-}
-
-@media screen and (max-width: 375px) {
-    #accueil .search{
-        z-index: 1000;
-        position: absolute;
-        top: 5%;
-        left: 16%;
-        width: 25%;
+    .carte img{
+        width: 100%;
+        height: 100%;
     }
 
     .navbar{
         display: none;
     }
 }
+
+
+<<<<<<< HEAD
+    .navbar{
+        display: none;
+    }
+}
+=======
+>>>>>>> 84c19a601a2c7a4ba182637d2a3f55f639e7ce4f
