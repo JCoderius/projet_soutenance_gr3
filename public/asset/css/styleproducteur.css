@@ -19,46 +19,83 @@ header {
     background-color: #CD853F; /* par defaut les cotés du back-ground du header sont 'beige' */
 }
 
-header .deconnexion {
+header .navigation {
     float: right;
-    margin: 5px 15px 20px;
+    margin: 15px 35px 20px;
+}
+header .navigation ul{
+  background-color: grey;
+
+}
+header .navigation ul li {
+  width: 50%;
+  float: left;
+  display: inline-block;
+  text-align: center;
+}
+header .navigation a {
+  text-decoration: none;
+  font-size: 1.2em;
+  color: white;
+  font-family: 'Nunito', sans-serif;
+
 }
 
-header a {
-    text-decoration: none;
-    font-size: 1.2em;
-}
-header .logo{
-  position: absolute;
-  z-index: 1000;
-  
-}
 header .titre{
   width: 25%;
+  height: 50px;
   position: absolute;
-  margin-left: 38%;
-  background-color:	#9ACD32;
+  margin-top: -1%;
+  margin-left: 30%;
+  background-color:	darkorange	;
+  border-radius: 15px;
   text-align: center;
 }
-h1 {
-  margin-top: 20px;
-  text-align: center;
+header .titre h1{
+  padding-top: 2.5%;
+font-family: 'Luckiest Guy', cursive;
+  font-size: 2em;
+  color: #8B4513;
+}
+header .logo{
+  height: 20%;
+  position: absolute;
+  z-index: 1000;
+  margin-top: -15px;
 }
 section .lien{
-  width: 50%;
+  width: 40%;
+  height: 200px;
   float: left;
-  margin-top: 20%
+  margin-top: 10%;
+  background-color: #f7f7ca;
+  border-radius: 10px;
+  text-align: center;
+}
+section .lien a{
+font-family: 'Nunito', sans-serif;
 }
 section .listing{
-  width: 50%;
+  width: 40%;
+  height: 200px;
   float: left;
-  margin-top: 20%;
+  font-family: 'Bowlby One', cursive;
+  margin-top: 12%;
+  background-color: #f7f7ca;
+  border-radius: 10px;
+  text-align: center;
 }
-section .texte{
+section .texte {
+  background-color: #f7f7ca;
+  border-radius: 10px;
+  margin-top: 10%;
   width: 50%;
   float: right;
 }
-
+section .texte p{
+  font-family: 'Bowlby One', cursive;
+  text-align: justify;
+}
 /* ****************************************** */
 /* ***************** INDEX ***************** */
 /* ****************************************** */
@@ -101,7 +138,8 @@ path{width: 100%;}
 /* ******************************************* */
 
 footer {
-    background-color: #f7f7ca; /* par defaut les cotés du back-ground du footer sont 'beige' */
+  margin-top: 5%;
+    background-color: #CD853F; /* par defaut les cotés du back-ground du footer sont 'beige' */
     text-align: center;
     padding: 20px 0;
 }
@@ -109,7 +147,9 @@ footer {
 .wrap-footer {
     background-color: grey; /* par defaut le back-ground du header est 'gris foncé' */
 }
-
+.bigbox-footer {
+  background-color: #A0522D;
+}
 .box-footer{
     float: left;
     width: 25%;
