@@ -34,8 +34,15 @@ class AppFixtures extends Fixture
         $user2->setPassword($this->passwordEncoder->encodePassword($user2,'user'));
         $manager->persist($user2);
 
+        $user3 = new User();
+        $user3->setEmail('quidelantoine@gmail.com');
+        $user3->setRoles(array('ROLE_USER','ROLE_ADMIN'));
+        $user3->setPassword($this->passwordEncoder->encodePassword($user1,'michel'));
+        $manager->persist($user3);
+
         $manager->persist($user1);
         $manager->persist($user2);
+        $manager->persist($user3);
 
         for ($i = 1; $i < 20; $i++) {
             $user = new User();
