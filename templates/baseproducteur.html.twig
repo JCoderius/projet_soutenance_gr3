@@ -5,6 +5,9 @@
         <title>{% block title %}Front Office{% endblock %}</title>
 
         <!-- Le STYLE.CSS -->
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
         <link rel="stylesheet" href="{{ asset('asset/css/styleproducteur.css') }}">
 
         <!-- Font Awesome JS -->
@@ -14,10 +17,12 @@
         <header>
             <div class="wrap-w1200 wrap-header">
 
-                <div class="deconnexion">
+                <div class="navigation">
                     <ul>
-                        <li><a href="#">Deconnexion</a></li>
+                        <li><a href="{{ path('defaut') }}">Accueil</a></li>
+                        <li><a href="#">Déconnexion</a></li>
                     </ul>
+
                 </div>
                 <div class="logo">
                   <img src="asset/img/logoprojet.png" />
