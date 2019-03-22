@@ -1,97 +1,97 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Front Office{% endblock %}</title>
-        <!-- fontawesome  -->
-        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- Le STYLE.CSS -->
-        <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
+<head>
+    <meta charset="UTF-8">
+    <title>{% block title %}Front Office{% endblock %}</title>
+    <!-- fontawesome  -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Le STYLE.CSS -->
+    <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
 
-        <!-- Font Awesome JS -->
-        {% block stylesheets %}{% endblock %}
-    </head>
-    <body>
-        <header>
-            <div class="wrap-w1200 wrap-header">
+    <!-- Font Awesome JS -->
+    {% block stylesheets %}{% endblock %}
+</head>
+<body>
+<header>
+    <div class="wrap-w1200 wrap-header">
 
-                <div class="inscription">
-                    <ul>
-                        <li><a href="{{ path('app_register') }}">Inscription</a></li>
-                        <li><a href="{{ path('app_login') }}">Connexion</a></li>
-                    </ul>
-                </div>
-                <div class="clear"></div>
+        <div class="inscription">
+            <ul>
+                <li><a href="{{ path('app_register') }}">Inscription</a></li>
+                <li><a href="{{ path('app_login') }}">Connexion</a></li>
+            </ul>
+        </div>
+        <div class="clear"></div>
 
-                <div class="flexslider-header">
-                    <ul class="slides">
-                        <li>
-                            <img src="asset/img/background1.jpg" />
-                        </li>
-                        <li>
-                            <img src="asset/img/background2.jpg" />
-                        </li>
-                        <li>
-                            <img src="asset/img/background3.jpg" />
-                        </li>
-                    </ul>
-                </div>
-            </div> <!-- end wrap-w1200 wrap-header-->
-            <div class="clear"></div>
-        </header>
-        {% block body %}{% endblock %}
-        <footer>
-            <div class="wrap-w1200 wrap-footer">
-                <div class="bigbox-footer">
-                    <div class="box-footer a_propos_de_nous">
-                        <h2>A PROPOS DE NOUS</h2>
-                        <ul>
-                          <li><a href="#"></a>Qui sommes nous?</li>
-                          <li>Nos partenaires</li>
-                        </ul>
-                        
-                    </div>
-                    <div class="box-footer informations_legales">
-                        <h2>INFORMATIONS LEGALES</h2>
-                        <p>Trouves ta ferme</p>
-                        <p><i class="fas fa-envelope-square"></i> 13, rue de Pont Audemer</p>
-                        <p>27 260 Épaignes</p>
-                        <p><i class="fas fa-phone-square"></i> 02.32.33.34.35</p>
-                        <p>Hébergeur</p>
-                    </div>
-                    <div class="box-footer des_questions">
-                        <h2>DES QUESTIONS ?</h2>
-                        <ul>
-                          <li><a href="#">contact@trouvetaferme.com</a></li>
-                          <li><a href="#">Nous rejoindre</a></li>
-                        </ul>
-                    </div>
-                    <div class="box-footer sociaux">
-                        <h2>RETROUVER-NOUS</h2>
-                        <ul>
-                          <li><a href="https://www.facebook.com/trouve.ferme.7"><i class="fab fa-facebook-square"></i></a></li>
-                          <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                          <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                          <li><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
-                        </ul>
+        <div class="flexslider-header">
+            <ul class="slides">
+                <li>
+                    <img src="asset/img/background1.jpg" />
+                </li>
+                <li>
+                    <img src="asset/img/background2.jpg" />
+                </li>
+                <li>
+                    <img src="asset/img/background3.jpg" />
+                </li>
+            </ul>
+        </div>
+    </div> <!-- end wrap-w1200 wrap-header-->
+    <div class="clear"></div>
+</header>
+{% block body %}{% endblock %}
+<footer>
+    <div class="wrap-w1200 wrap-footer">
+        <div class="bigbox-footer">
+            <div class="box-footer a_propos_de_nous">
+                <h2>A PROPOS DE NOUS</h2>
+                <ul>
+                    <li><a href="#"></a>Qui sommes nous?</li>
+                    <li>Nos partenaires</li>
+                </ul>
 
-
-                    </div>
-                </div> <!-- end bigbox-footer -->
             </div>
-            <div class="clear"></div>
+            <div class="box-footer informations_legales">
+                <h2>INFORMATIONS LEGALES</h2>
+                <p>Trouves ta ferme</p>
+                <p><i class="fas fa-envelope-square"></i> 13, rue de Pont Audemer</p>
+                <p>27 260 Épaignes</p>
+                <p><i class="fas fa-phone-square"></i> 02.32.33.34.35</p>
+                <p>Hébergeur</p>
+            </div>
+            <div class="box-footer des_questions">
+                <h2>DES QUESTIONS ?</h2>
+                <ul>
+                    <li><a href="#">contact@trouvetaferme.com</a></li>
+                    <li><a href="#">Nous rejoindre</a></li>
+                </ul>
+            </div>
+            <div class="box-footer sociaux">
+                <h2>RETROUVER-NOUS</h2>
+                <ul>
+                    <li><a href="https://www.facebook.com/trouve.ferme.7"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                    <li><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
+                </ul>
 
-            <!-- end wrap-w1200 wrap-footer -->
-        </footer>
-        <!-- jQuery CDN - Slim version (=without AJAX) -->
-        <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-        <!-- Bootstrap min -->
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
-        <!-- flexslider -->
-        <script src="asset/flexslider/jquery.flexslider.js"></script>
-        <!-- main.js -->
-        <script src="asset/js/main.js"></script>
-        {% block javascripts %}{% endblock %}
-    </body>
+
+            </div>
+        </div> <!-- end bigbox-footer -->
+    </div>
+    <div class="clear"></div>
+
+    <!-- end wrap-w1200 wrap-footer -->
+</footer>
+<!-- jQuery CDN - Slim version (=without AJAX) -->
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<!-- Bootstrap min -->
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<!-- flexslider -->
+<script src="asset/flexslider/jquery.flexslider.js"></script>
+<!-- main.js -->
+<script src="asset/js/main.js"></script>
+{% block javascripts %}{% endblock %}
+</body>
 </html>
