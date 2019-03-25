@@ -15,17 +15,25 @@
 <body>
 <header>
     <div class="wrap-w1200 wrap-header">
-        <div class="inscription">
-            <ul>
-                {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                    <li><a href="{{ path('app_register') }}">Inscription</a></li>
-                    <li><a href="{{ path('app_login') }}">Connexion</a></li>
-                {% else %}
-                    <li><a href="{{ path('app_logout') }}">Deconnexion</a></li>
-                {% endif %}
-            </ul>
+
+        <div class="logo">
+          <img src="asset/img/logoprojet.png" />
         </div>
         <div class="clear"></div>
+
+
+                <div class="inscription">
+                    <ul>
+                        {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                            <li><a href="{{ path('app_register') }}">Inscription</a></li>
+                            <li><a href="{{ path('app_login') }}">Connexion</a></li>
+                        {% else %}
+                            <li><a href="{{ path('app_logout') }}">Deconnexion</a></li>
+                        {% endif %}
+                    </ul>
+                </div>
+                <div class="clear"></div>
+
         <div class="flexslider-header">
             <ul class="slides">
                 <li>
@@ -52,9 +60,11 @@
                     <li><a href="#"></a>Qui sommes nous?</li>
                     <li>Nos partenaires</li>
                 </ul>
+
+
             </div>
             <div class="box-footer informations_legales">
-                <h2>INFORMATIONS LEGALES</h2>
+                <h2>MENTIONS LEGALES</h2>
                 <p>Trouves ta ferme</p>
                 <p><i class="fas fa-envelope-square"></i> 13, rue de Pont Audemer</p>
                 <p>27 260 Épaignes</p>
@@ -64,7 +74,7 @@
             <div class="box-footer des_questions">
                 <h2>DES QUESTIONS ?</h2>
                 <ul>
-                    <li><a href="#">contact@trouvetaferme.com</a></li>
+                    <li><a href="#">contact@trouvestaferme.com</a></li>
                     <li><a href="#">Nous rejoindre</a></li>
                 </ul>
             </div>
@@ -76,10 +86,14 @@
                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
                 </ul>
+
+
             </div>
         </div> <!-- end bigbox-footer -->
-    </div> <!-- end wrap-w1200 wrap-footer -->
+    </div>
     <div class="clear"></div>
+
+    <!-- end wrap-w1200 wrap-footer -->
 </footer>
 <!-- jQuery CDN - Slim version (=without AJAX) -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
