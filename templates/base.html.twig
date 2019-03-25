@@ -15,38 +15,28 @@
 <body>
 <header>
     <div class="wrap-w1200 wrap-header">
-
         <div class="inscription">
             <ul>
-                <li><a href="{{ path('app_register') }}">Inscription</a></li>
-                <li><a href="{{ path('app_login') }}">Connexion</a></li>
+                {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                    <li><a href="{{ path('app_register') }}">Inscription</a></li>
+                    <li><a href="{{ path('app_login') }}">Connexion</a></li>
+                {% else %}
+                    <li><a href="{{ path('app_logout') }}">Deconnexion</a></li>
+                {% endif %}
             </ul>
         </div>
         <div class="clear"></div>
 
-
-                <div class="inscription">
-                    <ul>
-                        {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                            <li><a href="{{ path('app_register') }}">Inscription</a></li>
-                            <li><a href="{{ path('app_login') }}">Connexion</a></li>
-                        {% else %}
-                            <li><a href="{{ path('app_logout') }}">Deconnexion</a></li>
-                        {% endif %}
-                    </ul>
-                </div>
-                <div class="clear"></div>
-
         <div class="flexslider-header">
             <ul class="slides">
                 <li>
-                    <img src="asset/img/background1.jpg" />
+                    <img src="asset/img/background1.jpg"/>
                 </li>
                 <li>
-                    <img src="asset/img/background2.jpg" />
+                    <img src="asset/img/background2.jpg"/>
                 </li>
                 <li>
-                    <img src="asset/img/background3.jpg" />
+                    <img src="asset/img/background3.jpg"/>
                 </li>
             </ul>
         </div>
@@ -84,24 +74,26 @@
             <div class="box-footer sociaux">
                 <h2>RETROUVER-NOUS</h2>
                 <ul>
-                    <li><a href="https://www.facebook.com/trouve.ferme.7"><i class="fab fa-facebook-square"></i></a></li>
+                    <li><a href="https://www.facebook.com/trouve.ferme.7"><i class="fab fa-facebook-square"></i></a>
+                    </li>
                     <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
                 </ul>
-
-
             </div>
         </div> <!-- end bigbox-footer -->
     </div>
     <div class="clear"></div>
-
     <!-- end wrap-w1200 wrap-footer -->
 </footer>
 <!-- jQuery CDN - Slim version (=without AJAX) -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+        integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+        crossorigin="anonymous"></script>
 <!-- Bootstrap min -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
 <!-- flexslider -->
 <script src="asset/flexslider/jquery.flexslider.js"></script>
 <!-- main.js -->

@@ -77,7 +77,7 @@ header a {
 
 /* navbar de recherche */
 .navbar{
-    background-color: darkorange;
+    background-color: grey;
     margin: 20px auto;
     text-align: center;
     padding: 10px 0;
@@ -133,6 +133,10 @@ h2 {
     background-color: grey; /* par defaut le back-ground du header est 'gris foncé' */
 }
 
+.bigbox-footer{
+    width: 100%;
+}
+
 .box-footer{
     float: left;
     width: 25%;
@@ -143,13 +147,13 @@ h2 {
 /* *************** RESPONSIVE ******************** */
 /* ******************************************* */
 @media screen and (max-width: 1024px) {
-    .carte img{
+    .carte{
         width: 50%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .carte img{
+    .carte{
         width: 100%;
         height: 100%;
     }
@@ -157,13 +161,9 @@ h2 {
     .navbar{
         display: none;
     }
-}
 
-
-<<<<<<< HEAD
-    .navbar{
-        display: none;
+    .box-footer{
+        width: 100%;
+        margin: 20px 0;
     }
 }
-=======
->>>>>>> 84c19a601a2c7a4ba182637d2a3f55f639e7ce4f
