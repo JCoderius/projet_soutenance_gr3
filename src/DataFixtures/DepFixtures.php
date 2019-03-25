@@ -2,10 +2,11 @@
 
 namespace App\DataFixtures;
 
-use Symfony\Component\Security\Core\Encoder\UserPasswordEncoderInterface;
+
 use Doctrine\Bundle\FixturesBundle\Fixture;
 use Doctrine\Common\Persistence\ObjectManager;
 use App\Entity\Departements;
+
 class DepFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
@@ -344,147 +345,147 @@ class DepFixtures extends Fixture
 
         $departement67 = new Departements();
         $departement67->setNumero('67');
-        $departement67>setNom('BAS-RHIN');
+        $departement67->setNom('BAS-RHIN');
         $manager->persist($departement67);
 
         $departement68 = new Departements();
         $departement68->setNumero('68');
-        $departement68>setNom('HAUT-RHIN');
+        $departement68->setNom('HAUT-RHIN');
         $manager->persist($departement68);
 
         $departement69 = new Departements();
         $departement69->setNumero('69');
-        $departement69>setNom('RHONE');
+        $departement69->setNom('RHONE');
         $manager->persist($departement69);
 
         $departement70 = new Departements();
         $departement70->setNumero('70');
-        $departement70>setNom('HAUTE-SAVOIE');
+        $departement70->setNom('HAUTE-SAVOIE');
         $manager->persist($departement70);
 
         $departement71 = new Departements();
         $departement71->setNumero('71');
-        $departement71>setNom('SAONE-ET-LOIRE');
+        $departement71->setNom('SAONE-ET-LOIRE');
         $manager->persist($departement71);
 
         $departement72 = new Departements();
         $departement72->setNumero('72');
-        $departement72>setNom('SARTHE');
+        $departement72->setNom('SARTHE');
         $manager->persist($departement72);
 
         $departement73 = new Departements();
         $departement73->setNumero('73');
-        $departement73>setNom('SAVOIE');
+        $departement73->setNom('SAVOIE');
         $manager->persist($departement73);
 
         $departement74 = new Departements();
         $departement74->setNumero('74');
-        $departement74>setNom('HAUTE-SAVOIE');
+        $departement74->setNom('HAUTE-SAVOIE');
         $manager->persist($departement74);
 
         $departement75 = new Departements();
         $departement75->setNumero('75');
-        $departement75>setNom('PARIS');
+        $departement75->setNom('PARIS');
         $manager->persist($departement75);
 
         $departement76 = new Departements();
         $departement76->setNumero('76');
-        $departement76>setNom('SAINE-MARITIME');
+        $departement76->setNom('SAINE-MARITIME');
         $manager->persist($departement76);
 
         $departement77 = new Departements();
         $departement77->setNumero('77');
-        $departement77>setNom('SEINE-ET-MARNE');
+        $departement77->setNom('SEINE-ET-MARNE');
         $manager->persist($departement77);
 
         $departement78 = new Departements();
         $departement78->setNumero('78');
-        $departement78>setNom('YVELINES');
+        $departement78->setNom('YVELINES');
         $manager->persist($departement78);
 
         $departement79 = new Departements();
         $departement79->setNumero('79');
-        $departement79>setNom('DEUX-SEVRES');
+        $departement79->setNom('DEUX-SEVRES');
         $manager->persist($departement79);
 
         $departement80 = new Departements();
         $departement80->setNumero('80');
-        $departement80>setNom('SOMME');
+        $departement80->setNom('SOMME');
         $manager->persist($departement80);
 
         $departement81 = new Departements();
         $departement81->setNumero('81');
-        $departement81>setNom('TARN');
+        $departement81->setNom('TARN');
         $manager->persist($departement81);
 
         $departement82 = new Departements();
         $departement82->setNumero('82');
-        $departement82>setNom('TARN-ET-GARONNE');
+        $departement82->setNom('TARN-ET-GARONNE');
         $manager->persist($departement82);
 
         $departement83 = new Departements();
         $departement83->setNumero('83');
-        $departement83>setNom('VAR');
+        $departement83->setNom('VAR');
         $manager->persist($departement83);
 
         $departement84 = new Departements();
         $departement84->setNumero('84');
-        $departement84>setNom('VAUCLUSE');
+        $departement84->setNom('VAUCLUSE');
         $manager->persist($departement84);
 
         $departement85 = new Departements();
         $departement85->setNumero('85');
-        $departement85>setNom('VENDEE');
+        $departement85->setNom('VENDEE');
         $manager->persist($departement85);
 
         $departement86 = new Departements();
         $departement86->setNumero('86');
-        $departement86>setNom('VIENNE');
+        $departement86->setNom('VIENNE');
         $manager->persist($departement86);
 
         $departement87 = new Departements();
         $departement87->setNumero('87');
-        $departement87>setNom('HAUTE-VIENNE');
+        $departement87->setNom('HAUTE-VIENNE');
         $manager->persist($departement87);
 
         $departement88 = new Departements();
         $departement88->setNumero('88');
-        $departement88>setNom('VOSGES');
+        $departement88->setNom('VOSGES');
         $manager->persist($departement88);
 
         $departement89 = new Departements();
         $departement89->setNumero('89');
-        $departement89>setNom('YONNE');
+        $departement89->setNom('YONNE');
         $manager->persist($departement89);
 
         $departement90 = new Departements();
         $departement90->setNumero('90');
-        $departement90>setNom('TERRITOIRE-DE-BELFORT');
+        $departement90->setNom('TERRITOIRE-DE-BELFORT');
         $manager->persist($departement90);
 
         $departement91 = new Departements();
         $departement91->setNumero('91');
-        $departement91>setNom('ESSONNE');
+        $departement91->setNom('ESSONNE');
         $manager->persist($departement91);
 
         $departement92 = new Departements();
         $departement92->setNumero('92');
-        $departement92>setNom('HAUTS-DE-SEINE');
+        $departement92->setNom('HAUTS-DE-SEINE');
         $manager->persist($departement92);
 
         $departement93 = new Departements();
         $departement93->setNumero('93');
-        $departement93>setNom('SEINE-SAINT-DENIS');
+        $departement93->setNom('SEINE-SAINT-DENIS');
         $manager->persist($departement93);
 
         $departement94 = new Departements();
         $departement94->setNumero('94');
-        $departement94>setNom('VAL-DE-MARNE');
+        $departement94->setNom('VAL-DE-MARNE');
         $manager->persist($departement94);
 
         $departement95 = new Departements();
         $departement95->setNumero('95');
-        $departement95>setNom('VAL-D\'OISE');
+        $departement95->setNom('VAL-D\'OISE');
         $manager->persist($departement95);
 
 
