@@ -13,7 +13,11 @@ class AnonymeController extends AbstractController
      */
     public function show(Departements $dep)
     {
-        dd($dep);
+//        dd($dep);
+        if (!$dep && !is_numeric($dep))
+        {
+            return $this->render('defaut');
+        }
         return $this->render('anonyme/index.html.twig', [
             'dep' => $dep,
         ]);

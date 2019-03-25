@@ -44,10 +44,9 @@ header a {
 }
 header .logo{
     width: 20%;
-  height: 20%;
-  position: absolute;
-  z-index: 1000;
-  margin-top: -15px;
+    position: absolute;
+    z-index: 1000;
+    margin-top: -15px;
 }
 
 .flexslider-header .slides img{
@@ -83,17 +82,6 @@ header .logo{
     width: 80%;
     height: 95%;
 }
-
-/* navbar de recherche */
-.navbar{
-    background-color: grey;
-    margin: 20px auto;
-    text-align: center;
-    padding: 10px 0;
-    opacity: 0.6;
-    width: 100%;
-}
-
 
 /* CSS concernant la carte de France */
 .carte svg{
