@@ -35,6 +35,23 @@ header .inscription ul li{
     float: left;
     margin: 0 20px;
 }
+header .titre{
+  width: 25%;
+  height: 50px;
+  position: absolute;
+  margin-top: -2%;
+  margin-left: 30%;
+  background-color:	darkorange	;
+  border-radius: 15px;
+  text-align: center;
+  z-index: 1000;
+}
+header .titre h1{
+  padding-top: 2.5%;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2em;
+  color: #f7f7ca;;
+}
 
 header a {
     text-decoration: none;
@@ -129,25 +146,40 @@ path{width: 100%;}
 /* ******************************************* */
 
 footer {
-    background-color: #e2e204; /* par defaut les cotés du back-ground du footer sont 'beige' */
+    background-color: #f7f7ca; /* par defaut les cotés du back-ground du footer sont 'beige' */
     text-align: center;
     padding: 20px 0;
 }
+.wrap-footer {
+  background-color: #e2e204;     /* par defaut le back-ground du header est 'gris foncé' */
+}
 footer a {
-  color: white;
+  color: black;
   font-family: 'Nunito', sans-serif;
+}
+footer .sociaux ul li {
+  width: 25%;
+  float: left;
+}
+footer .contact a {
+  margin-top: 10%;
+}
+footer a .contact{
+  margin-left: 30px;;
 }
 h2 {
   font-weight: bold;
   padding-bottom: 5px;
 }
-.wrap-footer {
-    background-color: grey; /* par defaut le back-ground du header est 'gris foncé' */
+
+.footer {
+
 }
 
 .box-footer{
     float: left;
-    width: 25%;
+    width: 33.33%;
+
 }
 
 
@@ -172,10 +204,8 @@ h2 {
 }
 
 
-<<<<<<< HEAD
+ /* HEAD */
     .navbar{
         display: none;
     }
 }
-=======
->>>>>>> 84c19a601a2c7a4ba182637d2a3f55f639e7ce4f

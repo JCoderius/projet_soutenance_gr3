@@ -6,6 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
         <!-- Le STYLE.CSS -->
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
         <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
         <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
@@ -26,7 +27,7 @@
 
                 </div>
                 <div class="logo">
-                  <img src="asset/img/logoprojet.png" />
+                  <a href="{{ path('defaut') }}"><img src="asset/img/logoprojet.png" /></a>
                 </div>
                 <div class="clear"></div>
 
@@ -53,49 +54,50 @@
         {% block body %}{% endblock %}
         <footer>
             <div class="wrap-w1200 wrap-footer">
-                <div class="bigbox-footer">
-                    <div class="box-footer a_propos_de_nous">
-                        <h2>A PROPOS DE NOUS</h2>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                    </div>
-                    <div class="box-footer informations_legales">
-                        <h2>INFORMATIONS LEGALES</h2>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                    </div>
-                    <div class="box-footer des_questions">
-                        <h2>DES QUESTIONS ?</h2>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                    </div>
-                    <div class="box-footer sociaux">
-                        <h2>SOCIAUX</h2>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                        <p>lorem lorem lorem</p>
-                    </div>
+              <div class="wrap-w1200 wrap-footer">
+                  <div class="bigbox-footer">
+                      <div class="box-footer a_propos_de_nous">
+                          <h2>A PROPOS DE NOUS</h2>
+                          <ul>
+                              <li><a href="#"></a>Qui sommes nous?</li>
+                              <li>Nos partenaires</li>
+                              <li><a href="#">Nous rejoindre</a></li>
+                          </ul>
+
+
+                      </div>
+                      <div class="box-footer informations_legales">
+                          <h2>MENTIONS LEGALES</h2>
+                          <p>Trouves ta ferme</p>
+                          <p><i class="fas fa-envelope-square"></i> 13, rue de Pont Audemer</p>
+                          <p>27 260 Épaignes</p>
+                          <p><i class="fas fa-phone-square"></i> 02.32.33.34.35</p>
+                          <p>Hébergeur</p>
+                      </div>
+                      <div class="box-footer sociaux">
+                          <h2>RETROUVER-NOUS</h2>
+                          <ul>
+                              <li><a href="https://www.facebook.com/trouve.ferme.7"><i class="fab fa-facebook-square"></i></a></li>
+                              <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
+                              <li><a href="#"><i class="fab fa-instagram"></i></a></li>
+                              <li><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
+                          </ul>
+                          <div class="contact">
+                              <a href="#">contact@trouvestaferme.com</a>
+                          </div>
                 </div> <!-- end bigbox-footer -->
             </div>
-            <div class="clear"></div>
+          <div class="clear"></div>
 
             <!-- end wrap-w1200 wrap-footer -->
         </footer>
         <!-- jQuery CDN - Slim version (=without AJAX) -->
         <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+        <!-- Popper -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
         <!-- Bootstrap min -->
         <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
         <!-- flexslider -->
         <script src="asset/flexslider/jquery.flexslider.js"></script>
         <!-- main.js -->
