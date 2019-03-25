@@ -166,4 +166,8 @@ footer {
     #sidebar.active {
         margin-left: 0;
     }
+    header .titre {
+      width: 100%;
+      margin-left: 0;
+    }
 }

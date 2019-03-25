@@ -39,6 +39,14 @@ header .inscription ul li{
 header a {
     text-decoration: none;
     font-size: 1.2em;
+    color: white;
+    font-family: 'Nunito', sans-serif;
+}
+header .logo{
+  height: 20%;
+  position: absolute;
+  z-index: 1000;
+  margin-top: -15px;
 }
 
 .flexslider-header .slides img{
@@ -124,6 +132,10 @@ footer {
     background-color: #e2e204; /* par defaut les cotés du back-ground du footer sont 'beige' */
     text-align: center;
     padding: 20px 0;
+}
+footer a {
+  color: white;
+  font-family: 'Nunito', sans-serif;
 }
 h2 {
   font-weight: bold;
