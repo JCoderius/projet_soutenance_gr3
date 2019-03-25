@@ -2,20 +2,21 @@
 
 namespace App\Controller;
 
+use App\Entity\Departements;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\Routing\Annotation\Route;
 
 class AnonymeController extends AbstractController
 {
     /**
-     * @Route("/anonyme/{dep}", name="anonyme")
+     * @Route("/anonyme/{dep}", name="anonyme", methods={"GET"})
      */
-    public function index(int $dep)
+    public function show(Departements $dep)
     {
-
-        die($dep);
+        dd($dep);
         return $this->render('anonyme/index.html.twig', [
-            'controller_name' => 'AnonymeController',
+            'dep' => $dep,
         ]);
     }
+
 }
