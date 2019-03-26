@@ -111,6 +111,27 @@ header .logo{
 }
 
 path{width: 100%;}
+/* ******************************************* */
+/* *************** LES SELECTIONS ************ */
+/* ******************************************* */
+#les_selections{
+    text-align: center;
+    padding: 50px;
+}
+#les_selections .navbar{
+    width: 4%;
+    background-color: grey;
+    margin:0 auto;
+    margin-bottom: 20px;
+    opacity: 0.6;
+    padding: 1px 0;
+    text-align: center;
+}
+#les_selections h1{
+    font-size: 30px;
+    text-transform: uppercase;
+}
+
 
 
 /* ******************************************* */
