@@ -140,21 +140,40 @@ path{width: 100%;}
 footer {
   margin-top: 5%;
     background-color: #CD853F; /* par defaut les cotés du back-ground du footer sont 'beige' */
-    text-align: center;
-    padding: 20px 0;
 }
 
 .wrap-footer {
-    background-color: grey; /* par defaut le back-ground du header est 'gris foncé' */
-}
-.bigbox-footer {
-  background-color: #A0522D;
-}
-.box-footer{
-    float: left;
-    width: 25%;
+    background-color: #A0522D;  /* par defaut le back-ground du header est 'gris foncé' */
+    padding: 20px 0;
 }
 
+.box-footer{
+    float: left;
+    width: 33.33%;
+}
+footer .sociaux ul{
+  width: 33.33%;
+
+}
+footer .reseaux {
+
+  margin-bottom: 10%;
+
+}
+footer .reseaux ul li {
+  width: 25%;
+  float: left;
+
+}
+.sociaux a {
+  color: black;
+}
+.contact{
+  width: 100%;
+}
+.a_propos_de_nous a{
+  color: white;
+}
 /* ******************************************* */
 /* *************** RESPONSIVE ******************** */
 /* ******************************************* */

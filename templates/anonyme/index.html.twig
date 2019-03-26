@@ -1,7 +1,18 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}departement{% endblock %}
+{% block title %}departement {{ dep.numero }}{% endblock %}
 
 {% block body %}
-<p>bienvenue dans le département {{ dep.numero }}</p>
+<section id="les_selections">
+    <div class="navbar">
+        <nav class="navbar navbar-light bg-light">
+            <form class="form-inline">
+                <input class="form-control mr-sm-2" type="search" placeholder="Departements" aria-label="Search">
+                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+            </form>
+        </nav>
+    </div>
+    <h1>bienvenue dans le département {{ dep.numero }}</h1>
+</section>
+
 {% endblock %}

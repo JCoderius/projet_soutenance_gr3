@@ -7,6 +7,9 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- fontawesome  -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Le STYLE.CSS -->
     <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
@@ -30,6 +33,7 @@
                     <li><a href="{{ path('app_register') }}">Inscription</a></li>
                     <li><a href="{{ path('app_login') }}">Connexion</a></li>
                 {% else %}
+                    <li><a href="{{ path('admin') }}">Administration</a></li>
                     <li><a href="{{ path('app_logout') }}">Deconnexion</a></li>
                 {% endif %}
             </ul>
@@ -49,6 +53,9 @@
                 </li>
             </ul>
         </div>
+        <div class="titre">
+            <h1>Trouves ta ferme</h1>
+       </div>
     </div> <!-- end wrap-w1200 wrap-header-->
     <div class="clear"></div>
 </header>
@@ -61,6 +68,7 @@
                 <ul>
                     <li><a href="#"></a>Qui sommes nous?</li>
                     <li>Nos partenaires</li>
+                    <li><a href="#">Nous rejoindre</a></li>
                 </ul>
 
 
@@ -73,13 +81,6 @@
                 <p><i class="fas fa-phone-square"></i> 02.32.33.34.35</p>
                 <p>Hébergeur</p>
             </div>
-            <div class="box-footer des_questions">
-                <h2>DES QUESTIONS ?</h2>
-                <ul>
-                    <li><a href="#">contact@trouvestaferme.com</a></li>
-                    <li><a href="#">Nous rejoindre</a></li>
-                </ul>
-            </div>
             <div class="box-footer sociaux">
                 <h2>RETROUVER-NOUS</h2>
                 <ul>
@@ -88,9 +89,11 @@
                     <li><a href="#"><i class="fab fa-instagram"></i></a></li>
                     <li><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
                 </ul>
+                <div class="contact">
+                    <a href="#">contact@trouvestaferme.com</a>
+                </div>
 
 
-            </div>
         </div> <!-- end bigbox-footer -->
     </div>
     <div class="clear"></div>
@@ -101,6 +104,7 @@
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
 <!-- Bootstrap min -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
+
 <!-- flexslider -->
 <script src="{{ asset('asset/flexslider/jquery.flexslider.js') }}"></script>
 <!-- main.js -->

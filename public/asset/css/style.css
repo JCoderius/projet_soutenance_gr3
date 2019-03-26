@@ -35,6 +35,23 @@ header .inscription ul li{
     float: left;
     margin: 0 20px;
 }
+header .titre{
+  width: 25%;
+  height: 50px;
+  position: absolute;
+  margin-top: -2%;
+  margin-left: 30%;
+  background-color:	darkorange	;
+  border-radius: 15px;
+  text-align: center;
+  z-index: 1000;
+}
+header .titre h1{
+  padding-top: 2.5%;
+  font-family: 'Luckiest Guy', cursive;
+  font-size: 2em;
+  color: #f7f7ca;;
+}
 
 header a {
     text-decoration: none;
@@ -97,8 +114,8 @@ header .logo{
     transition: fill 0.2s, stroke 0.3s;
 }
 #map path:hover {
-    fill: red;
-    stroke: red;
+    fill: #FF8C00;
+    stroke: #FF8C00;
 }
 #map .separator {
     stroke: #ccc;
@@ -111,6 +128,27 @@ header .logo{
 }
 
 path{width: 100%;}
+/* ******************************************* */
+/* *************** LES SELECTIONS ************ */
+/* ******************************************* */
+#les_selections{
+    text-align: center;
+    padding: 50px;
+}
+#les_selections .navbar{
+    width: 40%;
+    background-color: lightgrey;
+    margin:0 auto;
+    opacity: 0.8;
+    padding: 5px 0;
+    text-align: center;
+}
+#les_selections h1{
+    font-size: 30px;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
 
 /* ******************************* */
 /*****css. formulaire register  ***/
@@ -142,20 +180,35 @@ background-color: #00B207;
 /* ******************************************* */
 
 footer {
-    background-color: #e2e204; /* par defaut les cotés du back-ground du footer sont 'beige' */
+    background-color: #f7f7ca; /* par defaut les cotés du back-ground du footer sont 'beige' */
     text-align: center;
-    padding: 20px 0;
+
+}
+.wrap-footer {
+  background-color: #e2e204;     /* par defaut le back-ground du header est 'gris foncé' */
+  padding: 20px 0;
 }
 footer a {
-  color: white;
+  color: black;
   font-family: 'Nunito', sans-serif;
+}
+footer .sociaux ul li {
+  width: 25%;
+  float: left;
+}
+footer .contact a {
+  margin-top: 10%;
+}
+footer a .contact{
+  margin-left: 30px;;
 }
 h2 {
   font-weight: bold;
   padding-bottom: 5px;
 }
-.wrap-footer {
-    background-color: grey; /* par defaut le back-ground du header est 'gris foncé' */
+
+.footer {
+
 }
 
 .bigbox-footer{
@@ -164,7 +217,8 @@ h2 {
 
 .box-footer{
     float: left;
-    width: 25%;
+    width: 33.33%;
+
 }
 
 
