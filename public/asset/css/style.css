@@ -39,15 +39,18 @@ header .inscription ul li{
 header a {
     text-decoration: none;
     font-size: 1.2em;
-    color: white;
-    font-family: 'Nunito', sans-serif;
 }
-header .logo{
-  height: 20%;
-  position: absolute;
-  z-index: 1000;
-  margin-top: -15px;
+
+
+/*connexion boostsnipp  */
+
+@media(min-width: 768px) {
+  .field-label-responsive {
+    padding-top: .5rem;
+    text-align: right;
+  }
 }
+
 
 .flexslider-header .slides img{
     width: 100%;
@@ -85,7 +88,7 @@ header .logo{
 
 /* navbar de recherche */
 .navbar{
-    background-color: grey;
+    background-color: darkorange;
     margin: 20px auto;
     text-align: center;
     padding: 10px 0;
@@ -133,20 +136,12 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
-footer a {
-  color: white;
-  font-family: 'Nunito', sans-serif;
-}
 h2 {
   font-weight: bold;
   padding-bottom: 5px;
 }
 .wrap-footer {
     background-color: grey; /* par defaut le back-ground du header est 'gris foncé' */
-}
-
-.bigbox-footer{
-    width: 100%;
 }
 
 .box-footer{
@@ -159,13 +154,13 @@ h2 {
 /* *************** RESPONSIVE ******************** */
 /* ******************************************* */
 @media screen and (max-width: 1024px) {
-    .carte{
+    .carte img{
         width: 50%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .carte{
+    .carte img{
         width: 100%;
         height: 100%;
     }
@@ -173,9 +168,13 @@ h2 {
     .navbar{
         display: none;
     }
+}
 
-    .box-footer{
-        width: 100%;
-        margin: 20px 0;
+
+<<<<<<< HEAD
+    .navbar{
+        display: none;
     }
 }
+=======
+>>>>>>> 84c19a601a2c7a4ba182637d2a3f55f639e7ce4f
