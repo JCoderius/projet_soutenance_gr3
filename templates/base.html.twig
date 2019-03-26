@@ -5,6 +5,9 @@
     <title>{% block title %}Front Office{% endblock %}</title>
     <!-- fontawesome  -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css">
+    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- Le STYLE.CSS -->
     <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
@@ -17,33 +20,33 @@
     <div class="wrap-w1200 wrap-header">
 
         <div class="logo">
-          <img src="asset/img/logoprojet.png" />
+            <a href="{{ path('defaut') }}"><img src="{{ asset('asset/img/logoprojet.png') }}"/></a>
         </div>
         <div class="clear"></div>
 
 
-                <div class="inscription">
-                    <ul>
-                        {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                            <li><a href="{{ path('app_register') }}">Inscription</a></li>
-                            <li><a href="{{ path('app_login') }}">Connexion</a></li>
-                        {% else %}
-                            <li><a href="{{ path('app_logout') }}">Deconnexion</a></li>
-                        {% endif %}
-                    </ul>
-                </div>
-                <div class="clear"></div>
+        <div class="inscription">
+            <ul>
+                {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                    <li><a href="{{ path('app_register') }}">Inscription</a></li>
+                    <li><a href="{{ path('app_login') }}">Connexion</a></li>
+                {% else %}
+                    <li><a href="{{ path('app_logout') }}">Deconnexion</a></li>
+                {% endif %}
+            </ul>
+        </div>
+        <div class="clear"></div>
 
         <div class="flexslider-header">
             <ul class="slides">
                 <li>
-                    <img src="asset/img/background1.jpg" />
+                    <img src="{{ asset('asset/img/background1.jpg') }}" />
                 </li>
                 <li>
-                    <img src="asset/img/background2.jpg" />
+                    <img src="{{ asset('asset/img/background2.jpg') }}" />
                 </li>
                 <li>
-                    <img src="asset/img/background3.jpg" />
+                    <img src="{{ asset('asset/img/background3.jpg') }}" />
                 </li>
             </ul>
         </div>
@@ -100,9 +103,9 @@
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
 <!-- flexslider -->
-<script src="asset/flexslider/jquery.flexslider.js"></script>
+<script src="{{ asset('asset/flexslider/jquery.flexslider.js') }}"></script>
 <!-- main.js -->
-<script src="asset/js/main.js"></script>
+<script src="{{ asset('asset/js/main.js') }}"></script>
 {% block javascripts %}{% endblock %}
 </body>
 </html>
