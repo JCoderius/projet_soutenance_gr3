@@ -110,8 +110,8 @@ header .logo{
     transition: fill 0.2s, stroke 0.3s;
 }
 #map path:hover {
-    fill: red;
-    stroke: red;
+    fill: #FF8C00;
+    stroke: #FF8C00;
 }
 #map .separator {
     stroke: #ccc;
@@ -160,6 +160,52 @@ section .texte {
 section .texte p{
   font-family: 'Bowlby One', cursive;
   text-align: justify;
+}
+/* ******************************************* */
+/* *************** LES SELECTIONS ************ */
+/* ******************************************* */
+#les_selections{
+    text-align: center;
+    padding: 50px;
+}
+#les_selections .navbar{
+    width: 40%;
+    background-color: lightgrey;
+    margin:0 auto;
+    opacity: 0.8;
+    padding: 5px 0;
+    text-align: center;
+}
+#les_selections h1{
+    font-size: 30px;
+    margin: 20px 0;
+    text-transform: uppercase;
+}
+
+
+/* ******************************* */
+/*****css. formulaire register  ***/
+/* ***************************** */
+.inscription h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+.champs {
+  width: 30% ;
+  margin: 0 auto;
+
+}
+.confirme {
+  margin: 0 auto;
+  text-align: center;
+  width: 20%;
+  border: 1px solid #00FF7F;
+  border-radius: 5px;
+  background-color:  #A8FF75;
+  margin-bottom: 10px;
+}
+.confirme :hover {
+background-color: #00B207;
 }
 
 /* ******************************************* */

@@ -10,7 +10,6 @@ class CategoryFixtures extends Fixture
 {
     public function load(ObjectManager $manager)
     {
-    
        $category1 = new Category();
        $category1->setProduit('Fruits');
        $manager->persist($category1);
