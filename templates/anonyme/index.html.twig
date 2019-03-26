@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}departement{% endblock %}
+{% block title %}departement {{ dep.numero }}{% endblock %}
 
 {% block body %}
 <section id="les_selections">
@@ -13,6 +13,9 @@
         </nav>
     </div>
     <h1>bienvenue dans le département {{ dep.numero }}</h1>
+    {% for user in users %}
+        {{ user.id }}
+    {% endfor %}
 </section>
 
 {% endblock %}
