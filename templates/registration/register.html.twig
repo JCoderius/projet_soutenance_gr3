@@ -3,16 +3,19 @@
 {% block title %}Register{% endblock %}
 
 {% block body %}
-    <h1>Register</h1>
-
-      
-
-
-      {{ form_start(registrationForm) }}
-        {{ form_row(registrationForm.email) }}
-        {{ form_row(registrationForm.plainPassword) }}
-        {{ form_row(registrationForm.termsAccepted) }}
-
+  <div class="inscription">
+    <h1>Création de votre compte</h1>
+      <div class="champs">
+          {{ form_start(registrationForm) }}
+          {{ form_row(registrationForm.email) }}
+          {{ form_row(registrationForm.plainPassword) }}
+          {{ form_row(registrationForm.termsAccepted) }}
+      </div>
+      <div class="confirme">
         <button class="btn">Register</button>
-    {{ form_end(registrationForm) }}
+        {{ form_end(registrationForm) }}
+      </div>
+
+
+    </div>
 {% endblock %}

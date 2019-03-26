@@ -39,18 +39,15 @@ header .inscription ul li{
 header a {
     text-decoration: none;
     font-size: 1.2em;
+    color: white;
+    font-family: 'Nunito', sans-serif;
 }
-
-
-/*connexion boostsnipp  */
-
-@media(min-width: 768px) {
-  .field-label-responsive {
-    padding-top: .5rem;
-    text-align: right;
-  }
+header .logo{
+    width: 20%;
+    position: absolute;
+    z-index: 1000;
+    margin-top: -15px;
 }
-
 
 .flexslider-header .slides img{
     width: 100%;
@@ -80,22 +77,11 @@ header a {
 #accueil .search{
     z-index: 1000;
     position: absolute;
-    top: 1%;
+    top: 8%;
     left:10%;
     width: 80%;
     height: 95%;
 }
-
-/* navbar de recherche */
-.navbar{
-    background-color: darkorange;
-    margin: 20px auto;
-    text-align: center;
-    padding: 10px 0;
-    opacity: 0.6;
-    width: 100%;
-}
-
 
 /* CSS concernant la carte de France */
 .carte svg{
@@ -126,6 +112,30 @@ header a {
 
 path{width: 100%;}
 
+/* ******************************* */
+/*****css. formulaire register  ***/
+/* ***************************** */
+.inscription h1 {
+  text-align: center;
+  margin-top: 10px;
+}
+.champs {
+  width: 30% ;
+  margin: 0 auto;
+
+}
+.confirme {
+  margin: 0 auto;
+  text-align: center;
+  width: 20%;
+  border: 1px solid #00FF7F;
+  border-radius: 5px;
+  background-color:  #A8FF75;
+  margin-bottom: 10px;
+}
+.confirme :hover {
+background-color: #00B207;
+}
 
 /* ******************************************* */
 /* *************** FOOTER ******************** */
@@ -136,12 +146,20 @@ footer {
     text-align: center;
     padding: 20px 0;
 }
+footer a {
+  color: white;
+  font-family: 'Nunito', sans-serif;
+}
 h2 {
   font-weight: bold;
   padding-bottom: 5px;
 }
 .wrap-footer {
     background-color: grey; /* par defaut le back-ground du header est 'gris foncé' */
+}
+
+.bigbox-footer{
+    width: 100%;
 }
 
 .box-footer{
@@ -154,13 +172,13 @@ h2 {
 /* *************** RESPONSIVE ******************** */
 /* ******************************************* */
 @media screen and (max-width: 1024px) {
-    .carte img{
+    .carte{
         width: 50%;
     }
 }
 
 @media screen and (max-width: 768px) {
-    .carte img{
+    .carte{
         width: 100%;
         height: 100%;
     }
@@ -168,13 +186,22 @@ h2 {
     .navbar{
         display: none;
     }
-}
 
-
-<<<<<<< HEAD
-    .navbar{
-        display: none;
+    .box-footer{
+        width: 100%;
+        margin: 20px 0;
+    }
+    header .logo{
+        width: 10%;
     }
 }
-=======
->>>>>>> 84c19a601a2c7a4ba182637d2a3f55f639e7ce4f
+
+@media screen and (max-width: 375px) {
+    .search{
+        width: 60%;
+        top: -15%;
+    }
+    header .logo{
+        width: 5%;
+    }
+}

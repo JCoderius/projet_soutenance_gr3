@@ -3,9 +3,8 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Front Office{% endblock %}</title>
-    <!--boostsnipp  -->
+    <!-- Bootstrap  -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- <link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css"> -->
     <!-- fontawesome  -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -15,17 +14,16 @@
     <!-- Font Awesome JS -->
     {% block stylesheets %}{% endblock %}
 </head>
-
 <body>
-
 <header>
-
     <div class="wrap-w1200 wrap-header">
 
         <div class="logo">
-            <img src="asset/img/logoprojet.png">
+            <a href="{{ path('defaut') }}"><img src="{{ asset('asset/img/logoprojet.png') }}"/></a>
         </div>
         <div class="clear"></div>
+
+
         <div class="inscription">
             <ul>
                 {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
@@ -36,19 +34,18 @@
                 {% endif %}
             </ul>
         </div>
-
         <div class="clear"></div>
 
         <div class="flexslider-header">
             <ul class="slides">
                 <li>
-                    <img src="asset/img/background1.jpg" />
+                    <img src="{{ asset('asset/img/background1.jpg') }}" />
                 </li>
                 <li>
-                    <img src="asset/img/background2.jpg" />
+                    <img src="{{ asset('asset/img/background2.jpg') }}" />
                 </li>
                 <li>
-                    <img src="asset/img/background3.jpg" />
+                    <img src="{{ asset('asset/img/background3.jpg') }}" />
                 </li>
             </ul>
         </div>
@@ -102,14 +99,12 @@
 </footer>
 <!-- jQuery CDN - Slim version (=without AJAX) -->
 <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<!-- Ajax  -->
-<script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
 <!-- Bootstrap min -->
 <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 <!-- flexslider -->
-<script src="asset/flexslider/jquery.flexslider.js"></script>
+<script src="{{ asset('asset/flexslider/jquery.flexslider.js') }}"></script>
 <!-- main.js -->
-<script src="asset/js/main.js"></script>
+<script src="{{ asset('asset/js/main.js') }}"></script>
 {% block javascripts %}{% endblock %}
 </body>
 </html>
