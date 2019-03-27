@@ -3,7 +3,7 @@
 {% block title %}User index{% endblock %}
 
 {% block body %}
-    <h1>User index</h1>
+    <h1>Liste des Producteurs</h1>
 
     <table class="table">
         <thead>
@@ -41,8 +41,8 @@
                 <td>{{ user.category }}</td>
                 <td>{{ user.site }}</td>
                 <td>
-                    <a href="{{ path('user_show', {'id': user.id}) }}">show</a>
-                    <a href="{{ path('user_edit', {'id': user.id}) }}">edit</a>
+                    <a href="{{ path('user_show', {'id': user.id}) }}"><i class="fas fa-eye" title="afficher"></i></a>
+                    <a href="{{ path('user_edit', {'id': user.id}) }}"><i class="fas fa-user-edit" title="éditer"></i></a>
                 </td>
             </tr>
         {% else %}
@@ -53,5 +53,5 @@
         </tbody>
     </table>
 
-    <a href="{{ path('user_new') }}">Create new</a>
+    <!-- <a href="{{ path('user_new') }}">Create new</a> -->
 {% endblock %}
