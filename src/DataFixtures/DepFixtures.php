@@ -9,6 +9,8 @@ use App\Entity\Departements;
 
 class DepFixtures extends Fixture
 {
+    public const DEPARTEMENT_REFERENCE1 = 'dep1';
+    public const DEPARTEMENT_REFERENCE2 = 'dep2';
     public function load(ObjectManager $manager)
     {
         // $product = new Product();
@@ -490,5 +492,8 @@ class DepFixtures extends Fixture
 
 
         $manager->flush();
+
+        $this->addReference(self::DEPARTEMENT_REFERENCE1, $departement27);
+        $this->addReference(self::DEPARTEMENT_REFERENCE2, $departement76);
     }
 }
