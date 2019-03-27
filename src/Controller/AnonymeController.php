@@ -4,7 +4,9 @@ namespace App\Controller;
 
 use App\Entity\Departements;
 use App\Entity\User;
+use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
+use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
 
 class AnonymeController extends AbstractController
@@ -24,11 +26,12 @@ class AnonymeController extends AbstractController
         ]);
     }
 
-    public function listing(User $user): Response
+    public function listing(UserRepository $users)
     {
         return $this->render('anonyme/index.html.twig', [
-            'user' => $user,
+            'users' => $users->findAll(),
         ]);
     }
+
 
 }
