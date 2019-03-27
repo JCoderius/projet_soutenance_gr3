@@ -15,7 +15,17 @@
     <h1>bienvenue dans le département {{ departement.numero }}</h1>
 </section>
     {% for user in users %}
+        <div class="prod">
+            <p>{{ user.email }}</p>
+            {% for catt in user.cat %}
+                {{ catt.produit }}
+            {% endfor %}
+        </div>
         {{ user.email }}
+        {% for catt in user.cat %}
+            {{ catt.produit }}
+            {% endfor %}
+
     {% endfor %}
 
 {% endblock %}
