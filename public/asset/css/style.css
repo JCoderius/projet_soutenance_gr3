@@ -37,29 +37,24 @@ header .fa-user-plus{
 header .fa-user{
  padding-right: 10px;
 }
-header .titre{
-  width: 25%;
-  height: 50px;
-  position: absolute;
-  margin-top: -2%;
-  margin-left: 15%;
-  background-color:	darkorange	;
-  border-radius: 15px;
-  text-align: center;
-  z-index: 1000;
-}
 header .titre h1{
-  padding-top: 2.5%;
+  position: absolute;
+  margin-top: -14.5%;
+  padding-left: 30%;
   font-family: 'Luckiest Guy', cursive;
   font-size: 2em;
-  color: #f7f7ca;;
+  color: #f7f7ca;
+  z-index: 1000;
 }
 
 header a {
     text-decoration: none;
     font-size: 1.2em;
-    color: black;
+    color: white;
     font-family: 'Nunito', sans-serif;
+}
+header a:hover {
+  color: darkorange;
 }
 header .logo{
     width: 20%;
@@ -101,7 +96,38 @@ header .logo{
     width: 80%;
     height: 95%;
 }
+/* modal*/
+#accueil button.btn.btn-primary{
+  background-color: darkorange;
+  border-color: darkorange;
+  position: relative;
+  font-size: 1.5em;
+  font-family: 'Nunito', sans-serif;
 
+}
+#accueil button.btn.btn-primary:hover {
+  background-color: orange;
+  border-color: orange;
+  position: relative;
+  font-family: 'Nunito', sans-serif;
+}
+
+#accueil .visiteurs {
+  position: absolute;
+  top: 10%;
+  left:10%;
+  z-index: 1001;
+}
+#accueil .producteur{
+  position: absolute;
+  top: 10%;
+  left:75%;
+  z-index: 1001;
+}
+#accueil .modal-body{
+  font-family: font-family: 'Nunito', sans-serif;
+  text-align: justify;
+}
 /* CSS concernant la carte de France */
 .carte svg{
     width: 62%;
@@ -155,6 +181,7 @@ section .listing{
 }
 section .lien a{
 font-family: 'Nunito', sans-serif;
+padding-top: 30%;
 }
 section .texte {
   border-radius: 10px;
@@ -221,12 +248,12 @@ background-color: #00B207;
 footer {
     background-color: #228B22; /* par defaut les cotés du back-ground du footer sont 'beige' */
     text-align: center;
-    font-family: 'Bowlby One', cursive;
-    color: black;
+    font-family: 'Nunito', sans-serif;
+    color: white;
 
 }
 footer a {
-  color: black;
+  color: white;
   font-family: 'Nunito', sans-serif;
 }
 /******* Bloc footer ******/
@@ -248,32 +275,52 @@ footer .modaldeux{
   margin-top: 5%;
   margin-bottom: 5%;
 }
-button.btn.btn-primary{
-  background-color: green;
-  border-color: green;
+footer .modal-content{
   color: black;
+  text-align: justify;
+}
+button.btn.btn-primary{
+  background-color: #9ACD32;
+  border-color: #9ACD32;
+  color: white;
 }
 button.btn.btn-primary:hover{
-  background-color: grey;
+  background-color: darkorange;
 }
 
 /******* Favicon******/
 footer .fa-facebook-square{
   font-size: 2em;
 }
+footer .fa-facebook-square:hover{
+  color: darkorange;
+}
 footer .fa-twitter-square {
   font-size: 2em;
+}
+footer .fa-twitter-square:hover{
+  color: darkorange;
 }
 footer .fa-instagram{
   font-size: 2em;
 }
+footer .fa-instagram:hover{
+  color: darkorange;
+}
 footer .fa-pinterest-square{
   font-size: 2em;
+}
+footer .fa-pinterest-square:hover{
+  color: darkorange;
 }
 /****** bloc réseaux sociaux *******/
 footer .sociaux ul li {
   width: 25%;
   float: left;
+}
+footer .copyright{
+  margin-top: 20px;
+  margin-bottom: 20px;
 }
 
 footer .contact {
@@ -295,11 +342,7 @@ h2 {
 /* ******************************************* */
 /* *************** RESPONSIVE ******************** */
 /* ******************************************* */
-@media screen and (max-width: 1024px) {
-    .carte{
-        width: 50%;
-    }
-}
+
 
 @media screen and (max-width: 768px) {
     .carte{

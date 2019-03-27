@@ -2,6 +2,8 @@
 
 namespace App\Entity;
 
+use Doctrine\Common\Collections\ArrayCollection;
+use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
@@ -95,7 +97,16 @@ class User implements UserInterface
      */
     private $dep_id;
 
+    /**
+     * @ORM\ManyToMany(targetEntity="App\Entity\Category", inversedBy="users")
+     */
+    private $cat;
 
+    public function __construct()
+    {
+        $this->cat = new ArrayCollection();
+    }
+    
     public function getId(): ?int
     {
         return $this->id;
@@ -313,6 +324,32 @@ class User implements UserInterface
     public function setDepId(?Departements $dep_id): self
     {
         $this->dep_id = $dep_id;
+        return $this;
+    }
+
+    /**
+     * @return Collection|Category[]
+     */
+    public function getCat(): Collection
+    {
+        return $this->cat;
+    }
+
+    public function addCat(Category $cat): self
+    {
+        if (!$this->cat->contains($cat)) {
+            $this->cat[] = $cat;
+        }
+
+        return $this;
+    }
+
+    public function removeCat(Category $cat): self
+    {
+        if ($this->cat->contains($cat)) {
+            $this->cat->removeElement($cat);
+        }
+
         return $this;
     }
 }

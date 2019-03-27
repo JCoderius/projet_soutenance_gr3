@@ -1,10 +1,4 @@
-
 $(document).ready(function(){
-
-    $('#flex1').flexslider({
-        animation:"slides"
-
-    },10);
 
     document.addEventListener('DOMContentLoaded', function(){
         map = this.getElementById('map'); // je selectionne mon élément global
@@ -22,12 +16,12 @@ $(document).ready(function(){
     // ////// FLEXSLIDER DU HEADER ///////
     // ///////////////////////////////////
     $('.flexslider-header').flexslider({
+    animation: "slide",
     controlNav: false,
     directionNav: false,
-    animation: "slide",
     animationSpeed: 2000,
     slideshowSpeed: 15000
-    });
+    },10 );
 
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
