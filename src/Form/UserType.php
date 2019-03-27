@@ -29,6 +29,8 @@ class UserType extends AbstractType
             ->add('siret')
             ->add('phone')
             ->add('adress')
+            ->add('cp')
+            ->add('ville')
             ->add('horaire')
             ->add('category')
             ->add('site')
