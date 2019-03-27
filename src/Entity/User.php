@@ -80,6 +80,16 @@ class User implements UserInterface
      */
     private $site;
 
+    /**
+     * @ORM\Column(type="string", length=5, nullable=true)
+     */
+    private $cp;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ville;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -263,6 +273,30 @@ class User implements UserInterface
     public function setSite(string $site): self
     {
         $this->site = $site;
+
+        return $this;
+    }
+
+    public function getCp(): ?string
+    {
+        return $this->cp;
+    }
+
+    public function setCp(string $cp): self
+    {
+        $this->cp = $cp;
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->ville;
+    }
+
+    public function setVille(?string $ville): self
+    {
+        $this->ville = $ville;
 
         return $this;
     }
