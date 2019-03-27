@@ -83,6 +83,16 @@ class User implements UserInterface
     private $site;
 
     /**
+     * @ORM\Column(type="string", length=5, nullable=true)
+     */
+    private $cp;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $ville;
+
+    /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Departements", inversedBy="users")
      */
     private $dep_id;
@@ -96,7 +106,7 @@ class User implements UserInterface
     {
         $this->cat = new ArrayCollection();
     }
-
+    
     public function getId(): ?int
     {
         return $this->id;
@@ -284,6 +294,28 @@ class User implements UserInterface
         return $this;
     }
 
+    public function getCp(): ?string
+    {
+        return $this->cp;
+    }
+
+    public function setCp(string $cp): self
+    {
+        $this->cp = $cp;
+
+        return $this;
+    }
+
+    public function getVille(): ?string
+    {
+        return $this->ville;
+    }
+
+    public function setVille(?string $ville): self
+    {
+        $this->ville = $ville;
+    }
+
     public function getDepId(): ?Departements
     {
         return $this->dep_id;
@@ -292,7 +324,6 @@ class User implements UserInterface
     public function setDepId(?Departements $dep_id): self
     {
         $this->dep_id = $dep_id;
-
         return $this;
     }
 

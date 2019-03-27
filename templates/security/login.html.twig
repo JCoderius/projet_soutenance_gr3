@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Log in!{% endblock %}
+{% block title %}Connexion{% endblock %}
 
 {% block body %}
 <form method="post">
@@ -10,7 +10,8 @@
 
 
     <div class="container">
-           <form class="form-horizontal" role="form" method="POST" action="/login">
+           <form class="form-horizontal" role="form" method="POST">
+               <input type="hidden" name="_csrf_token" value="{{ csrf_token('authenticate') }}">
                <div class="row">
                    <div class="col-md-3"></div>
                    <div class="col-md-6">
@@ -22,50 +23,45 @@
                    <div class="col-md-3"></div>
                    <div class="col-md-6">
                        <div class="form-group has-danger">
-                           <label class="sr-only" for="email">E-Mail Address</label>
+                           <label for="inputEmail" class="sr-only">Email</label>
+
                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-at"></i></div>
-                               <input type="text" name="email" class="form-control" id="email"
-                                      placeholder="you@example.com" required autofocus>
+                               <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="you@example.com" required autofocus>
+                               {#<input type="text" name="email" class="form-control" id="email"#}
+                                      {#placeholder="you@example.com" required autofocus>#}
                            </div>
                        </div>
                    </div>
-                   <div class="col-md-3">
-                       <div class="form-control-feedback">
-                           <span class="text-danger align-middle">
-                               <i class="fa fa-close"></i> Example error message
-                           </span>
-                       </div>
-                   </div>
+
                </div>
                <div class="row">
                    <div class="col-md-3"></div>
                    <div class="col-md-6">
                        <div class="form-group">
-                           <label class="sr-only" for="password">Password</label>
+
+                           <label for="inputPassword" class="sr-only">Password</label>
+
                            <div class="input-group mb-2 mr-sm-2 mb-sm-0">
                                <div class="input-group-addon" style="width: 2.6rem"><i class="fa fa-key"></i></div>
-                               <input type="password" name="password" class="form-control" id="password"
-                                      placeholder="Password" required>
+                               <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+                               {#<input type="password" name="password" class="form-control" id="password"#}
+                                      {#placeholder="Password" required>#}
                            </div>
                        </div>
                    </div>
-                   <div class="col-md-3">
-                       <div class="form-control-feedback">
-                           <span class="text-danger align-middle">
-                           <!-- Put password error message here -->
-                           </span>
-                       </div>
-                   </div>
+
                </div>
                <div class="row">
                    <div class="col-md-3"></div>
                    <div class="col-md-6" style="padding-top: .35rem">
                        <div class="form-check mb-2 mr-sm-2 mb-sm-0">
                            <label class="form-check-label">
-                               <input class="form-check-input" name="remember"
-                                      type="checkbox" >
-                               <span style="padding-bottom: .15rem">Remember me</span>
+                               {#<input class="form-check-input" name="remember"#}
+                                      {#type="checkbox" >#}
+                               {#<span style="padding-bottom: .15rem">Remember me</span>#}
+                               <input class="form-check-input" type="checkbox" id="remember_me" name="_remember_me" checked/>
+                               <label for="remember_me">Keep me logged in</label>
                            </label>
                        </div>
                    </div>
@@ -74,7 +70,7 @@
                    <div class="col-md-3"></div>
                    <div class="col-md-6">
                        <button type="submit" class="btn btn-success"><i class="fa fa-sign-in"></i> Login</button>
-                       <a class="btn btn-link" href="/password/reset">Forgot Your Password?</a>
+                       <a class="btn btn-link" href="{{ path('app_forgotten_password') }}">Forgot Your Password?</a>
                    </div>
                </div>
            </form>
@@ -86,27 +82,27 @@
 
 
 
+{#<form method="post">#}
+
+    {#<h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>#}
+    {#<label for="inputEmail" class="sr-only">Email</label>#}
+    {#<input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>#}
+    {#<label for="inputPassword" class="sr-only">Password</label>#}
+    {#<input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>#}
+
+    {#<input type="hidden" name="_csrf_token"#}
+           {#value="{{ csrf_token('authenticate') }}">#}
 
 
-    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
-    <label for="inputEmail" class="sr-only">Email</label>
-    <input type="email" value="{{ last_username }}" name="email" id="inputEmail" class="form-control" placeholder="Email" required autofocus>
-    <label for="inputPassword" class="sr-only">Password</label>
-    <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
+    {#<input type="checkbox" id="remember_me" name="_remember_me" checked/>#}
+    {#<label for="remember_me">Keep me logged in</label>#}
 
-    <input type="hidden" name="_csrf_token"
-           value="{{ csrf_token('authenticate') }}">
-
-
-    <input type="checkbox" id="remember_me" name="_remember_me" checked/>
-    <label for="remember_me">Keep me logged in</label>
-
-    <button class="btn btn-lg btn-primary" type="submit">
-        Sign in
-    </button>
-</form>
-<div>
-    <a  href="{{ path('app_forgotten_password') }}">Forgotten password</a>
-</div>
+    {#<button class="btn btn-lg btn-primary" type="submit">#}
+        {#Sign in#}
+    {#</button>#}
+{#</form>#}
+{#<div>#}
+    {#<a  href="{{ path('app_forgotten_password') }}">Forgotten password</a>#}
+{#</div>#}
 
 {% endblock %}
