@@ -283,7 +283,6 @@ class User implements UserInterface
         return $this;
     }
 
-<<<<<<< HEAD
     public function getCp(): ?string
     {
         return $this->cp;
@@ -304,7 +303,8 @@ class User implements UserInterface
     public function setVille(?string $ville): self
     {
         $this->ville = $ville;
-=======
+    }
+
     public function getDepId(): ?Departements
     {
         return $this->dep_id;
@@ -313,8 +313,6 @@ class User implements UserInterface
     public function setDepId(?Departements $dep_id): self
     {
         $this->dep_id = $dep_id;
->>>>>>> 4690f2c86988b6080c9c353c59b161c03f606119
-
         return $this;
     }
 }
