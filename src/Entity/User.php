@@ -80,6 +80,11 @@ class User implements UserInterface
      */
     private $site;
 
+    /**
+     * @ORM\ManyToOne(targetEntity="App\Entity\Departements", inversedBy="users")
+     */
+    private $dep_id;
+
     public function getId(): ?int
     {
         return $this->id;
@@ -263,6 +268,18 @@ class User implements UserInterface
     public function setSite(string $site): self
     {
         $this->site = $site;
+
+        return $this;
+    }
+
+    public function getDepId(): ?Departements
+    {
+        return $this->dep_id;
+    }
+
+    public function setDepId(?Departements $dep_id): self
+    {
+        $this->dep_id = $dep_id;
 
         return $this;
     }

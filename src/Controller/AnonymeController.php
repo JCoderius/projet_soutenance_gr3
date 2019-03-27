@@ -4,6 +4,7 @@ namespace App\Controller;
 
 use App\Entity\Departements;
 use App\Entity\User;
+use App\Repository\DepartementsRepository;
 use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
@@ -14,22 +15,20 @@ class AnonymeController extends AbstractController
     /**
      * @Route("/anonyme/{dep}", name="anonyme", methods={"GET"})
      */
-    public function show(Departements $dep)
+    public function show(UserRepository $repousers,DepartementsRepository $repodepartements,$dep)
     {
-//        dd($dep);
-        if (!$dep)
+
+        $departement = $repodepartements->findOneByNumero($dep);
+        if (!$departement)
         {
             return $this->redirectToRoute('defaut');
+            // 404
         }
-        return $this->render('anonyme/index.html.twig', [
-            'dep' => $dep,
-        ]);
-    }
+        $users = $departement->getUsers();
 
-    public function listing(UserRepository $users)
-    {
         return $this->render('anonyme/index.html.twig', [
-            'users' => $users->findAll(),
+            'departement' => $departement,
+            'users' => $users,
         ]);
     }
 

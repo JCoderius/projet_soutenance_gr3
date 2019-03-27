@@ -1,6 +1,6 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}departement {{ dep.numero }}{% endblock %}
+{% block title %}departement {{ departement.numero }}{% endblock %}
 
 {% block body %}
 <section id="les_selections">
@@ -12,7 +12,10 @@
             </form>
         </nav>
     </div>
-    <h1>bienvenue dans le département {{ dep.numero }}</h1>
+    <h1>bienvenue dans le département {{ departement.numero }}</h1>
 </section>
+    {% for user in users %}
+        {{ user.email }}
+    {% endfor %}
 
 {% endblock %}
