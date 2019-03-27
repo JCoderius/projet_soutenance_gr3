@@ -3,8 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <title>{% block title %}Front Office{% endblock %}</title>
+    <!-- Bootstrap  -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <!-- fontawesome  -->
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
     <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
@@ -28,11 +31,11 @@
         <div class="inscription">
             <ul>
                 {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                    <li><a href="{{ path('app_register') }}">Inscription</a></li>
-                    <li><a href="{{ path('app_login') }}">Connexion</a></li>
+                    <li><a href="{{ path('app_register') }}"><i class="fas fa-user-plus"></i>Inscription</a></li>
+                    <li><a href="{{ path('app_login') }}"><i class="fas fa-user"></i>Connexion</a></li>
                 {% else %}
-                    <li><a href="{{ path('admin') }}">Administration</a></li>
-                    <li><a href="{{ path('app_logout') }}">Deconnexion</a></li>
+                    <li><a href="{{ path('admin') }}"><i class="fas fa-user-cog"></i>Administration</a></li>
+                    <li><a href="{{ path('app_logout') }}"><i class="fas fa-user-slash"></i>Deconnexion</a></li>
                 {% endif %}
             </ul>
         </div>
@@ -63,14 +66,53 @@
         <div class="bigbox-footer">
             <div class="box-footer a_propos_de_nous">
                 <h2>A PROPOS DE NOUS</h2>
-                <ul>
-                    <li><a href="#"></a>Qui sommes nous?</li>
-                    <li>Nos partenaires</li>
-                    <li><a href="#">Nous rejoindre</a></li>
-                </ul>
+                <div class="modalune">
+                <!-- Modal qui sommes nous -->
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
+                  Qui sommes-nous ?
+                </button>
+                  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
+                    <div class="modal-dialog" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Qui sommes Nous ?</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                        Nous sommes une association qui avons pour but de mettre en relation les producteurs de nos régions en lien direct avec le consommateur.
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
 
+                <div class="modaldeux">
+                  <!-- Modal Nos partenaires -->
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                    Nos partenaires
+                  </button>
 
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                    <div class="modal-dialog modal-dialog-centered" role="document">
+                      <div class="modal-content">
+                        <div class="modal-header">
+                          <h5 class="modal-title" id="exampleModalLongTitle">Nos partenaires</h5>
+                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                          </button>
+                        </div>
+                        <div class="modal-body">
+                          Nous sommes en partenariat avec :
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
             </div>
+
             <div class="box-footer informations_legales">
                 <h2>MENTIONS LEGALES</h2>
                 <p>Trouves ta ferme</p>
@@ -88,7 +130,7 @@
                     <li><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
                 </ul>
                 <div class="contact">
-                    <a href="#">contact@trouvestaferme.com</a>
+                    <p><i class="fas fa-address-card"></i>trouvestaferme@gmail.com</p>
                 </div>
 
 

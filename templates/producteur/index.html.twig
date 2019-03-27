@@ -1,4 +1,4 @@
-{% extends 'baseproducteur.html.twig' %}
+{% extends 'base.html.twig' %}
 
 {% block title %}Producteur{% endblock %}
 
@@ -12,113 +12,11 @@
 
     <section>
       <div class="lien">
-        <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
-          Complétez votre inscription
-        </button>
-        <div class="modal fade" id="myModal">
-          <div class="modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-
-            <!-- Modal Header -->
-              <div class="modal-header">
-                <h4 class="modal-title">Complétez votre inscription</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
-
-            <!-- Modal body -->
-                <div class="modal-body">
-                  <form class="needs-validation" novalidate>
-                      <div class="form-row">
-                        <div class="col-md-4 mb-3">
-                          <label for="validationTooltip01">Prénom</label>
-                          <input type="text" class="form-control" id="validationTooltip01" placeholder="Prénom" required>
-                          <div class="valid-tooltip"></div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                          <label for="validationTooltip02">Nom</label>
-                          <input type="text" class="form-control" id="validationTooltip02" placeholder="Nom"  required>
-                          <div class="valid-tooltip"></div>
-                        </div>
-                        <div class="col-md-4 mb-3">
-                          <label for="validationTooltipMail"></label>
-                          <div class="input-group">
-                            <div class="input-group-prepend">
-                              <span class="input-group-text" id="validationTooltipUsernamePrepend">@</span>
-                            </div>
-                            <input type="mail" class="form-control" id="validationTooltipUsername" placeholder="adresse mail" aria-describedby="validationTooltipUsernamePrepend" required>
-                            <div class="invalid-tooltip">Veuillez renseigner un mail valide.</div>
-                          </div>
-                        </div>
-                          <div class="col-md-4 mb-3">
-                            <label for="validationTooltip05">N° Siret</label>
-                            <input type="text" class="form-control" id="validationTooltip05" placeholder="N° Siret" required>
-                            <div class="invalid-tooltip">Veuillez renseigner un N° Siret.</div>
-                          </div>
-                          <div class="col-md-4 mb-3">
-                            <label for="validationTooltip05">N° de téléphone</label>
-                            <input type="text" class="form-control" id="validationTooltip05" placeholder="n° de téléphone" required>
-                            <div class="invalid-tooltip">Veuillez renseigner un numéro de téléphone.</div>
-                          </div>
-                          <div class="col-md-4 mb-3">
-                            <label for="validationTooltip05">Horaire ouverture</label>
-                            <input type="text" class="form-control" id="validationTooltip05" placeholder="horaires d'ouverture" required>
-                            <div class="invalid-tooltip">Veuillez renseigner vos horaires d'ouverture au public.</div>
-                          </div>
-
-                          <div class="form-row">
-                            <div class="col-md-6 mb-3">
-                              <label for="validationTooltip03">Adresse</label>
-                              <input type="text" class="form-control" id="validationTooltip03" placeholder="Adresse" required>
-                              <div class="invalid-tooltip">  Veuillez renseigner votre adresse. </div>
-                            </div>
-                            <div class="col-md-3 mb-3">
-                              <label for="validationTooltip04">Code Postal</label>
-                              <input type="text" class="form-control" id="validationTooltip04" placeholder="code postale" required>
-                              <div class="invalid-tooltip">
-                                Veuillez renseigner un code postale.
-                              </div>
-                            </div>
-                            <div class="col-md-3 mb-3">
-                              <label for="validationTooltip05">Ville</label>
-                              <input type="text" class="form-control" id="validationTooltip05" placeholder="ville" required>
-                              <div class="invalid-tooltip">Veuillez renseigner une ville.</div>
-                            </div>
-                            <div class="col-md-3 mb-3">
-                              <label for="validationTooltip05">Site internet</label>
-                              <input type="text" class="form-control" id="validationTooltip05" placeholder="site internet" required>
-                              <div class="invalid-tooltip">Veuillez renseigner un site internet.</div>
-                            </div>
-                            <div class="form-group">
-                              <select class="custom-select" required>
-                                <option value="">Sélectionnez vos catégories</option>
-                                <option value="1">Fruits</option>
-                                <option value="2">Légumes</option>
-                                <option value="3">Viandes</option>
-                                <option value="4">Charcuterie</option>
-                                <option value="5">Produits laitiers</option>
-                                <option value="6">Douceurs sucrées</option>
-                                <option value="7">Épiceries & condiments</option>
-                                <option value="8">Produits Biologiques</option>
-                                <option value="9">Œufs</option>
-                                <option value="10">Miel</option>
-                                <option value="11">Boissons alcoolisées</option>
-                                <option value="12">Boissons non-alcoolisées</option>
-                                <option value="13">Autres</option>
-
-                              </select>
-                              <div class="invalid-feedback">Example invalid custom select feedback</div>
-                            </div>
-                          </div>
-                          <button class="btn btn-primary" type="submit">Submit form</button>
-                      </div>
-                  </form>
-                </div>
-             </div>
-          </div>
+        <a href="#">Complétez votre inscription</a>
         </div>
       <div class="clear">
     </div>
-  </div>
+
 
       <div class="texte">
         <p>
