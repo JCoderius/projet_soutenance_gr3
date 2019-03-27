@@ -26,6 +26,7 @@ class RegistrationFormType extends AbstractType
                   'required' => true,
                   'first_options'  => ['label' => 'Mot de passse'],
                   'second_options' => ['label' => 'Confirmez votre mot de passe'],
+                'error_bubbling'  => false,
                   'constraints' => [
                       new NotBlank([
                           'message' => 'Please enter a password',
