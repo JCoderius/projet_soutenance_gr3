@@ -8,6 +8,19 @@ use Doctrine\Common\Persistence\ObjectManager;
 
 class CategoryFixtures extends Fixture
 {
+    public const CATEGORY_REFERENCE1 = 'cat1';
+    public const CATEGORY_REFERENCE2 = 'cat2';
+    public const CATEGORY_REFERENCE3 = 'cat3';
+    public const CATEGORY_REFERENCE4 = 'cat4';
+    public const CATEGORY_REFERENCE5 = 'cat5';
+    public const CATEGORY_REFERENCE6 = 'cat6';
+    public const CATEGORY_REFERENCE7 = 'cat7';
+    public const CATEGORY_REFERENCE8 = 'cat8';
+    public const CATEGORY_REFERENCE9 = 'cat9';
+    public const CATEGORY_REFERENCE10 = 'cat10';
+    public const CATEGORY_REFERENCE11 = 'cat11';
+    public const CATEGORY_REFERENCE12 = 'cat12';
+    public const CATEGORY_REFERENCE13 = 'cat13';
     public function load(ObjectManager $manager)
     {
        $category1 = new Category();
@@ -63,5 +76,19 @@ class CategoryFixtures extends Fixture
        $manager->persist($category13);
 
        $manager->flush();
+
+        $this->addReference(self::CATEGORY_REFERENCE1, $category1);
+        $this->addReference(self::CATEGORY_REFERENCE2, $category2);
+        $this->addReference(self::CATEGORY_REFERENCE3, $category3);
+        $this->addReference(self::CATEGORY_REFERENCE4, $category4);
+        $this->addReference(self::CATEGORY_REFERENCE5, $category5);
+        $this->addReference(self::CATEGORY_REFERENCE6, $category6);
+        $this->addReference(self::CATEGORY_REFERENCE7, $category7);
+        $this->addReference(self::CATEGORY_REFERENCE8, $category8);
+        $this->addReference(self::CATEGORY_REFERENCE9, $category9);
+        $this->addReference(self::CATEGORY_REFERENCE10, $category10);
+        $this->addReference(self::CATEGORY_REFERENCE11, $category11);
+        $this->addReference(self::CATEGORY_REFERENCE12, $category12);
+        $this->addReference(self::CATEGORY_REFERENCE13, $category13);
     }
 }

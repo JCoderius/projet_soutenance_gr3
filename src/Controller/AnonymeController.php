@@ -19,18 +19,18 @@ class AnonymeController extends AbstractController
     {
 
         $departement = $repodepartements->findOneByNumero($dep);
+//        dd($departement);
         if (!$departement)
         {
             return $this->redirectToRoute('defaut');
             // 404
         }
         $users = $departement->getUsers();
-
+//        dd($users);
         return $this->render('anonyme/index.html.twig', [
             'departement' => $departement,
             'users' => $users,
         ]);
     }
-
 
 }
