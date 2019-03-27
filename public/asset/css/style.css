@@ -18,7 +18,7 @@ body{
 /* ****************************************** */
 
 header {
-    background-color: #e2e204; /* par defaut les cotés du back-ground du header sont 'beige' */
+    background-color: #228B22; /* par defaut les cotés du back-ground du header sont 'beige' */
     position: relative;
 }
 
@@ -31,12 +31,18 @@ header .inscription ul li{
     float: left;
     margin: 0 20px;
 }
+header .fa-user-plus{
+  padding-right: 10px;
+}
+header .fa-user{
+ padding-right: 10px;
+}
 header .titre{
   width: 25%;
   height: 50px;
   position: absolute;
   margin-top: -2%;
-  margin-left: 30%;
+  margin-left: 15%;
   background-color:	darkorange	;
   border-radius: 15px;
   text-align: center;
@@ -213,9 +219,10 @@ background-color: #00B207;
 /* ******************************************* */
 
 footer {
-    background-color: #e2e204; /* par defaut les cotés du back-ground du footer sont 'beige' */
+    background-color: #228B22; /* par defaut les cotés du back-ground du footer sont 'beige' */
     text-align: center;
     font-family: 'Bowlby One', cursive;
+    color: black;
 
 }
 footer a {
@@ -308,9 +315,28 @@ h2 {
         width: 100%;
         margin: 20px 0;
     }
-    header .logo{
-        width: 10%;
+    header .inscription {
+        float: right;
+        margin: 2px 1px 2px;
     }
+
+    header .inscription ul li{
+        float: left;
+        margin: 0 2px;
+    }
+    header img{
+        width: 100px;
+        height: 100px;
+        float: left;
+    }
+    header .titre{
+      width: 75%;
+      height: 35%;
+      /* margin-top: 2px; */
+      font-size: 1em;
+
+    }
+
 }
 
 @media screen and (max-width: 375px) {

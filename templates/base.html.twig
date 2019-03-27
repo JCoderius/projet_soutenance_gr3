@@ -31,11 +31,11 @@
         <div class="inscription">
             <ul>
                 {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                    <li><a href="{{ path('app_register') }}">Inscription</a></li>
-                    <li><a href="{{ path('app_login') }}">Connexion</a></li>
+                    <li><a href="{{ path('app_register') }}"><i class="fas fa-user-plus"></i>Inscription</a></li>
+                    <li><a href="{{ path('app_login') }}"><i class="fas fa-user"></i>Connexion</a></li>
                 {% else %}
-                    <li><a href="{{ path('admin') }}">Administration</a></li>
-                    <li><a href="{{ path('app_logout') }}">Deconnexion</a></li>
+                    <li><a href="{{ path('admin') }}"><i class="fas fa-user-cog"></i>Administration</a></li>
+                    <li><a href="{{ path('app_logout') }}"><i class="fas fa-user-slash"></i>Deconnexion</a></li>
                 {% endif %}
             </ul>
         </div>
