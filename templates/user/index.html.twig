@@ -3,7 +3,7 @@
 {% block title %}User index{% endblock %}
 
 {% block body %}
-    <h1>Liste des Producteurs</h1>
+    <h1>Liste des producteurs</h1>
 
     <table class="table">
         <thead>
@@ -13,17 +13,17 @@
                 <th>Roles</th>
                 <!-- <th>Password</th> -->
                 <!-- <th>Token</th> -->
-                <th>Lastname</th>
-                <th>Firstname</th>
+                <th>Nom</th>
+                <th>Prénom</th>
                 <th>Siret</th>
-                <th>Phone</th>
-                <th>Adress</th>
-                <th>cp</th>
-                <th>ville</th>
-                <th>Horaire</th>
-                <th>Category</th>
+                <th>Tél</th>
+                <th>Adresse</th>
+                <th>CP</th>
+                <th>Ville</th>
+                <th>Horaires</th>
+                <!-- <th>Categories</th> -->
                 <th>Site</th>
-                <th>actions</th>
+                <th>Actions</th>
             </tr>
         </thead>
         <tbody>
@@ -42,7 +42,7 @@
                 <td>{{ user.cp }}</td>
                 <td>{{ user.ville }}</td>
                 <td>{{ user.horaire }}</td>
-                <td>{{ user.category }}</td>
+                <!-- <td>{{ user.category }}</td> -->
                 <td>{{ user.site }}</td>
                 <td>
                     <a href="{{ path('user_show', {'id': user.id}) }}"><i class="fas fa-eye" title="afficher"></i></a>
