@@ -47,7 +47,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user3->setPassword($this->passwordEncoder->encodePassword($user3, 'michel'));
         $user3->setToken($this->tokenGenerator->generateToken());
         $user3->setDepId($this->getReference(DepFixtures::DEPARTEMENT_REFERENCE2));
-        $user3addCat($this->getReference(CategoryFixtures::CATEGORY_REFERENCE2));
+        $user3->addCat($this->getReference(CategoryFixtures::CATEGORY_REFERENCE2));
         $manager->persist($user3);
         for ($i = 1; $i < 20; $i++) {
             $user = new User();
