@@ -18,13 +18,9 @@
         <div class="prod">
             <p>{{ user.email }}</p>
             {% for catt in user.cat %}
-                {{ catt.produit }}
+                <p>{{ catt.produit }}</p>
             {% endfor %}
         </div>
-        {{ user.email }}
-        {% for catt in user.cat %}
-            {{ catt.produit }}
-            {% endfor %}
 
     {% endfor %}
 
