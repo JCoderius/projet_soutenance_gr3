@@ -3,29 +3,28 @@
 {% block title %}departement {{ departement.numero }}{% endblock %}
 
 {% block body %}
-<section id="les_selections">
-    <div class="navbar">
-        <nav class="navbar navbar-light bg-light">
-            <form class="form-inline">
-                <input class="form-control mr-sm-2" type="search" placeholder="Departements" aria-label="Search">
-                <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
-            </form>
-        </nav>
-    </div>
-    <h1>bienvenue dans le département {{ departement.numero }}</h1>
-</section>
-    {% for user in users %}
-        <div class="prod">
-            <p>{{ user.email }}</p>
-            {% for catt in user.cat %}
-                {{ catt.produit }}
-            {% endfor %}
+    <section id="les_selections">
+        <div class="navbar">
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Departements" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+                </form>
+            </nav>
         </div>
-        {{ user.email }}
-        {% for catt in user.cat %}
-            {{ catt.produit }}
-            {% endfor %}
+        <h1>bienvenue dans le département {{ departement.numero }}</h1>
 
-    {% endfor %}
-
+        {% for user in users %}
+            <div class="prod">
+                <p class="ident">{{ user.lastname }} {{ user.firstname }}</p>
+                <p>{{ user.email }}</p>
+                {% for catt in user.cat %}
+                    <p>Produits proposés : {{ catt.produit }}</p>
+                {% endfor %}
+                <p>Adresse : {{ user.adress }}</p>
+                <p>Code Postale : {{ user.cp }}</p>
+                <p>Tel : 0{{ user.phone }}</p>
+            </div>
+        {% endfor %}
+    </section>
 {% endblock %}

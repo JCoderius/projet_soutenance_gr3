@@ -5,7 +5,17 @@
   background-size: cover;
 }
 
-.fa-eye, .fa-user-edit, .fa-trash-alt {
+.fa-eye, .fa-user-edit, .fa-trash-alt, .fa-plus{
     font-size: 1.4em;
     color: grey;
+}
+
+button.btn {
+    color: white;
+    background-color: blue;
+}
+
+a {
+    font-weight: bold;
+    color: green;
 }

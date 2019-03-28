@@ -106,7 +106,7 @@ class User implements UserInterface
     {
         $this->cat = new ArrayCollection();
     }
-    
+
     public function getId(): ?int
     {
         return $this->id;
@@ -311,9 +311,10 @@ class User implements UserInterface
         return $this->ville;
     }
 
-    public function setVille(?string $ville): self
+    public function setVille(string $ville): self
     {
         $this->ville = $ville;
+        return $this;
     }
 
     public function getDepId(): ?Departements

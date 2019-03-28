@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class UserType extends AbstractType
 {
@@ -23,17 +24,33 @@ class UserType extends AbstractType
                 'multiple' => true
             ))
             //->add('password')
-        //    ->add('token')
-            ->add('lastname')
-            ->add('firstname')
+            //->add('token')
+            ->add('lastname', TextType::class, [
+                'label' =>'Nom',
+            ])
+            ->add('firstname', TextType::class, [
+                'label' =>'Prénom',
+            ])
             ->add('siret')
-            ->add('phone')
-            ->add('adress')
-            ->add('cp')
-            ->add('ville')
-            ->add('horaire')
-            ->add('category')
-            ->add('site')
+            ->add('phone', TextType::class, [
+                'label' =>'Tél',
+            ])
+            ->add('adress', TextType::class, [
+                'label' =>'Adresse',
+            ])
+            ->add('cp', TextType::class, [
+                'label' =>'CP',
+            ])
+            ->add('ville', TextType::class, [
+                'label' =>'Ville',
+            ])
+            ->add('horaire', TextType::class, [
+                'label' =>'Horaires',
+            ])
+            // ->add('category')
+            ->add('site', TextType::class, [
+                'label' =>'Site',
+            ])
         ;
     }
 

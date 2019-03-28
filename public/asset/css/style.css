@@ -202,7 +202,7 @@ section .texte p{
     padding: 50px;
 }
 #les_selections .navbar{
-    width: 40%;
+    width: 50%;
     background-color: lightgrey;
     margin:0 auto;
     opacity: 0.8;
@@ -215,6 +215,19 @@ section .texte p{
     text-transform: uppercase;
 }
 
+#les_selections .prod{
+    text-align: center;
+    margin: 10px auto;
+    color: white;
+    background-color: green;
+    width: 30%;
+    padding: 10px;
+}
+
+#les_selections .prod .ident{
+    font-size: 18px;
+    font-weight: bolder;
+}
 
 /* ******************************* */
 /*****css. formulaire register  ***/
