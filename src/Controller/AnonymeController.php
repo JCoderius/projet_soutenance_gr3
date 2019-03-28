@@ -15,9 +15,8 @@ class AnonymeController extends AbstractController
     /**
      * @Route("/anonyme/{dep}", name="anonyme", methods={"GET"})
      */
-    public function show(UserRepository $repousers,DepartementsRepository $repodepartements,$dep)
+    public function show(UserRepository $repousers,DepartementsRepository $repodepartements,DepartementsRepository $repodeparts,$dep)
     {
-
         $departement = $repodepartements->findOneByNumero($dep);
 //        dd($departement);
         if (!$departement)
@@ -30,6 +29,7 @@ class AnonymeController extends AbstractController
         return $this->render('anonyme/index.html.twig', [
             'departement' => $departement,
             'users' => $users,
+            'depalls' => $repodeparts->findAll()
         ]);
     }
 
