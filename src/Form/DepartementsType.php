@@ -21,6 +21,18 @@ class DepartementsType extends AbstractType
             ->add('nom', TextType::class, [
                 'label' =>'Nom du département',
             ])
+            ->add('dep_id', EntityType::class, [
+                // looks for choices from this entity
+                'class' => Departements::class,
+                'label' => 'Départements',
+
+                // uses the User.username property as the visible option string
+                'choice_label' => 'nom',
+
+                // used to render a select box, check boxes or radios
+                // 'multiple' => true,
+                // 'expanded' => true,
+            ])
         ;
     }
 

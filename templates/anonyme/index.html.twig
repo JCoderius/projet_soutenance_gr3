@@ -7,7 +7,12 @@
         <div class="navbar">
             <nav class="navbar navbar-light bg-light">
                 <form class="form-inline">
-                    <input class="form-control mr-sm-2" type="search" placeholder="Departements" aria-label="Search">
+                    <select name="profil[dep_id" id="profil_dep_id">
+                        <option value="">Departements</option>
+                        {% for depall in depalls %}
+                            <option value="{{ depall.numero }}">{{ depall.numero }} - {{ depall.nom }}</option>
+                        {% endfor %}
+                    </select>
                     <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
                 </form>
             </nav>
