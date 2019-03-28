@@ -27,7 +27,6 @@ class ProfilType extends AbstractType
             ->add('site')
             ->add('cp')
             ->add('ville')
-            ->add('dep_id')
             ->add('dep_id', EntityType::class, [
                 // looks for choices from this entity
                 'class' => Departements::class,
