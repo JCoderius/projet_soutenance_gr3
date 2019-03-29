@@ -266,6 +266,10 @@ section .texte p{
     padding: 5px 15px;
 }
 
+#les_selections .pagin ul li a{
+    color: white;
+}
+
 
 /* ******************************* */
 /*****css. formulaire register  ***/
