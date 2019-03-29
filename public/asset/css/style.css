@@ -39,12 +39,13 @@ header .fa-user{
 }
 header .titre h1{
   position: absolute;
-  margin-top: -9.25%;
+  margin-top: -9.75%;
   padding-left: 20%;
   font-family: 'Luckiest Guy', cursive;
   font-size: 2em;
   color: #f7f7ca;
   z-index: 1000;
+  text-shadow: 3px 3px 0 black;
 }
 
 header a {
@@ -61,10 +62,12 @@ header .logo{
     position: absolute;
     z-index: 1000;
     margin-top: -15px;
+
 }
 
 .flexslider-header .slides img{
     width: 100%;
+    vertical-align: middle;
 }
 
 
@@ -86,6 +89,7 @@ header .logo{
     height: 100%;
     z-index: 1;
     opacity: 0.7;
+
 }
 
 #accueil .search{
@@ -110,6 +114,7 @@ header .logo{
   border-color: orange;
   position: relative;
   font-family: 'Nunito', sans-serif;
+
 }
 
 #accueil .visiteurs {
@@ -117,17 +122,20 @@ header .logo{
   top: 10%;
   left:10%;
   z-index: 1001;
+
 }
 #accueil .producteur{
   position: absolute;
   top: 10%;
   left:75%;
   z-index: 1001;
+
 }
 #accueil .modal-body{
-  font-family: font-family: 'Nunito', sans-serif;
+  font-family:'Nunito', sans-serif;
   text-align: justify;
 }
+
 /* CSS concernant la carte de France */
 .carte svg{
     width: 62%;
@@ -140,6 +148,7 @@ header .logo{
     stroke:#FFFFFF;
     stroke-width:0.6;
     transition: fill 0.2s, stroke 0.3s;
+
 }
 #map path:hover {
     fill: #FF8C00;
@@ -279,6 +288,7 @@ section .texte p{
   text-align: center;
   margin-top: 20px;
   font-size: 1.5em;
+  text-shadow: 2px 2px 0 black;
 
 }
 .champs {
@@ -336,8 +346,47 @@ button.btn.btn-success:hover{
   background-color: darkorange;
   border-color: darkorange;
 }
+/********************************************* */
+/***************** Forgotten-password********* */
+/* ******************************************* */
+.contenu {
+  width: 70%;
+  margin-top: 5%;
+  margin-left: 15%; ;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bolder;
+}
 
+/* ******************************************* */
+/* *************** profil ******************** */
+/* ******************************************* */
+.progress-bar {
+  background-color: #228B22;
+  color: darkorange;
+}
+.contenu h1{
+  font-size: 1.5em;
+  margin-left: 40%;
 
+}
+
+.contenu button{
+  margin: 5% 40% 5% 45%;
+  font-size: 1em;
+  color: white;
+  background-color: #228B22;
+  border-color: #228B22;
+  box-shadow: 2px 2px 0 black;
+}
+.contenu button:hover{
+  border-color: darkorange;
+  background-color: darkorange;
+}
+#inputEmail1 {
+  width: 50%;
+  margin-left: 25%;
+  margin-top: 5%;
+}
 /* ******************************************* */
 /* *************** FOOTER ******************** */
 /* ******************************************* */
@@ -347,7 +396,6 @@ footer {
     text-align: center;
     font-family: 'Nunito', sans-serif;
     color: white;
-
 }
 footer a {
   color: white;
@@ -357,6 +405,7 @@ footer a {
 .bigbox-footer{
     width: 100%;
     padding-top: 3%;
+
 }
 
 .box-footer{
@@ -366,48 +415,65 @@ footer a {
 }
 footer h2{
   padding-bottom: 5%;
+  text-shadow: 2px 2px 0 black;
 }
 /****** modal *********/
 footer .modaldeux{
   margin-top: 5%;
   margin-bottom: 5%;
+
 }
 footer .modal-content{
-
+  color: black;
   text-align: justify;
 }
 button.btn.btn-primary{
   background-color: #9ACD32;
   border-color: #9ACD32;
   color: white;
-  box-shadow: 2px 2px 0px black;
+  box-shadow: 2px 2px 0 black;
 }
 button.btn.btn-primary:hover{
   background-color: darkorange;
-  border-color: darkorange;
+}
+.box-footer.informations_legales p{
+  padding: 3px;
+}
+p.titre2{
+  text-shadow: 2px 2px 0 black;
 }
 
 /******* Favicon******/
+.fa-envelope-square{
+  text-shadow: 2px 2px 0 black;
+}
+.fa-phone-square{
+  text-shadow: 2px 2px 0 black;
+}
 footer .fa-facebook-square{
   font-size: 2em;
+  text-shadow: 2px 2px 0 black;
 }
 footer .fa-facebook-square:hover{
   color: darkorange;
 }
 footer .fa-twitter-square {
   font-size: 2em;
+  text-shadow: 2px 2px 0 black;
 }
 footer .fa-twitter-square:hover{
   color: darkorange;
 }
 footer .fa-instagram{
   font-size: 2em;
+  text-shadow: 2px 2px 0 black;
 }
 footer .fa-instagram:hover{
   color: darkorange;
 }
 footer .fa-pinterest-square{
   font-size: 2em;
+  text-shadow: 2px 2px 0 black;
 }
 footer .fa-pinterest-square:hover{
   color: darkorange;
@@ -425,6 +491,7 @@ footer .copyright{
 footer .contact {
   padding-top: 50px;
   margin-left: 30px;
+  text-shadow: 2px 2px 0 black;
 }
 footer .fa-address-card {
   padding-right: 10px;
@@ -433,8 +500,9 @@ h2 {
   font-weight: bold;
   padding-bottom: 5px;
 }
-
-
+p.copyright{
+  padding-top: 20px;
+}
 
 
 
