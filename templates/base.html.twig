@@ -29,17 +29,13 @@
 
 
         <div class="inscription">
-
             <ul>
                 {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
                     <li><a href="{{ path('app_register') }}"><i class="fas fa-user-plus"></i>Inscription</a></li>
                     <li><a href="{{ path('app_login') }}"><i class="fas fa-user"></i>Connexion</a></li>
                 {% else %}
-                    {% if is_granted('ROLE_ADMIN') %}
-                        <li><a href="{{ path('admin') }}"><i class="fas fa-user-cog"></i>Administration</a></li>
-                    {% endif %}
+                    <li><a href="{{ path('admin') }}"><i class="fas fa-user-cog"></i>Administration</a></li>
                     <li><a href="{{ path('app_logout') }}"><i class="fas fa-user-slash"></i>Deconnexion</a></li>
-                    <li><a href="{{ path('profil') }}"><i class="fas fa-user-slash"></i>Profil</a></li>
                 {% endif %}
             </ul>
         </div>
@@ -72,21 +68,28 @@
                 <h2>A PROPOS DE NOUS</h2>
                 <div class="modalune">
                 <!-- Modal qui sommes nous -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalLong">
-                  Qui sommes-nous ?
+                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter3">
+                  Qui sommes nous
                 </button>
-                  <div class="modal fade" id="exampleModalLong" tabindex="-1" role="dialog" aria-labelledby="exampleModalLongTitle" aria-hidden="true">
-                    <div class="modal-dialog" role="document">
-                      <div class="modal-content">
-                        <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Qui sommes Nous ?</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
-                        </div>
-                        <div class="modal-body">
-                        Nous sommes une association qui avons pour but de mettre en relation les producteurs de nos régions en lien direct avec le consommateur.
-                        </div>
+              </div>
+                  <!-- Modal -->
+                  <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
+                      <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Qui sommes nous</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                          <span aria-hidden="true">&times;</span>
+                        </button>
+                      </div>
+                      <div class="modal-body">
+                        Notre finalité en tant qu'association est né d'un projet commun lors de notre formation de développeur/codeur web, de la théorie nous sommes passés à une réalité largement augmentée.</br></br>
+                        Motivés par une idée lancée, nous avons construit un site à notre image : simple, conviviale, accessible à tous.
+                        A travers notre site, nous souhaitons reconnecter l'urbain au rural et ainsi perpétuer la transmission des savoirs qui se perdent dans le temps.</br></br>
+                        L'ère du digitale absorbe tout, l'innovation est en marche ...maintenant place à la révolution dans nos assiettes !
+                      </div>
+                      <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
                       </div>
                     </div>
                   </div>
@@ -94,12 +97,12 @@
 
                 <div class="modaldeux">
                   <!-- Modal Nos partenaires -->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter4">
                     Nos partenaires
                   </button>
 
                   <!-- Modal -->
-                  <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                  <div class="modal fade" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
                     <div class="modal-dialog modal-dialog-centered" role="document">
                       <div class="modal-content">
                         <div class="modal-header">
@@ -119,14 +122,15 @@
 
             <div class="box-footer informations_legales">
                 <h2>MENTIONS LEGALES</h2>
-                <p>Trouves ta ferme</p>
+                <p class="titre2">Trouves ta ferme</p>
                 <p><i class="fas fa-envelope-square"></i> 13, rue de Pont Audemer</p>
                 <p>27 260 Épaignes</p>
                 <p><i class="fas fa-phone-square"></i> 02.32.33.34.35</p>
-                <p>Hébergeur</p>
+                <p>Hébergeur : OVH</p>
+                <p class="copyright"><i class="far fa-copyright"></i> Copyright 2019</p>
             </div>
             <div class="box-footer sociaux">
-                <h2>RETROUVER-NOUS</h2>
+                <h2>RETROUVEZ-NOUS</h2>
                 <ul>
                     <li><a href="https://www.facebook.com/trouve.ferme.7"><i class="fab fa-facebook-square"></i></a></li>
                     <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
