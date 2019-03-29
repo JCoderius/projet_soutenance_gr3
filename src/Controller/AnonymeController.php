@@ -15,22 +15,42 @@ class AnonymeController extends AbstractController
     /**
      * @Route("/anonyme/{dep}", name="anonyme", methods={"GET"})
      */
-    public function show(UserRepository $repousers,DepartementsRepository $repodepartements,DepartementsRepository $repodeparts,$dep)
+    public function show(UserRepository $repousers, DepartementsRepository $repodepartements, $dep, Request $request)
     {
         $departement = $repodepartements->findOneByNumero($dep);
-//        dd($departement);
-        if (!$departement)
-        {
-            return $this->redirectToRoute('defaut');
-            // 404
+        if (!$departement) {
+            throw $this->createNotFoundException('The departement does not exist');
         }
         $users = $departement->getUsers();
-//        dd($users);
+
+        $depalls = $repodepartements->findAll();
+//        dd($depalls);
         return $this->render('anonyme/index.html.twig', [
             'departement' => $departement,
-            'users' => $users,
-            'depalls' => $repodeparts->findAll()
+            'users'       => $users,
+            'depalls'     => $depalls
         ]);
     }
 
+    /**
+     * @Route("/anonyme2", name="anonyme2", methods={"GET"})
+     */
+    public function show2(UserRepository $repousers, DepartementsRepository $repodepartements,  Request $request)
+    {
+        $numero = $request->query->get('departement', 1);
+
+        $departement = $repodepartements->findOneByNumero($numero);
+        if (!$departement) {
+
+         throw $this->createNotFoundException('The departement does not exist');
+        }
+        $users = $departement->getUsers();
+
+        $depalls = $repodepartements->findAll();
+        return $this->render('anonyme/index.html.twig', [
+            'departement' => $departement,
+            'users'       => $users,
+            'depalls'     => $depalls
+        ]);
+    }
 }

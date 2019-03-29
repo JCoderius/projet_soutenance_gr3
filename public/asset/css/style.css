@@ -200,8 +200,9 @@ section .texte p{
 #les_selections{
     text-align: center;
     padding: 50px;
+    width: 100%;
 }
-#les_selections .navbar{
+#les_selections .navbar1{
     width: 50%;
     background-color: lightgrey;
     margin:0 auto;
@@ -209,6 +210,12 @@ section .texte p{
     padding: 5px 0;
     text-align: center;
 }
+
+#les_selections .navbar{
+    width: 60%;
+    margin: 5px auto;
+}
+
 #les_selections h1{
     font-size: 30px;
     margin: 20px 0;
@@ -232,8 +239,13 @@ section .texte p{
 #les_selections select{
     margin: 0 20px;
 }
-#les_selections button{
-    m
+
+#les_selections .image{
+     width: 60%;
+    opacity: 0.6;
+}
+#les_selections .global{
+    float: left;
 }
 
 /* ******************************* */
