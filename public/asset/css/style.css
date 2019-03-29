@@ -251,6 +251,22 @@ section .texte p{
     float: left;
 }
 
+#les_selections .pagin ul{
+    text-align: center;
+    margin: 0 auto;
+    width: 10%;
+    float: right;
+    margin-right: 22%;
+}
+
+#les_selections .pagin ul li{
+    background-color: green;
+    margin: 0 auto;
+    color: white;
+    padding: 5px 15px;
+}
+
+
 /* ******************************* */
 /*****css. formulaire register  ***/
 /* ***************************** */
