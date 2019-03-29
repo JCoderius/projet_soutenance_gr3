@@ -53,12 +53,12 @@ class User implements UserInterface
     private $firstname;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="string", length=14, nullable=true)
      */
     private $siret;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="string", length=10, nullable=true)
      */
     private $phone;
 
@@ -68,7 +68,7 @@ class User implements UserInterface
     private $adress;
 
     /**
-     * @ORM\Column(type="integer", nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $horaire;
 
@@ -222,7 +222,7 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getSiret(): ?int
+    public function getSiret(): ?string
     {
         return $this->siret;
     }
@@ -234,7 +234,7 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getPhone(): ?int
+    public function getPhone(): ?string
     {
         return $this->phone;
     }
@@ -258,7 +258,7 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getHoraire(): ?int
+    public function getHoraire(): ?string
     {
         return $this->horaire;
     }
