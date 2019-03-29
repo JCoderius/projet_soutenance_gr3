@@ -39,8 +39,8 @@ header .fa-user{
 }
 header .titre h1{
   position: absolute;
-  margin-top: -14.5%;
-  padding-left: 30%;
+  margin-top: -9.25%;
+  padding-left: 20%;
   font-family: 'Luckiest Guy', cursive;
   font-size: 2em;
   color: #f7f7ca;
@@ -229,30 +229,83 @@ section .texte p{
     font-weight: bolder;
 }
 
+#les_selections select{
+    margin: 0 20px;
+}
+#les_selections button{
+    m
+}
+
 /* ******************************* */
 /*****css. formulaire register  ***/
 /* ***************************** */
+.inscription {
+  font-family: 'Nunito', sans-serif;
+  font-weight: bold;
+  margin-top: 2%;
+}
 .inscription h1 {
   text-align: center;
-  margin-top: 10px;
+  margin-top: 20px;
+  font-size: 1.5em;
+
 }
 .champs {
   width: 30% ;
   margin: 0 auto;
+}
+
+button.btn1 {
+  background-color:#228B22;
+  color: white;
+  border-radius: 5px;
+  margin-bottom: 10%;
+  margin-left: 60%;
+  border-color: #228B22;
+  padding: 10px 20px 10px 20px;
+  font-family: 'Nunito', sans-serif;
+}
+button.btn1:hover {
+  background-color: darkorange;
+  border-color: darkorange;
+}
+.form-check{
+  margin-top: 2%;
+  margin-left: -50%;
+}
+/* ******************************* */
+/*****css. login ***/
+/* ***************************** */
+.container {
+  font-family: 'Nunito', sans-serif;
+  margin-top: 2%;
+  font-weight: bold;
+}
+h2 {
+  text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
 
 }
-.confirme {
-  margin: 0 auto;
-  text-align: center;
-  width: 20%;
-  border: 1px solid #00FF7F;
-  border-radius: 5px;
-  background-color:  #A8FF75;
-  margin-bottom: 10px;
+.col-md-6-2 a {
+    width: 100%;
+    margin: 2% 2% 20% 50%;
+
 }
-.confirme :hover {
-background-color: #00B207;
+.form-check.mb-2.mr-sm-2.mb-sm-0 {
+  margin-left: 50%;
+  margin-top: -25%;
 }
+button.btn.btn-success {
+margin-left: 50%;
+box-shadow: 2px 2px 0px black;
+}
+
+button.btn.btn-success:hover{
+  background-color: darkorange;
+  border-color: darkorange;
+}
+
 
 /* ******************************************* */
 /* *************** FOOTER ******************** */
@@ -289,16 +342,18 @@ footer .modaldeux{
   margin-bottom: 5%;
 }
 footer .modal-content{
-  color: black;
+
   text-align: justify;
 }
 button.btn.btn-primary{
   background-color: #9ACD32;
   border-color: #9ACD32;
   color: white;
+  box-shadow: 2px 2px 0px black;
 }
 button.btn.btn-primary:hover{
   background-color: darkorange;
+  border-color: darkorange;
 }
 
 /******* Favicon******/

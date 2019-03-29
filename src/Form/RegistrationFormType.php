@@ -29,11 +29,11 @@ class RegistrationFormType extends AbstractType
                 'error_bubbling'  => false,
                   'constraints' => [
                       new NotBlank([
-                          'message' => 'Please enter a password',
+                          'message' => 'SVP entrez un mot passe',
                       ]),
                       new Length([
                           'min' => 6,
-                          'minMessage' => 'Your password should be at least {{ limit }} characters',
+                          'minMessage' => 'Votre mot de passe doit faire {{ limit }} caractères',
                           // max length allowed by Symfony for security reasons
                           'max' => 120,
                       ]),
@@ -42,6 +42,7 @@ class RegistrationFormType extends AbstractType
             ->add('termsAccepted', CheckboxType::class, array(
                 'mapped' => false,
                 'constraints' => new IsTrue(),
+                'label' => 'veuillez accepter les termes'
             ))
 
         ;
