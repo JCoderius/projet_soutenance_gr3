@@ -275,6 +275,10 @@ section .texte p{
     padding: 5px 15px;
 }
 
+#les_selections .pagin ul li a{
+    color: white;
+}
+
 
 /* ******************************* */
 /*****css. formulaire register  ***/
@@ -355,13 +359,21 @@ button.btn.btn-success:hover{
   margin-left: 15%; ;
   font-family: 'Nunito', sans-serif;
   font-weight: bolder;
+}
 
+/* ******************************************* */
+/* *************** profil ******************** */
+/* ******************************************* */
+.progress-bar {
+  background-color: #228B22;
+  color: darkorange;
 }
 .contenu h1{
   font-size: 1.5em;
   margin-left: 40%;
 
 }
+
 .contenu button{
   margin: 5% 40% 5% 45%;
   font-size: 1em;
