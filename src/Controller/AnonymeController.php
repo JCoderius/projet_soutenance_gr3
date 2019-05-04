@@ -9,6 +9,7 @@ use App\Repository\UserRepository;
 use Symfony\Bundle\FrameworkBundle\Controller\AbstractController;
 use Symfony\Component\HttpFoundation\Request;
 use Symfony\Component\Routing\Annotation\Route;
+use Symfony\Component\HttpFoundation\Response;
 use JasonGrimes\Paginator;
 
 class AnonymeController extends AbstractController
@@ -16,71 +17,43 @@ class AnonymeController extends AbstractController
     /**
      * @Route("/anonyme/{dep}", name="anonyme", methods={"GET"})
      */
-    public function show(UserRepository $repousers, DepartementsRepository $repodepartements, $dep, Request $request, UserRepository $userRepository)
+public function show(DepartementsRepository $repodepartements, $dep, Request $request, UserRepository $userRepository): Response
     {
+        $departement = $repodepartements->findOneByNumero($dep);
         $departement = $repodepartements->findOneByNumero($dep);
         if (!$departement) {
             throw $this->createNotFoundException('The departement does not exist');
         }
+
         $users = $departement->getUsers();
-
+        
         $depalls = $repodepartements->findAll();
-//        dd($depalls);
-
-        $totalItems = $userRepository->countUsers();
-        $itemsPerPage = 4;
-        $currentPage = $request->query->get('page', 1);
-        $urlPattern = '?page=(:num)';
-        $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
-        $offset = 0;
-        if($currentPage != 1) {
-            $offset =  ($itemsPerPage * $currentPage) - $itemsPerPage;
-        }
-
-        $users = $userRepository->getAllUsersPaginate($itemsPerPage,$offset);
-
 
         return $this->render('anonyme/index.html.twig', [
             'departement' => $departement,
-            'users'       => $users,
-            'depalls'     => $depalls,
-            'paginator' =>$paginator
+            'depalls'     => $repodepartements->findAll(),
+            'users' => $users,
         ]);
     }
 
     /**
      * @Route("/anonyme2", name="anonyme2", methods={"GET"})
      */
-    public function show2(UserRepository $repousers, DepartementsRepository $repodepartements,  Request $request, UserRepository $userRepository)
+    public function show2(DepartementsRepository $repodepartements, Request $request): Response
     {
         $numero = $request->query->get('departement', 1);
 
         $departement = $repodepartements->findOneByNumero($numero);
         if (!$departement) {
 
-         throw $this->createNotFoundException('The departement does not exist');
+            throw $this->createNotFoundException('The departement does not exist');
         }
-        $users = $departement->getUsers();
 
         $depalls = $repodepartements->findAll();
-
-        $totalItems = $userRepository->countUsers();
-        $itemsPerPage = 10;
-        $currentPage = $request->query->get('page', 1);
-        $urlPattern = '?page=(:num)';
-        $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
-        $offset = 0;
-        if($currentPage != 1) {
-            $offset =  ($itemsPerPage * $currentPage) - $itemsPerPage;
-        }
-
-        $users = $userRepository->getAllUsersPaginate($itemsPerPage,$offset);
-
         return $this->render('anonyme/index.html.twig', [
+            'users'       => $departement ->getUsers(),
             'departement' => $departement,
-            'users'       => $users,
             'depalls'     => $depalls,
-            'paginator' =>$paginator
         ]);
     }
 

@@ -19,10 +19,10 @@ class DepartementsRepository extends ServiceEntityRepository
         parent::__construct($registry, Departements::class);
     }
 
-    // /**
-    //  * @return Departements[] Returns an array of Departements objects
-    //  */
-    /*
+     /**
+      * @return Departements[] Returns an array of Departements objects
+      */
+
     public function findByExampleField($value)
     {
         return $this->createQueryBuilder('d')
@@ -34,9 +34,7 @@ class DepartementsRepository extends ServiceEntityRepository
             ->getResult()
         ;
     }
-    */
 
-    /*
     public function findOneBySomeField($value): ?Departements
     {
         return $this->createQueryBuilder('d')
@@ -46,5 +44,24 @@ class DepartementsRepository extends ServiceEntityRepository
             ->getOneOrNullResult()
         ;
     }
-    */
+
+    /**
+     * @return Query[]
+     */
+    public function getAllUsersPaginate($limit,$offset)
+    {
+        return $this->getEntityManager()
+            ->createQuery('SELECT u FROM App\Entity\Departement as u')
+            ->setMaxResults($limit)
+            ->setFirstResult($offset)
+            ->getResult();
+    }
+
+    public function countUsers()
+    {
+        return $this->createQueryBuilder('u')
+            ->select('COUNT(u)')
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
 }
