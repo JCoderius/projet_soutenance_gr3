@@ -107,7 +107,7 @@ class DepFixtures extends Fixture
 
         $departement19 = new Departements();
         $departement19->setNumero('19');
-        $departement19->setNom('CORRE66E');
+        $departement19->setNom('CORREZE');
         $manager->persist($departement19);
 
         $departement20 = new Departements();

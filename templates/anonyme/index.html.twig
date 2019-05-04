@@ -9,7 +9,7 @@
                     <form class="form-inline" action="{{ path('anonyme2')}}">
 
                         <select name="departement" id="profil_dep_id">
-                            <option value="">Departements</option>
+{#                            <option value="">Departements</option>#}
                             {% for depall in depalls %}
 
                                 <option {% if(depall.numero == departement.numero) %}selected="selected" {% endif %}value="{{ depall.numero }}">{{ depall.numero }} - {{ depall.nom }}</option>
@@ -43,10 +43,6 @@
         </div>
 
         <div class="clear"></div>
-
-        <div class="pagin">
-            {{ paginator|raw }}
-        </div>
 
     </section>
 {% endblock %}

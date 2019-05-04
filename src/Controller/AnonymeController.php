@@ -16,35 +16,23 @@ class AnonymeController extends AbstractController
     /**
      * @Route("/anonyme/{dep}", name="anonyme", methods={"GET"})
      */
-    public function show(UserRepository $repousers, DepartementsRepository $repodepartements, $dep, Request $request, UserRepository $userRepository)
+    public function show(DepartementsRepository $repodepartements, $dep, Request $request, UserRepository $userRepository)
     {
         $departement = $repodepartements->findOneByNumero($dep);
         if (!$departement) {
             throw $this->createNotFoundException('The departement does not exist');
         }
-        $users = $departement->getUsers();
 
         $depalls = $repodepartements->findAll();
 //        dd($depalls);
 
-        $totalItems = $userRepository->countUsers();
-        $itemsPerPage = 4;
-        $currentPage = $request->query->get('page', 1);
-        $urlPattern = '?page=(:num)';
-        $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
-        $offset = 0;
-        if($currentPage != 1) {
-            $offset =  ($itemsPerPage * $currentPage) - $itemsPerPage;
-        }
-
-        $users = $userRepository->getAllUsersPaginate($itemsPerPage,$offset);
+        $users = $departement ->getUsers();
 
 
         return $this->render('anonyme/index.html.twig', [
             'departement' => $departement,
             'users'       => $users,
-            'depalls'     => $depalls,
-            'paginator' =>$paginator
+            'depalls'     => $depalls
         ]);
     }
 
@@ -60,27 +48,15 @@ class AnonymeController extends AbstractController
 
          throw $this->createNotFoundException('The departement does not exist');
         }
-        $users = $departement->getUsers();
+
+        $users = $departement ->getUsers();
 
         $depalls = $repodepartements->findAll();
-
-        $totalItems = $userRepository->countUsers();
-        $itemsPerPage = 10;
-        $currentPage = $request->query->get('page', 1);
-        $urlPattern = '?page=(:num)';
-        $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
-        $offset = 0;
-        if($currentPage != 1) {
-            $offset =  ($itemsPerPage * $currentPage) - $itemsPerPage;
-        }
-
-        $users = $userRepository->getAllUsersPaginate($itemsPerPage,$offset);
 
         return $this->render('anonyme/index.html.twig', [
             'departement' => $departement,
             'users'       => $users,
-            'depalls'     => $depalls,
-            'paginator' =>$paginator
+            'depalls'     => $depalls
         ]);
     }
 
