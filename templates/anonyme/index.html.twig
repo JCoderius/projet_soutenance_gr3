@@ -1,27 +1,30 @@
 {% extends 'base.html.twig' %}
-
-{% block title %}departement {{ departement.numero }}{% endblock %}
-
+{% block title %}departement
+{{ departement.numero }}
+{% endblock %}
 {% block body %}
 <section id="les_selections">
     <div class="navbar1">
         <nav class="navbar navbar-light bg-light">
             <form class="form-inline" action="{{ path('anonyme2')}}">
 
-                <select name="departement" id="profil_dep_id">
-{#                            <option value="">Departements</option>#}
-                            {% for depall in depalls %}
+                <select id="profil_dep_id" name="departement">
+                    {#                            <option value="">Departements</option>#}
+                    {% for depall in depalls %}
 
-                                <option {% if(depall.numero == departement.numero) %}selected="selected" {% endif %}value="{{ depall.numero }}">{{ depall.numero }} - {{ depall.nom }}</option>
-                            {% endfor %}
-                        </select>
+                    <option {% if(depall.numero == departement.numero) %} selected="selected" {% endif %} value="{{ depall.numero }}">{{ depall.numero }}
+                        -
+                        {{ depall.nom }}</option>
+                    {% endfor %}
+                </select>
 
                 <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
             </form>
 
         </nav>
     </div>
-    <h1>bienvenue dans le département {{ departement.numero }}</h1>
+    <h1>bienvenue dans le département
+        {{ departement.numero }}</h1>
     <div class="clear"></div>
 
     <div class="global image">
@@ -29,20 +32,28 @@
     </div>
 
     {% for user in users %}
-    <div class="global prod">
-        <p class="ident">{{ user.lastname }} {{ user.firstname }}</p>
-        <p>{{ user.email }}</p>
-        {% for catt in user.cat %}
-        <p>Produits proposés : {{ catt.produit }}</p>
-        {% endfor %}
-        <p>Adresse : {{ user.adress }}</p>
-        <p>Code Postale : {{ user.cp }}</p>
-        <p>Tel : 0{{ user.phone }}</p>
+    <div class="paginator">
+        <div class="global prod">
+            <p class="ident">{{ user.lastname }}
+                {{ user.firstname }}</p>
+            <p>{{ user.email }}</p>
+            {% for catt in user.cat %}
+            <p>Produits proposés :
+                {{ catt.produit }}</p>
+            {% endfor %}
+            <p>Adresse :
+                {{ user.adress }}</p>
+            <p>Code Postale :
+                {{ user.cp }}</p>
+            <p>Tel : 0{{ user.phone }}</p>
+        </div>
     </div>
     {% endfor %}
+
     </div>
 
     <div class="clear"></div>
 
-</section>
-{% endblock %}
+    <?php echo $paginator ?>
+
+</section>{% endblock %}

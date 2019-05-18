@@ -17,22 +17,30 @@ class AnonymeController extends AbstractController
     /**
      * @Route("/anonyme/{dep}", name="anonyme", methods={"GET"})
      */
-public function show(DepartementsRepository $repodepartements, $dep, Request $request, UserRepository $userRepository): Response
+    public function show(DepartementsRepository $repoDepartements, $dep, Request $request): Response
     {
-        $departement = $repodepartements->findOneByNumero($dep);
-        $departement = $repodepartements->findOneByNumero($dep);
+        $departement = $repoDepartements->findOneByNumero($dep);
         if (!$departement) {
             throw $this->createNotFoundException('The departement does not exist');
         }
 
         $users = $departement->getUsers();
         
-        $depalls = $repodepartements->findAll();
+        $depalls = $repoDepartements->findAll();
+
+        $totalItems = 10;
+        $itemsPerPage = 1;
+        $currentPage = $request->query->get('page', 1);
+        $urlPattern = '?page=(:num)';
+
+
+        $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
 
         return $this->render('anonyme/index.html.twig', [
             'departement' => $departement,
-            'depalls'     => $repodepartements->findAll(),
+            'depalls'     => $repoDepartements->findAll(),
             'users' => $users,
+            'paginator' => $paginator
         ]);
     }
 
