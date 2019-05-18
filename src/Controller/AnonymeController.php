@@ -25,7 +25,7 @@ class AnonymeController extends AbstractController
         }
 
         $users = $departement->getUsers();
-        
+
         $depalls = $repoDepartements->findAll();
 
         $totalItems = 10;
@@ -59,10 +59,9 @@ class AnonymeController extends AbstractController
 
         $depalls = $repodepartements->findAll();
         return $this->render('anonyme/index.html.twig', [
-            'users'       => $departement ->getUsers(),
+            'users'       => $departement->getUsers(),
             'departement' => $departement,
             'depalls'     => $depalls,
         ]);
     }
-
 }
