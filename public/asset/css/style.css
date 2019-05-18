@@ -2,41 +2,81 @@
 @import "https://fonts.googleapis.com/css?family=Poppins:300,400,500,600,700";
 
 /* Définition d'un wrap à 1200 px sur le <header> et le <footer> */
+
 .wrap-w1200 {
     width: 100%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-body{
-    width:100%;
-    height: 100%;
+body {
+    width: 100%;
 }
 
+
 /* ****************************************** */
+
+
 /* ***************** HEADER ***************** */
+
+
 /* ****************************************** */
 
 header {
-    background-color: #228B22; /* par defaut les cotés du back-ground du header sont 'beige' */
+    background-color: #228B22;
+    /* par defaut les cotés du back-ground du header sont 'beige' */
     position: relative;
 }
 
 header .inscription {
-    float: right;
-    margin: 20px 15px 20px;
+    margin: 0 auto;
+    width: 100%;
+    text-align: center;
 }
 
-header .inscription ul li{
+header .topsite {
+    float: right;
+    width: 100%;
+}
+
+header .topsite.liens {
+    text-align: center;
+    width: 75%;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+header .topsite.liens ul li a {
+    width: 23%;
     float: left;
-    margin: 0 20px;
+    margin: 15px auto;
 }
-header .fa-user-plus{
-  padding-right: 10px;
+
+header .topsite.liens ul li a i {
+    width: 100%;
+    /*text-align: center;*/
+    /*float: left;*/
+    /*margin: 30px 10px 20px 50px;*/
 }
-header .fa-user{
- padding-right: 10px;
+
+header .topsite.liens ul li a i span {
+    width: 100%;
+    margin: 0 auto;
+    text-align: left;
 }
+
+header .topsite.titre {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+header .topsite.titre h1 {
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 2em;
+    color: #f7f7ca;
+    text-shadow: 3px 3px 0 black;
+}
+<<<<<<< HEAD
 header .fa-user-cog{
   padding-right: 10px;
 }
@@ -53,6 +93,15 @@ header .titre h1{
   color: darkorange;
   z-index: 1000;
   text-shadow: 3px 3px 0 black;
+=======
+
+header .fa-user-plus {
+    padding-right: 10px;
+}
+
+header .fa-user {
+    padding-right: 10px;
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 }
 
 header a {
@@ -62,18 +111,19 @@ header a {
     text-decoration: underline;
     text-underline-position: under;
 }
+
 header a:hover {
-  color: darkorange;
+    color: darkorange;
 }
-header .logo{
-    width: 20%;
+
+header .logo a img {
     position: absolute;
     z-index: 1000;
-    margin-top: -15px;
-
+    top: -4.5%;
+    left: 1%;
 }
 
-.flexslider-header .slides img{
+.flexslider-header .slides img {
     width: 100%;
     vertical-align: middle;
     position: relative;
@@ -81,10 +131,14 @@ header .logo{
 
 
 /* ****************************************** */
+
+
 /* ***************** INDEX ***************** */
+
+
 /* ****************************************** */
 
-#accueil{
+#accueil {
     margin: 0 auto;
     max-width: 1200px;
     position: relative;
@@ -93,53 +147,55 @@ header .logo{
     text-align: center;
 }
 
-#accueil img{
+#accueil img {
     width: 100%;
     height: 100%;
     z-index: 1;
     opacity: 0.7;
-
 }
 
-#accueil .search{
-    z-index: 1000;
-    position: absolute;
-    top: 8%;
-    left:10%;
-    width: 80%;
-    height: 95%;
+#accueil .search .navbar_principal .navbar {
+    display: none;
 }
+
+
 /* modal*/
-#accueil button.btn.btn-primary{
-  background-color: darkorange;
-  border-color: darkorange;
-  position: relative;
-  font-size: 1.5em;
-  font-family: 'Nunito', sans-serif;
 
+#accueil button.btn.btn-primary {
+    background-color: darkorange;
+    border-color: darkorange;
+    position: relative;
+    font-size: 1.5em;
+    font-family: 'Nunito', sans-serif;
 }
-#accueil button.btn.btn-primary:hover {
-  background-color: orange;
-  border-color: orange;
-  position: relative;
-  font-family: 'Nunito', sans-serif;
 
+#accueil button.btn.btn-primary:hover {
+    background-color: orange;
+    border-color: orange;
+    position: relative;
+    font-family: 'Nunito', sans-serif;
 }
 
 #accueil .visiteurs {
-  position: absolute;
-  top: 10%;
-  left:10%;
-  z-index: 1001;
-
+    position: absolute;
+    width: 5%;
+    top: 10%;
+    left: 10%;
+    z-index: 1001;
 }
-#accueil .producteur{
-  position: absolute;
-  top: 10%;
-  left:75%;
-  z-index: 1001;
 
+#accueil .producteur {
+    position: absolute;
+    width: 5%;
+    top: 10%;
+    left: 75%;
+    z-index: 1001;
 }
+
+#accueil .producteur button .btn {
+    width: 100%;
+}
+<<<<<<< HEAD
 #accueil .modal-body p{
   font-family:'Nunito', sans-serif;
   text-align: center;
@@ -163,67 +219,151 @@ header .logo{
   background-color: orange;
   border-color: orange;
 }
+=======
+
+#accueil .modal-body {
+    font-family: 'Nunito', sans-serif;
+    text-align: justify;
+}
+
+
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 /* CSS concernant la carte de France */
-.carte svg{
-    width: 62%;
+
+.carte {
+    width: 52%;
     height: 100%;
-    margin-top: 20px;
+    position: absolute;
+    top: 10%;
+    left: 20%;
+    z-index: 1000;
 }
 
 #map path {
-    fill:green;
-    stroke:#FFFFFF;
-    stroke-width:0.6;
+    fill: green;
+    stroke: #FFFFFF;
+    stroke-width: 0.6;
     transition: fill 0.2s, stroke 0.3s;
-
 }
+
 #map path:hover {
     fill: #FF8C00;
     stroke: #FF8C00;
 }
+
 #map .separator {
     stroke: #ccc;
     fill: none;
-    stroke-width:1.5;
+    stroke-width: 1.5;
 }
+
 #map .separator:hover {
     stroke: #ccc;
     fill: none;
 }
 
+<<<<<<< HEAD
 path{width: 100%;}
+=======
+path {
+    width: 100%;
+}
+
 
 /* ******************************************* */
-/* *************** LES SELECTIONS ************ */
+
+
+/***************** Producteur **************** */
+
+
 /* ******************************************* */
-#les_selections{
+
+section .lien {
+    width: 40%;
+    height: 200px;
+    float: left;
+    margin-top: 10%;
+    border-radius: 10px;
+    text-align: center;
+    border: dashed 1px black;
+}
+
+section .listing {
+    width: 40%;
+    height: 200px;
+    float: left;
+    font-family: 'Bowlby One', cursive;
+    margin-top: 12%;
+    border-radius: 10px;
+    border: dashed 1px black;
+    text-align: center;
+}
+
+section .lien a {
+    font-family: 'Nunito', sans-serif;
+    padding-top: 30%;
+}
+
+section .texte {
+    border-radius: 10px;
+    margin-top: -25%;
+    width: 50%;
+    float: right;
+    border: dashed 1px black;
+}
+
+section .texte p {
+    font-family: 'Bowlby One', cursive;
+    text-align: justify;
+}
+
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
+
+/* ******************************************* */
+
+
+/* *************** LES SELECTIONS ************ */
+
+
+/* ******************************************* */
+
+#les_selections {
     text-align: center;
     padding: 50px;
     width: 100%;
     position: relative;
     z-index: 100;
 }
-#les_selections .navbar1{
-    width: 50%;
+
+#les_selections .navbar1 {
+    width: 70%;
     background-color: lightgrey;
-    margin:0 auto;
+    margin: 0 auto;
     opacity: 0.8;
     padding: 5px 0;
     text-align: center;
 }
 
-#les_selections .navbar{
-    width: 60%;
-    margin: 5px auto;
+#les_selections .navbar1 nav {
+    width: 100%;
 }
 
-#les_selections h1{
+#les_selections .navbar1 form.form-inline {
+    width: 80%;
+    margin: 0 auto;
+}
+
+#les_selections .navbar1 form.form-inline select {
+    margin: 10px 20px;
+}
+
+#les_selections h1 {
     font-size: 30px;
     margin: 20px 0;
     text-transform: uppercase;
 }
 
-#les_selections .prod{
+#les_selections .prod {
     text-align: center;
     margin: 10px auto;
     color: white;
@@ -232,52 +372,37 @@ path{width: 100%;}
     padding: 10px;
 }
 
-#les_selections .prod .ident{
+#les_selections .prod .ident {
     font-size: 18px;
     font-weight: bolder;
 }
 
-#les_selections select{
-    margin: 0 20px;
-}
-
-#les_selections .image img{
-     width: 70%;
+#les_selections .image img {
+    width: 70%;
     opacity: 0.8;
     margin-top: 50px;
-}
-#les_selections .global{
-    float: left;
-}
-
-#les_selections .pagin ul{
-    text-align: center;
-    margin: 0 auto;
-    width: 10%;
-    float: right;
-    margin-right: 22%;
-}
-
-#les_selections .pagin ul li{
-    background-color: green;
-    margin: 0 auto;
-    color: white;
-    padding: 5px 15px;
-}
-
-#les_selections .pagin ul li a{
-    color: white;
 }
 
 
 /* ******************************* */
+
+
+<<<<<<< HEAD
+/* ******************************* */
 /***** register  ***/
+=======
+/*****css. formulaire register  ***/
+
+
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 /* ***************************** */
+
 .inscription {
-  font-family: 'Nunito', sans-serif;
-  font-weight: bold;
-  margin-top: 2%;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bold;
+    margin-top: 2%;
 }
+<<<<<<< HEAD
 .inscription h1 {
   text-align: center;
   margin-top: 20px;
@@ -285,13 +410,23 @@ path{width: 100%;}
   font-weight: bold;
   text-decoration: underline;
   text-underline-position: under;
+=======
+
+.inscription h1 {
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+    text-shadow: 2px 2px 0 black;
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 }
+
 .champs {
-  width: 30% ;
-  margin: 0 auto;
+    width: 30%;
+    margin: 0 auto;
 }
 
 button.btn1 {
+<<<<<<< HEAD
   background-color:#228B22;
   color: white;
   border-radius: 5px;
@@ -300,37 +435,81 @@ button.btn1 {
   border-color: #228B22;
   padding: 10px 20px 10px 20px;
   font-family: 'Nunito', sans-serif;
+=======
+    background-color: #228B22;
+    color: white;
+    border-radius: 5px;
+    margin-bottom: 10%;
+    margin-left: 60%;
+    border-color: #228B22;
+    padding: 10px 20px 10px 20px;
+    font-family: 'Nunito', sans-serif;
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 }
+
 button.btn1:hover {
-  background-color: darkorange;
-  border-color: darkorange;
+    background-color: darkorange;
+    border-color: darkorange;
 }
+<<<<<<< HEAD
 .form-check{
   margin-top: 4%;
   margin-left: -45%;
 }
 .form-group{
   width: 89%;
+=======
+
+.form-check {
+    margin-top: 2%;
+    margin-left: -50%;
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 }
+
+
 /* ******************************* */
+<<<<<<< HEAD
 /***** login ***/
+=======
+
+
+/*****css. login ***/
+
+
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 /* ***************************** */
+
 .container {
+<<<<<<< HEAD
   font-family: 'Nunito', sans-serif;
   margin-top: 2%;
   font-weight: bold;
   margin-bottom: 5%;
+=======
+    font-family: 'Nunito', sans-serif;
+    margin-top: 2%;
+    font-weight: bold;
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 }
+
 h2 {
+<<<<<<< HEAD
   text-align: center;
   margin-top: 20px;
   font-size: 1.5em;
   font-weight: bold;
   text-decoration: underline;
   text-underline-position: under;
+=======
+    text-align: center;
+    margin-top: 20px;
+    font-size: 1.5em;
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 }
+
 .col-md-6-2 a {
     width: 100%;
+<<<<<<< HEAD
     margin-top: -9%;
     margin-left: 70%;
     font-size: 0.7em;
@@ -343,26 +522,76 @@ h2 {
   width: 100%;
   margin-left: 48%;
   margin-top: -11%;
+=======
+    margin: 2% 2% 20% 50%;
 }
+
+.form-check.mb-2.mr-sm-2.mb-sm-0 {
+    margin-left: 50%;
+    margin-top: -25%;
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
+}
+
 button.btn.btn-success {
+<<<<<<< HEAD
 margin-left: 40%;
 box-shadow: 2px 2px 0px black;
 float:left;
+=======
+    margin-left: 50%;
+    box-shadow: 2px 2px 0px black;
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 }
 
-button.btn.btn-success:hover{
-  background-color: darkorange;
-  border-color: darkorange;
+button.btn.btn-success:hover {
+    background-color: darkorange;
+    border-color: darkorange;
 }
+<<<<<<< HEAD
+=======
+
+
+/********************************************* */
+
+
+/***************** Forgotten-password********* */
+
 
 /* ******************************************* */
+
+.contenu {
+    width: 70%;
+    margin-top: 5%;
+    margin-left: 15%;
+    ;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+}
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
+
+
+/* ******************************************* */
+
+
 /* *************** profil ******************** */
+
+
 /* ******************************************* */
+
 .progress-bar {
+<<<<<<< HEAD
   background-color: #228B22;
   color: darkorange;
   font-size: 1.5em;
+=======
+    background-color: #228B22;
+    color: darkorange;
+}
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 
+.contenu h1 {
+    font-size: 1.5em;
+    margin-left: 40%;
 }
 .progress{
   margin: 2% 0 2% 0;
@@ -395,6 +624,7 @@ button.btn.btn-success:hover{
   padding: 2%;
 }
 
+<<<<<<< HEAD
 /* ******************************************* */
 /* ********  forgotten password *********** */
 /* *******************************************  */
@@ -435,40 +665,83 @@ button.btn.btn-success:hover{
   margin-left: 15%; ;
   font-family: 'Nunito', sans-serif;
   font-weight: bolder;
+=======
+.contenu button {
+    margin: 5% 40% 5% 45%;
+    font-size: 1em;
+    color: white;
+    background-color: #228B22;
+    border-color: #228B22;
+    box-shadow: 2px 2px 0 black;
 }
+
+.contenu button:hover {
+    border-color: darkorange;
+    background-color: darkorange;
+}
+
+#inputEmail1 {
+    width: 50%;
+    margin-left: 25%;
+    margin-top: 5%;
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
+}
+
+
 /* ******************************************* */
+
+
 /* *************** FOOTER ******************** */
+
+
 /* ******************************************* */
 
 footer {
-    background-color: #228B22; /* par defaut les cotés du back-ground du footer sont 'beige' */
+    background-color: #228B22;
+    /* par defaut les cotés du back-ground du footer sont 'beige' */
     text-align: center;
     font-family: 'Nunito', sans-serif;
     color: white;
 
 }
+
 footer a {
-  color: white;
-  font-family: 'Nunito', sans-serif;
+    color: white;
+    font-family: 'Nunito', sans-serif;
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 /******* Bloc footer ******/
-.bigbox-footer{
+
+.bigbox-footer {
     width: 100%;
     padding-top: 3%;
 }
 
-.box-footer{
+.box-footer {
     float: left;
     width: 33.33%;
 }
+<<<<<<< HEAD
 footer h2{
   padding-bottom: 5%;
   text-decoration: underline;
   text-underline-position: under;
   text-shadow: 2px 2px 0 black;
+=======
+
+footer h2 {
+    padding-bottom: 5%;
+    text-shadow: 2px 2px 0 black;
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 }
+
+
 /****** modal *********/
+<<<<<<< HEAD
 footer .modalune{
   margin-top: 5%;
 }
@@ -501,16 +774,30 @@ footer ul li a{
 footer li a.partenaire {
   color: black;
   text-decoration: underline;
+=======
+
+footer .modaldeux {
+    margin-top: 5%;
+    margin-bottom: 5%;
 }
-button.btn.btn-primary{
-  background-color: #9ACD32;
-  border-color: #9ACD32;
-  color: white;
-  box-shadow: 2px 2px 0 black;
+
+footer .modal-content {
+    color: black;
+    text-align: justify;
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 }
-button.btn.btn-primary:hover{
-  background-color: darkorange;
+
+button.btn.btn-primary {
+    background-color: #9ACD32;
+    border-color: #9ACD32;
+    color: white;
+    box-shadow: 2px 2px 0 black;
 }
+
+button.btn.btn-primary:hover {
+    background-color: darkorange;
+}
+<<<<<<< HEAD
 footer button.btn.btn-secondary{
 background-color: darkorange;
 border-color: darkorange;
@@ -524,48 +811,69 @@ border-color: orange;
 }
 footer .adress{
   margin-top: 3%;
-}
-p.titre2{
-  text-shadow: 2px 2px 0 black;
+=======
+
+.box-footer.informations_legales p {
+    padding: 3px;
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 }
 
+p.titre2 {
+    text-shadow: 2px 2px 0 black;
+}
+
+
 /******* Favicon******/
-.fa-envelope-square{
-  text-shadow: 2px 2px 0 black;
+
+.fa-envelope-square {
+    text-shadow: 2px 2px 0 black;
 }
-.fa-phone-square{
-  text-shadow: 2px 2px 0 black;
+
+.fa-phone-square {
+    text-shadow: 2px 2px 0 black;
 }
-footer .fa-facebook-square{
-  font-size: 2em;
-  text-shadow: 2px 2px 0 black;
+
+footer .fa-facebook-square {
+    font-size: 2em;
+    text-shadow: 2px 2px 0 black;
 }
-footer .fa-facebook-square:hover{
-  color: darkorange;
+
+footer .fa-facebook-square:hover {
+    color: darkorange;
 }
+
 footer .fa-twitter-square {
-  font-size: 2em;
-  text-shadow: 2px 2px 0 black;
+    font-size: 2em;
+    text-shadow: 2px 2px 0 black;
 }
-footer .fa-twitter-square:hover{
-  color: darkorange;
+
+footer .fa-twitter-square:hover {
+    color: darkorange;
 }
-footer .fa-instagram{
-  font-size: 2em;
-  text-shadow: 2px 2px 0 black;
+
+footer .fa-instagram {
+    font-size: 2em;
+    text-shadow: 2px 2px 0 black;
 }
-footer .fa-instagram:hover{
-  color: darkorange;
+
+footer .fa-instagram:hover {
+    color: darkorange;
 }
-footer .fa-pinterest-square{
-  font-size: 2em;
-  text-shadow: 2px 2px 0 black;
+
+footer .fa-pinterest-square {
+    font-size: 2em;
+    text-shadow: 2px 2px 0 black;
 }
-footer .fa-pinterest-square:hover{
-  color: darkorange;
+
+footer .fa-pinterest-square:hover {
+    color: darkorange;
 }
+
+
 /****** bloc réseaux sociaux *******/
+
 footer .sociaux ul li {
+<<<<<<< HEAD
   width: 25%;
   float: left;
   margin-top: 5%;
@@ -579,10 +887,27 @@ footer .contact {
   padding-top: 25%;
   margin-left: 15px;
   text-shadow: 2px 2px 0 black;
+=======
+    width: 25%;
+    float: left;
 }
+
+footer .copyright {
+    margin-top: 20px;
+    margin-bottom: 20px;
+}
+
+footer .contact {
+    padding-top: 50px;
+    margin-left: 30px;
+    text-shadow: 2px 2px 0 black;
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
+}
+
 footer .fa-address-card {
-  padding-right: 10px;
+    padding-right: 10px;
 }
+<<<<<<< HEAD
 /*Logos partenaires  */
 .partenaires1 img{
   width: 95%;
@@ -619,62 +944,281 @@ img.poleemploi{
 img.departement{
   width: 90%;
 }
+=======
+
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 h2 {
-  font-weight: bold;
-  padding-bottom: 5px;
+    font-weight: bold;
+    padding-bottom: 5px;
 }
-p.copyright{
-  padding-top: 20px;
+
+.copyright {
+    margin: 10px auto;
+    width: 50%;
+    padding-top: 20px;
 }
+<<<<<<< HEAD
+=======
+
+.copyright nav ul li {
+    float: left;
+    width: 30%;
+}
+
+
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
 /* ******************************************* */
+
+
 /* *************** RESPONSIVE ******************** */
+
+
 /* ******************************************* */
 
-
-@media screen and (max-width: 768px) {
-    .carte{
-        width: 100%;
-        height: 100%;
+@media screen and (max-width: 950px) {
+    header .logo a img {
+        left: -1.5%;
     }
+    /*header .inscription{*/
+    /*margin: 0 auto;*/
+    /*margin-left: 2%;*/
+    /*}*/
+    /*header .topsite{*/
+    /*float: right;*/
+    header .topsite.liens {
+        width: 80%;
+        left: 20%;
+    }
+    header .topsite.liens ul {
+        width: 100%;
+        text-align: center;
+    }
+    header .topsite.liens ul li {
+        width: 28%;
+        float: left;
+        margin: 10px 5px;
+    }
+    header .topsite.titre {
+        width: 100%;
+        text-align: center;
+    }
+    /*header .titre h1{*/
+    /*width: 100%;*/
+    /*}*/
+    #les_selections .navbar1 {
+        width: 100%;
+    }
+    #les_selections .navbar1 nav select option {
+        width: 100%;
+    }
+    #les_selections .navbar1 nav select option {
+        width: 100%;
+    }
+}
 
-    .navbar{
+@media screen and (max-width: 850px) {
+    .carte {
+        width: 50%;
+        left: 25%;
+        top: 15%;
+    }
+    #accueil .search .navbar {
         display: none;
     }
-
-    .box-footer{
+    .box-footer {
         width: 100%;
         margin: 20px 0;
     }
-    header .inscription {
-        float: right;
-        margin: 2px 1px 2px;
+    /*header .inscription ul li a span{*/
+    /*display: none;*/
+    /*}*/
+    /*header img{*/
+    /*width: 100%;*/
+    /*float: left;*/
+    /*}*/
+    header .logo a img {
+        width: 20%;
+        left: -1%;
     }
+    #accueil .visiteurs {
+        position: absolute;
+        width: 5%;
+        top: 10%;
+        left: 5%;
+        z-index: 1001;
+    }
+    #accueil .producteur {
+        position: absolute;
+        width: 5%;
+        top: 10%;
+        left: 70%;
+        z-index: 1001;
+    }
+    /*header .topsite{*/
+    /*width: 50%;*/
+    /*}*/
+    /*header .liens ul{*/
+    /*!*width: 33%;*!*/
+    /*text-align: center;*/
+    /*}*/
+    /*header .liens ul li{*/
+    /*width: 33%;*/
+    /*float: left;*/
+    /*}*/
+    /*header .titre{*/
+    /*width: 100%;*/
+    /*}*/
+    /*header .titre h1{*/
+    /*width: 100%;*/
+    /*text-align: justify;*/
+    /*}*/
+    #les_selections {
+        text-align: center;
+        width: 80%;
+    }
+    #les_selections .navbar1 {
+        width: 100%;
+    }
+    #les_selections nav form {
+        width: 100%;
+        margin: 10px auto;
+    }
+    #les_selections nav form select {
+        width: 100%;
+        margin: 5px auto;
+        padding: 10px auto;
+    }
+    #les_selections nav form button {
+        width: 50%;
+        margin: 5px auto;
+    }
+}
 
-    header .inscription ul li{
+@media screen and (max-width: 768px) {
+    header .liens ul li span {
+        display: none;
+    }
+    header .liens ul {
+        padding: 0 5%;
+        width: 100%;
+    }
+    header .liens ul li {
+        width: 31%;
         float: left;
-        margin: 0 2px;
     }
-    header img{
-        width: 100px;
-        height: 100px;
-        float: left;
+    header .topsite.titre {
+        width: 60%;
+        /*font-size: 20px;*/
+        margin: 0 20% 2% 20%;
+        text-align: justify;
     }
-    header .titre{
-      width: 75%;
-      height: 35%;
-      /* margin-top: 2px; */
-      font-size: 1em;
+    header .logo a img {
+        width: 20%;
+    }
+    #les_selections {
+        width: 100%;
+    }
+    #les_selections .navbar1 nav form select {
+        width: 100%;
+        margin: 0 auto;
+    }
+    #les_selections .navbar1 nav button {
+        width: 50%;
+        margin: 50px auto;
+    }
+}
 
+@media screen and (max-width: 568px) {
+    header .liens ul {
+        margin: 0 auto;
+        width: 100%;
+        text-align: justify;
     }
-
+    header.titre {
+        width: 100%;
+    }
+    header .titre h1 {
+        width: 100%;
+        font-size: 20px;
+        margin-left: 20%;
+        text-align: justify;
+    }
+    #accueil {
+        position: relative;
+        z-index: 1;
+    }
+    #accueil .visiteurs {
+        position: absolute;
+        width: 100%;
+        top: 10%;
+        left: 5%;
+        z-index: 1001;
+    }
+    #accueil .producteur {
+        position: absolute;
+        width: 100%;
+        top: 40%;
+        left: 5%;
+        z-index: 1001;
+    }
+    #accueil img {
+        position: relative;
+        z-index: 1;
+    }
+    #accueil .search .carte {
+        display: none;
+    }
+    #accueil .search .navbar_principal .navbar {
+        display: block;
+        position: absolute;
+        z-index: 1001;
+        width: 100%;
+        top: 70%;
+        background-color: lightgrey;
+    }
+    #accueil .search .navbar_principal button {
+        margin: 0 auto;
+        width: 50%;
+    }
+    #accueil .search .navbar_principal select {
+        width: 80%;
+        margin: 0 auto;
+    }
+    header .logo {
+        width: 30%;
+        top: -6.5%;
+        left: -2%;
+    }
+    .flexslider-header {
+        display: none;
+    }
+    #les_selections nav form button.btn {
+        width: 50%;
+        margin: 10px auto;
+    }
 }
 
 @media screen and (max-width: 375px) {
-    .search{
-        width: 60%;
-        top: -15%;
+    header .liens {
+        width: 95%;
+        margin-left: 5%;
     }
-    header .logo{
-        width: 5%;
+    header .liens ul li {
+        width: 31%;
+        /*float: left;*/
+    }
+    header .liens ul li a i {
+        /*margin-left: 5%;*/
+        width: 100%;
+        float: left;
+    }
+    header .titre h1 {
+        margin: 0 -5%;
+        width: 80%;
+        font-size: 18px;
+        text-align: justify;
+    }
+    #les_selections .navbar1 .navbar form .form-inline button {
+        width: 100%;
     }
 }

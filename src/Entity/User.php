@@ -7,6 +7,7 @@ use Doctrine\Common\Collections\Collection;
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Bridge\Doctrine\Validator\Constraints\UniqueEntity;
 use Symfony\Component\Security\Core\User\UserInterface;
+use Symfony\Component\Validator\Constraints as Assert;
 
 
 
@@ -23,15 +24,18 @@ class User implements UserInterface
      */
     private $id;
 
+
     /**
      * @ORM\Column(type="string", length=180, unique=true)
      */
     private $email;
 
+
     /**
      * @ORM\Column(type="json")
      */
     private $roles = [];
+
 
     /**
      * @var string The hashed password
@@ -39,40 +43,72 @@ class User implements UserInterface
      */
     private $password;
 
+
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $token;
 
+
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 50,
+     *      minMessage = "Votre nom doit contenir au moins {{ limit }} caractères",
+     *      maxMessage = "Votre nom ne doit pas contenir plus de {{ limit }} caractères"
+     * )
      */
     private $lastname;
 
+
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 50,
+     *      minMessage = "Votre prénom doit contenir au moins {{ limit }} caractères",
+     *      maxMessage = "Votre prénom ne doit pas contenir plus de {{ limit }} caractères"
+     * )
      */
     private $firstname;
 
+
     /**
-     * @ORM\Column(type="string", length=14, nullable=true)
+     * @ORM\Column(type="integer", length=14, nullable=true)
      */
     private $siret;
 
+
     /**
      * @ORM\Column(type="string", length=10, nullable=true)
+     * @Assert\Length(
+     *      min = 10,
+     *      max = 10,
+     *      minMessage = "Votre telephone doit contenir au moins {{ limit }} chiffres",
+     *      maxMessage = "Votre telephone ne doit pas contenir plus de {{ limit }} chiffres"
+     * )
      */
     private $phone;
 
+
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 80,
+     *      minMessage = "Votre prénom doit contenir au moins {{ limit }} caractères",
+     *      maxMessage = "Votre prénom ne doit pas contenir plus de {{ limit }} caractères"
+     * )
      */
     private $adress;
+
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $horaire;
+
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -84,20 +120,36 @@ class User implements UserInterface
      */
     private $site;
 
+
     /**
-     * @ORM\Column(type="string", length=5, nullable=true)
+     * @ORM\Column(type="integer", length=5, nullable=true)
+     * @Assert\Length(
+     *      min = 5,
+     *      max = 5,
+     *      minMessage = "Votre code postal doit contenir au moins {{ limit }} chiffres",
+     *      maxMessage = "Votre code postal ne doit pas contenir plus de {{ limit }} chiffres"
+     * )
      */
     private $cp;
 
+
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *      min = 1,
+     *      max = 80,
+     *      minMessage = "Votre ville doit contenir au moins {{ limit }} caractères",
+     *      maxMessage = "Votre ville ne doit pas contenir plus de {{ limit }} caractères"
+     * )
      */
     private $ville;
+
 
     /**
      * @ORM\ManyToOne(targetEntity="App\Entity\Departements", inversedBy="users")
      */
     private $dep_id;
+
 
     /**
      * @ORM\ManyToMany(targetEntity="App\Entity\Category", inversedBy="users")
@@ -241,7 +293,7 @@ class User implements UserInterface
         return $this->phone;
     }
 
-    public function setPhone(?int $phone): self
+    public function setPhone(?string $phone): self
     {
         $this->phone = $phone;
 

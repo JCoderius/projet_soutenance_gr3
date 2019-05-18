@@ -5,6 +5,7 @@
 {% block body %}
 
     <section id="accueil">
+<<<<<<< HEAD
        <div class="visiteurs">
         <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
           Consommateurs
@@ -26,18 +27,48 @@
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
               </div>
+=======
+
+        <img src="{{ asset('asset/img/champs.jpg') }}" alt="">
+
+        <div class="visiteurs">
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter">
+                Consommateurs
+            </button>
+        </div>
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter" tabindex="-1" role="dialog"
+             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+            <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Consommateurs</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        Sélectionnez votre département sur la carte pour retrouver les producteurs, les fermes et les
+                        produits locaux proches de chez vous.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+                </div>
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
             </div>
-          </div>
         </div>
 
         <div class="producteur">
-          <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter2">
-            Producteurs
-          </button>
+            <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter2">
+                Producteurs
+            </button>
         </div>
-          <!-- Modal -->
-          <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+        <!-- Modal -->
+        <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+             aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
             <div class="modal-dialog modal-dialog-centered" role="document">
+<<<<<<< HEAD
               <div class="modal-content">
                 <div class="modal-header">
                   <h5 class="modal-title" id="exampleModalLongTitle">Producteurs</h5>
@@ -50,16 +81,46 @@
                   Pour cela il vous suffit de compléter l'inscription.<br>
                   <a href="{{ path('app_register') }}"><i class="fas fa-user-plus"></i>Inscription</a></br><br>
                   Vos données ne seront pas utilisées à des fins commerciales.</p>
+=======
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h5 class="modal-title" id="exampleModalLongTitle">Producteurs</h5>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        En vous inscrivant sur notre site vous gagnerez en visibilité et ainsi accroître votre
+                        développement locale grâce à notre service entiérement gratuit.
+                        Pour cela il vous suffit de compléter l'inscription.
+                        <a href="{{ path('app_register') }}"><i class="fas fa-user-plus"></i>Inscription</a></br>
+                        Vos données ne seront pas utilisé à des fins commerciales.
+                    </div>
+                    <div class="modal-footer">
+                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                    </div>
+>>>>>>> bc763ad3589d8b0c10a46150b23abc899b872e2c
                 </div>
-                <div class="modal-footer">
-                  <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                </div>
-              </div>
             </div>
-          </div>
+        </div>
 
-          <img src="asset/img/champs.jpg" alt="">
-          <div class="search">
+        <div class="search">
+            <div class="navbar_principal">
+                <nav class="navbar navbar-light bg-light">
+                    <form class="form-inline" action="{{ path('anonyme2') }}">
+
+                        <select name="departement" id="profil_dep_id">
+                            <option value="">Departements</option>
+                            {% for depall in depalls %}
+
+                                <option value="{{ depall.numero }}">{{ depall.numero }} - {{ depall.nom }}</option>
+                            {% endfor %}
+                        </select>
+
+                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+                    </form>
+                </nav>
+            </div>
 
             {#////////////////////////////////////////////////////////////////////////////////////////////#}
             {#/////   CARTE DE FRANCE #}
@@ -71,9 +132,9 @@
 
                     <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
                     <defs></defs>
-                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch:type="MSPage">
-                        <g id="france" sketch:type="MSLayerGroup" transform="translate(0.000000, 1.000000)">
-                            <g id="complete_map" sketch:type="MSShapeGroup">
+                    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd" sketch=type="MSPage">
+                        <g id="france" sketch=type="MSLayerGroup" transform="translate(0.000000, 1.000000)">
+                            <g id="complete_map" sketch=type="MSShapeGroup">
                                 <path class="separator" d="M424,541.25 L424,471 L488.25,429"
                                       id="corsica_separating_line"></path>
                                 </a>
@@ -466,7 +527,10 @@
                     </g>
                 </svg>
             </div>
+
+
         </div>
+
     </section>
     <div class="clear"></div>
 

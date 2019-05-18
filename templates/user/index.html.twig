@@ -57,7 +57,9 @@
         </tbody>
     </table>
 
-    {{ paginator|raw }}
+    <div class="pagin">
+        {{ paginator|raw }}
+    </div>
 
     <!-- <a href="{{ path('user_new') }}">Create new</a> -->
 {% endblock %}

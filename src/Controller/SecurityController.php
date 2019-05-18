@@ -24,7 +24,10 @@ class SecurityController extends AbstractController
         // last username entered by the user
         $lastUsername = $authenticationUtils->getLastUsername();
 
-        return $this->render('security/login.html.twig', ['last_username' => $lastUsername, 'error' => $error]);
+        return $this->render('security/login.html.twig', [
+            'last_username' => $lastUsername,
+            'error' => $error,
+            ]);
     }
 
     /**
@@ -105,6 +108,8 @@ class SecurityController extends AbstractController
             $this->addFlash('notice', 'Mot de passe mis à jour');
             return $this->redirectToRoute('defaut');
         }
-        return $this->render('security/reset_password.html.twig', ['token' => $token]);
+        return $this->render('security/reset_password.html.twig', [
+            'token' => $token,
+            ]);
     }
 }
