@@ -33,13 +33,13 @@ class UserType extends AbstractType
             ])
             ->add('siret')
             ->add('phone', TextType::class, [
-                'label' =>'Tél',
+                'label' =>'Téléphone',
             ])
             ->add('adress', TextType::class, [
                 'label' =>'Adresse',
             ])
             ->add('cp', TextType::class, [
-                'label' =>'CP',
+                'label' =>'Code Postal',
             ])
             ->add('ville', TextType::class, [
                 'label' =>'Ville',
@@ -47,7 +47,9 @@ class UserType extends AbstractType
             ->add('horaire', TextType::class, [
                 'label' =>'Horaires',
             ])
+
             // ->add('category')
+
             ->add('site', TextType::class, [
                 'label' =>'Site',
             ])
