@@ -37,22 +37,30 @@ header .fa-user-plus{
 header .fa-user{
  padding-right: 10px;
 }
+header .fa-user-cog{
+  padding-right: 10px;
+}
+header .fa-user-slash{
+  padding-right: 10px;
+
+}
 header .titre h1{
   position: absolute;
-  margin-top: -9.75%;
-  padding-left: 20%;
+  margin-top: -10%;
+  margin-left: 28%;
   font-family: 'Luckiest Guy', cursive;
-  font-size: 2em;
-  color: #f7f7ca;
+  font-size: 4em;
+  color: darkorange;
   z-index: 1000;
   text-shadow: 3px 3px 0 black;
 }
 
 header a {
-    text-decoration: none;
     font-size: 1.2em;
     color: white;
     font-family: 'Nunito', sans-serif;
+    text-decoration: underline;
+    text-underline-position: under;
 }
 header a:hover {
   color: darkorange;
@@ -68,6 +76,7 @@ header .logo{
 .flexslider-header .slides img{
     width: 100%;
     vertical-align: middle;
+    position: relative;
 }
 
 
@@ -131,11 +140,29 @@ header .logo{
   z-index: 1001;
 
 }
-#accueil .modal-body{
+#accueil .modal-body p{
   font-family:'Nunito', sans-serif;
-  text-align: justify;
+  text-align: center;
 }
-
+#accueil .modal-body a{
+  color: black;
+  text-decoration: underline;
+}
+#accueil .modal-header h5{
+  margin-left: 32.5%;
+  font-size: 1.5em;
+  font-family:'Nunito', sans-serif;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+#accueil button.btn.btn-secondary {
+  background-color: darkorange;
+  border-color: darkorange;
+}
+#accueil button.btn.btn-secondary:hover{
+  background-color: orange;
+  border-color: orange;
+}
 /* CSS concernant la carte de France */
 .carte svg{
     width: 62%;
@@ -165,44 +192,7 @@ header .logo{
 }
 
 path{width: 100%;}
-/* ******************************************* */
-/***************** Producteur **************** */
-/* ******************************************* */
-section .lien{
-  width: 40%;
-  height: 200px;
-  float: left;
-  margin-top: 10%;
-  border-radius: 10px;
-  text-align: center;
-  border: dashed 1px black;
-}
 
-section .listing{
-  width: 40%;
-  height: 200px;
-  float: left;
-  font-family: 'Bowlby One', cursive;
-  margin-top: 12%;
-  border-radius: 10px;
-    border: dashed 1px black;
-  text-align: center;
-}
-section .lien a{
-font-family: 'Nunito', sans-serif;
-padding-top: 30%;
-}
-section .texte {
-  border-radius: 10px;
-  margin-top: -25%;
-  width: 50%;
-  float: right;
-  border: dashed 1px black;
-}
-section .texte p{
-  font-family: 'Bowlby One', cursive;
-  text-align: justify;
-}
 /* ******************************************* */
 /* *************** LES SELECTIONS ************ */
 /* ******************************************* */
@@ -281,7 +271,7 @@ section .texte p{
 
 
 /* ******************************* */
-/*****css. formulaire register  ***/
+/***** register  ***/
 /* ***************************** */
 .inscription {
   font-family: 'Nunito', sans-serif;
@@ -292,8 +282,9 @@ section .texte p{
   text-align: center;
   margin-top: 20px;
   font-size: 1.5em;
-  text-shadow: 2px 2px 0 black;
-
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 .champs {
   width: 30% ;
@@ -304,7 +295,7 @@ button.btn1 {
   background-color:#228B22;
   color: white;
   border-radius: 5px;
-  margin-bottom: 10%;
+  margin-bottom: 5%;
   margin-left: 60%;
   border-color: #228B22;
   padding: 10px 20px 10px 20px;
@@ -315,50 +306,53 @@ button.btn1:hover {
   border-color: darkorange;
 }
 .form-check{
-  margin-top: 2%;
-  margin-left: -50%;
+  margin-top: 4%;
+  margin-left: -45%;
+}
+.form-group{
+  width: 89%;
 }
 /* ******************************* */
-/*****css. login ***/
+/***** login ***/
 /* ***************************** */
 .container {
   font-family: 'Nunito', sans-serif;
   margin-top: 2%;
   font-weight: bold;
+  margin-bottom: 5%;
 }
 h2 {
   text-align: center;
-    margin-top: 20px;
-    font-size: 1.5em;
-
+  margin-top: 20px;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: underline;
+  text-underline-position: under;
 }
 .col-md-6-2 a {
     width: 100%;
-    margin: 2% 2% 20% 50%;
-
+    margin-top: -9%;
+    margin-left: 70%;
+    font-size: 0.7em;
+    text-decoration: underline;
+    text-underline-position: under;
+    float: left;
 }
+
 .form-check.mb-2.mr-sm-2.mb-sm-0 {
-  margin-left: 50%;
-  margin-top: -25%;
+  width: 100%;
+  margin-left: 48%;
+  margin-top: -11%;
 }
 button.btn.btn-success {
-margin-left: 50%;
+margin-left: 40%;
 box-shadow: 2px 2px 0px black;
+float:left;
 }
 
 button.btn.btn-success:hover{
   background-color: darkorange;
   border-color: darkorange;
-}
-/********************************************* */
-/***************** Forgotten-password********* */
-/* ******************************************* */
-.contenu {
-  width: 70%;
-  margin-top: 5%;
-  margin-left: 15%; ;
-  font-family: 'Nunito', sans-serif;
-  font-weight: bolder;
 }
 
 /* ******************************************* */
@@ -367,15 +361,63 @@ button.btn.btn-success:hover{
 .progress-bar {
   background-color: #228B22;
   color: darkorange;
-}
-.contenu h1{
   font-size: 1.5em;
-  margin-left: 40%;
 
 }
+.progress{
+  margin: 2% 0 2% 0;
+  box-shadow: 2px 2px 0 black;
+}
+.stat p{
+  font-style: italic;
+  font-size: 0.9em;
+  text-align: center;
+}
+.profil {
+  width: 50%;
+  float: left;
+  line-height: 140%;
+}
+.formulaire {
+  width: 50%;
+  float: left;
+}
+.profil h1{
+  font-size: 1.5em;
+  text-align: center;
+  padding-bottom: 5%;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+.explication {
+  font-family: 'Nunito', sans-serif;
+  text-align: justify;
+  padding: 2%;
+}
 
+/* ******************************************* */
+/* ********  forgotten password *********** */
+/* *******************************************  */
+.contenu h1.h3.mb-3.font-weight {
+  margin-left: 35%;
+  font-size: 1.5em;
+  text-decoration: underline;
+  text-underline-position: under;
+  font-weight: bold;
+}
+.email{
+  width: 10%;
+  float: left;
+  padding-top: 2.5%;
+  padding-left: 21%;
+}
+#inputEmail1 {
+  width: 50%;
+  margin-left: 26.5%;
+  margin-top: 5%;
+}
 .contenu button{
-  margin: 5% 40% 5% 45%;
+  margin: 5% 40% 10% 42.5%;
   font-size: 1em;
   color: white;
   background-color: #228B22;
@@ -385,11 +427,14 @@ button.btn.btn-success:hover{
 .contenu button:hover{
   border-color: darkorange;
   background-color: darkorange;
+  color: white;
 }
-#inputEmail1 {
-  width: 50%;
-  margin-left: 25%;
+.contenu {
+  width: 70%;
   margin-top: 5%;
+  margin-left: 15%; ;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bolder;
 }
 /* ******************************************* */
 /* *************** FOOTER ******************** */
@@ -400,36 +445,62 @@ footer {
     text-align: center;
     font-family: 'Nunito', sans-serif;
     color: white;
+
 }
 footer a {
   color: white;
   font-family: 'Nunito', sans-serif;
 }
+
 /******* Bloc footer ******/
 .bigbox-footer{
     width: 100%;
     padding-top: 3%;
-
 }
 
 .box-footer{
     float: left;
     width: 33.33%;
-
 }
 footer h2{
   padding-bottom: 5%;
+  text-decoration: underline;
+  text-underline-position: under;
   text-shadow: 2px 2px 0 black;
 }
 /****** modal *********/
-footer .modaldeux{
+footer .modalune{
   margin-top: 5%;
+}
+footer .modaldeux{
+  margin-top: 10%;
   margin-bottom: 5%;
-
 }
 footer .modal-content{
   color: black;
-  text-align: justify;
+}
+footer .modal-header h5 {
+  margin-left: 30%;
+  font-size: 1.5em;
+  text-decoration: underline;
+  text-underline-position: under;
+}
+footer .modal-body h6 {
+  font-size: 1.1em;
+  font-family: 'Nunito', sans-serif;
+  line-height: 140%;
+  text-align: center;
+  padding-bottom: 2%;
+}
+
+footer ul li a{
+  font-family: 'Nunito', sans-serif;
+  line-height: 140%;
+  text-align: center;
+}
+footer li a.partenaire {
+  color: black;
+  text-decoration: underline;
 }
 button.btn.btn-primary{
   background-color: #9ACD32;
@@ -440,8 +511,19 @@ button.btn.btn-primary{
 button.btn.btn-primary:hover{
   background-color: darkorange;
 }
+footer button.btn.btn-secondary{
+background-color: darkorange;
+border-color: darkorange;
+}
+footer button.btn.btn-secondary:hover{
+background-color: orange;
+border-color: orange;
+}
 .box-footer.informations_legales p{
-  padding: 3px;
+  padding-top: 3px;
+}
+footer .adress{
+  margin-top: 3%;
 }
 p.titre2{
   text-shadow: 2px 2px 0 black;
@@ -486,19 +568,56 @@ footer .fa-pinterest-square:hover{
 footer .sociaux ul li {
   width: 25%;
   float: left;
+  margin-top: 5%;
 }
 footer .copyright{
   margin-top: 20px;
-  margin-bottom: 20px;
+  padding-bottom: 13%;
 }
 
 footer .contact {
-  padding-top: 50px;
-  margin-left: 30px;
+  padding-top: 25%;
+  margin-left: 15px;
   text-shadow: 2px 2px 0 black;
 }
 footer .fa-address-card {
   padding-right: 10px;
+}
+/*Logos partenaires  */
+.partenaires1 img{
+  width: 95%;
+}
+.partenaires1 ul{
+  width: 100%;
+  margin-left: 3%;
+}
+.partenaires1 ul li{
+  width: 33.3%;
+  float: left;
+  padding-top: 5%;
+  padding-left: 2%;
+}
+.partenaires2 img{
+  width: 100%;
+}
+.partenaires2 ul {
+  width: 100%;
+  margin-left: 5%;
+
+}
+.partenaires2 ul li {
+  width: 33.3%;
+  float: left;
+  padding-top: 10%;
+  padding-left: 8%;
+}
+img.poleemploi{
+  width: 80%;
+  margin-top: -15%;
+
+}
+img.departement{
+  width: 90%;
 }
 h2 {
   font-weight: bold;
@@ -507,9 +626,6 @@ h2 {
 p.copyright{
   padding-top: 20px;
 }
-
-
-
 /* ******************************************* */
 /* *************** RESPONSIVE ******************** */
 /* ******************************************* */

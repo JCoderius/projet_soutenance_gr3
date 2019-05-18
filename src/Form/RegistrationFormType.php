@@ -24,7 +24,7 @@ class RegistrationFormType extends AbstractType
                   'invalid_message' => 'Les deux champs mot de passe doivent être identique.',
                   'options' => ['attr' => ['class' => 'password-field']],
                   'required' => true,
-                  'first_options'  => ['label' => 'Mot de passse'],
+                  'first_options'  => ['label' => 'Mot de passe'],
                   'second_options' => ['label' => 'Confirmez votre mot de passe'],
                 'error_bubbling'  => false,
                   'constraints' => [
