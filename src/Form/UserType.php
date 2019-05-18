@@ -44,15 +44,15 @@ class UserType extends AbstractType
             ->add('ville', TextType::class, [
                 'label' =>'Ville',
             ])
-            ->add('horaire', TextType::class, [
-                'label' =>'Horaires',
-            ])
+            // ->add('horaire', TextType::class, [
+            //     'label' =>'Horaires',
+            // ])
 
             // ->add('category')
 
-            ->add('site', TextType::class, [
-                'label' =>'Site',
-            ])
+            // ->add('site', TextType::class, [
+            //     'label' =>'Site',
+            // ])
         ;
     }
 
