@@ -1,170 +1,252 @@
 <!DOCTYPE html>
 <html>
-<head>
-    <meta charset="UTF-8">
-    <title>{% block title %}Front Office{% endblock %}</title>
-    <!-- Bootstrap  -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <!-- fontawesome  -->
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.0/css/all.css">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- Le STYLE.CSS -->
-    <link rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
+    <head>
+        <meta charset="UTF-8">
+        <title>
+            {% block title %}Front Office
+            {% endblock %}
+        </title>
+        <!-- Bootstrap  -->
+        <link
+        crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+        <!-- fontawesome  -->
+        <link href="https://use.fontawesome.com/releases/v5.8.0/css/all.css" rel="stylesheet">
+        <link crossorigin="anonymous" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Nunito" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Baloo+Bhaijaan" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Luckiest+Guy" rel="stylesheet">
+        <meta
+        content="width=device-width, initial-scale=1.0" name="viewport">
+        <!-- Le STYLE.CSS -->
+        <link
+        rel="stylesheet" href="{{ asset('asset/css/style.css') }}">
 
-    <!-- Font Awesome JS -->
-    {% block stylesheets %}{% endblock %}
-</head>
-<body>
-<header>
-    <div class="wrap-w1200 wrap-header">
+        <!-- Font Awesome JS -->
+        {% block stylesheets %}{% endblock %}
+    </head>
+    <body>
+        <header>
+            <div class="wrap-w1200 wrap-header">
 
-        <div class="logo">
-            <a href="{{ path('defaut') }}"><img src="{{ asset('asset/img/logoprojet.png') }}"/></a>
-        </div>
-        <div class="clear"></div>
+                <div class="inscription">
 
-
-        <div class="inscription">
-            <ul>
-                {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                    <li><a href="{{ path('app_register') }}"><i class="fas fa-user-plus"></i>Inscription</a></li>
-                    <li><a href="{{ path('app_login') }}"><i class="fas fa-user"></i>Connexion</a></li>
-                {% else %}
-                    {% if is_granted('ROLE_ADMIN') %}
-                        <li><a href="{{ path('admin') }}"><i class="fas fa-user-cog"></i>Administration</a></li>
-                    {% endif %}
-                    <li><a href="{{ path('app_logout') }}"><i class="fas fa-user-slash"></i>Deconnexion</a></li>
-                    <li><a href="{{ path('profil') }}"><i class="fas fa-user-slash"></i>Profil</a></li>
-                {% endif %}
-            </ul>
-        </div>
-        <div class="clear"></div>
-
-        <div class="flexslider-header">
-            <ul class="slides">
-                <li>
-                    <img src="{{ asset('asset/img/background1.jpg') }}" />
-                </li>
-                <li>
-                    <img src="{{ asset('asset/img/background2.jpg') }}" />
-                </li>
-                <li>
-                    <img src="{{ asset('asset/img/background3.jpg') }}" />
-                </li>
-            </ul>
-        </div>
-        <div class="titre">
-            <h1>Trouves ta ferme</h1>
-       </div>
-    </div> <!-- end wrap-w1200 wrap-header-->
-    <div class="clear"></div>
-</header>
-{% block body %}{% endblock %}
-<footer>
-    <div class="wrap-w1200 wrap-footer">
-        <div class="bigbox-footer">
-            <div class="box-footer a_propos_de_nous">
-                <h2>A PROPOS DE NOUS</h2>
-                <div class="modalune">
-                <!-- Modal qui sommes nous -->
-                <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter3">
-                  Qui sommes nous
-                </button>
-              </div>
-                  <!-- Modal -->
-                  <div class="modal fade" id="exampleModalCenter3" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                  <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                      <div class="modal-header">
-                        <h5 class="modal-title" id="exampleModalLongTitle">Qui sommes nous</h5>
-                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                          <span aria-hidden="true">&times;</span>
-                        </button>
-                      </div>
-                      <div class="modal-body">
-                        Notre finalité en tant qu'association est né d'un projet commun lors de notre formation de développeur/codeur web, de la théorie nous sommes passés à une réalité largement augmentée.</br></br>
-                        Motivés par une idée lancée, nous avons construit un site à notre image : simple, conviviale, accessible à tous.
-                        A travers notre site, nous souhaitons reconnecter l'urbain au rural et ainsi perpétuer la transmission des savoirs qui se perdent dans le temps.</br></br>
-                        L'ère du digitale absorbe tout, l'innovation est en marche ...maintenant place à la révolution dans nos assiettes !
-                      </div>
-                      <div class="modal-footer">
-                        <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
-                      </div>
+                    <div class="topsite titre">
+                        <h1>Trouves ta ferme</h1>
                     </div>
-                  </div>
+
+                    <div class="topsite liens">
+                        <ul>
+                            {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                                <li>
+                                    <a href="{{ path('app_register') }}">
+                                        <i class="fas fa-user-plus"></i>
+                                        <span>Inscription</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="">
+                                        <span></span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('app_login') }}">
+                                        <i class="fas fa-user"></i>
+                                        <span>Connexion</span>
+                                    </a>
+                                </li>
+                            {% else %}
+                                <li>
+                                    <a href="{{ path('admin') }}">
+                                        <i class="fas fa-user-cog"></i>
+                                        <span>Administration</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('app_logout') }}">
+                                        <i class="fas fa-user-slash"></i>
+                                        <span>Deconnexion</span>
+                                    </a>
+                                </li>
+                                <li>
+                                    <a href="{{ path('profil') }}">
+                                        <i class="fas fa-user-slash"></i>
+                                        <span>Profil</span>
+                                    </a>
+                                </li>
+                            {% endif %}
+                        </ul>
+                    </div>
+
                 </div>
+                <div class="clear"></div>
 
-                <div class="modaldeux">
-                  <!-- Modal Nos partenaires -->
-                  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter4">
-                    Nos partenaires
-                  </button>
+                {#################################### FLEXSLIDER #############################################}
 
-                  <!-- Modal -->
-                  <div class="modal fade" id="exampleModalCenter4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
-                    <div class="modal-dialog modal-dialog-centered" role="document">
-                      <div class="modal-content">
+                <div class="flexslider-header">
+                    <ul class="slides">
+                        <li>
+                            <img src="{{ asset('asset/img/background1.jpg') }}"/>
+                        </li>
+                        <li>
+                            <img src="{{ asset('asset/img/background2.jpg') }}"/>
+                        </li>
+                        <li>
+                            <img src="{{ asset('asset/img/background3.jpg') }}"/>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <!-- end wrap-w1200 wrap-header-->
+            <div class="clear"></div>
+
+            {####################################### LOGO ###################################################}
+
+            <div class="logo">
+                <a href="{{ path('defaut') }}"><img src="{{ asset('asset/img/logoprojet.png') }}"/></a>
+
+                <div class="clear"></div>
+            </div>
+        </header>
+        {% block body %}{% endblock %}
+        <footer>
+            <div class="wrap-w1200 wrap-footer">
+                <div class="bigbox-footer">
+                    <div class="box-footer a_propos_de_nous">
+                        <h2>A PROPOS DE NOUS</h2>
+                        <div
+                            class="modalune">
+                            <!-- Modal qui sommes nous -->
+                            <button class="btn btn-primary" data-target="#exampleModalCenter3" data-toggle="modal" type="button">
+                                Qui sommes nous
+                            </button>
+                        </div>
+                        <!-- Modal -->
+                        <div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="exampleModalCenter3" role="dialog" tabindex="-1">
+                            <div class="modal-dialog modal-dialog-centered" role="document">
+                                <div class="modal-content">
+                                    <div class="modal-header">
+                                        <h5 class="modal-title" id="exampleModalLongTitle">Qui sommes nous</h5>
+                                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                            <span aria-hidden="true">&times;</span>
+                                        </button>
+                                    </div>
+                                    <div class="modal-body">
+                                        Notre finalité en tant qu'association est né d'un projet commun lors de notre formation
+                                                                        de développeur/codeur web, de la théorie nous sommes passés à une réalité largement
+                                                                        augmentée.</br>
+                                </br>
+                                Motivés par une idée lancée, nous avons construit un site à notre image : simple,
+                                                                conviviale, accessible à tous.
+                                                                A travers notre site, nous souhaitons reconnecter l'urbain au rural et ainsi perpétuer
+                                                                la transmission des savoirs qui se perdent dans le temps.</br>
+                        </br>
+                        L'ère du digitale absorbe tout, l'innovation est en marche ...maintenant place à la
+                                                        révolution dans nos assiettes !
+                    </div>
+                    <div class="modal-footer">
+                        <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div
+            class="modaldeux">
+            <!-- Modal Nos partenaires -->
+            <button class="btn btn-primary" data-target="#exampleModalCenter4" data-toggle="modal" type="button">
+                Nos partenaires
+            </button>
+
+            <!-- Modal -->
+            <div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="exampleModalCenter4" role="dialog" tabindex="-1">
+                <div class="modal-dialog modal-dialog-centered" role="document">
+                    <div class="modal-content">
                         <div class="modal-header">
-                          <h5 class="modal-title" id="exampleModalLongTitle">Nos partenaires</h5>
-                          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
-                            <span aria-hidden="true">&times;</span>
-                          </button>
+                            <h5 class="modal-title" id="exampleModalLongTitle">Nos partenaires</h5>
+                            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                <span aria-hidden="true">&times;</span>
+                            </button>
                         </div>
                         <div class="modal-body">
-                          Nous sommes en partenariat avec :
-                          <ul>
-                            <li>weblitzer<a href="http://www.weblitzer.fr"></a>weblitzer</li>
-                            <li><a href="#"></a>Gamepad</li>
-                            <li><a href="#"></a>Bandtogether</li>
-                          </ul>
+                            Nous sommes en partenariat avec :
+                            <ul>
+                                <li>weblitzer<a href="http://www.weblitzer.fr"></a>weblitzer</li>
+                                <li>
+                                    <a href="#"></a>Gamepad</li>
+                                <li>
+                                    <a href="#"></a>Bandtogether</li>
+                            </ul>
                         </div>
-                      </div>
                     </div>
-                  </div>
                 </div>
             </div>
-
-            <div class="box-footer informations_legales">
-                <h2>MENTIONS LEGALES</h2>
-                <p class="titre2">Trouves ta ferme</p>
-                <p><i class="fas fa-envelope-square"></i> 13, rue de Pont Audemer</p>
-                <p>27 260 Épaignes</p>
-                <p><i class="fas fa-phone-square"></i> 02.32.33.34.35</p>
-                <p>Hébergeur : OVH</p>
-                <p class="copyright"><i class="far fa-copyright"></i> Copyright 2019</p>
-            </div>
-            <div class="box-footer sociaux">
-                <h2>RETROUVEZ-NOUS</h2>
-                <ul>
-                    <li><a href="https://www.facebook.com/trouve.ferme.7"><i class="fab fa-facebook-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-twitter-square"></i></a></li>
-                    <li><a href="#"><i class="fab fa-instagram"></i></a></li>
-                    <li><a href="#"><i class="fab fa-pinterest-square"></i></a></li>
-                </ul>
-                <div class="contact">
-                    <p><i class="fas fa-address-card"></i>trouvestaferme@gmail.com</p>
-                </div>
-
-
-        </div> <!-- end bigbox-footer -->
+        </div>
     </div>
+
+    <div class="box-footer informations_legales">
+        <h2>INFORMATIONS</h2>
+        <p class="titre2">Trouves ta ferme</p>
+        <p>
+            <i class="fas fa-envelope-square"></i>
+            13, rue de Pont Audemer</p>
+        <p>27 260 Épaignes</p>
+        <p>
+            <i class="fas fa-phone-square"></i>
+            02.32.33.34.35</p>
+        <p>Hébergeur : OVH</p>
+    </div>
+    <div class="box-footer sociaux">
+        <h2>RETROUVEZ-NOUS</h2>
+        <ul>
+            <li>
+                <a href="https://www.facebook.com/trouve.ferme.7">
+                    <i class="fab fa-facebook-square"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-twitter-square"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-instagram"></i>
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <i class="fab fa-pinterest-square"></i>
+                </a>
+            </li>
+        </ul>
+        <div class="contact">
+            <p>
+                <i class="fas fa-address-card"></i>
+                <a href="mailto:trouvestaferme@gmail.com">trouvestaferme@gmail.com</a>
+            </p>
+        </div>
+
+    </div>
+    <!-- end bigbox-footer -->
     <div class="clear"></div>
 
-    <!-- end wrap-w1200 wrap-footer -->
-</footer>
-<!-- jQuery CDN - Slim version (=without AJAX) -->
-<script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-<!-- Bootstrap min -->
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" crossorigin="anonymous"></script>
 
-<!-- flexslider -->
-<script src="{{ asset('asset/flexslider/jquery.flexslider.js') }}"></script>
-<!-- main.js -->
-<script src="{{ asset('asset/js/main.js') }}"></script>
-{% block javascripts %}{% endblock %}
-</body>
-</html>
+</div>
+<div class="copyright">
+    <nav>
+        <ul>
+            <li>
+                <p>
+                    <i class="far fa-copyright"></i>
+                    Copyright 2019</p>
+            </li>
+            <li>
+                -
+            </li>
+            <li>
+                <a href="{{ path('mentions') }}">Mentions légales</a>
+            </li>
+        </ul>
+    </nav>
+</div>
+<div class="clear"></div></div><!-- end wrap-w1200 wrap-footer --></footer><!-- jQuery CDN - Slim version (=without AJAX) --><script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><!-- Bootstrap min --><script crossorigin="anonymous" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script><!-- flexslider --><script src="{{ asset('asset/flexslider/jquery.flexslider.js') }}"></script><!-- main.js --><script src="{{ asset('asset/js/main.js') }}"></script>{% block javascripts %}{% endblock %}</body></html>
