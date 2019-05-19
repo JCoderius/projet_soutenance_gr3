@@ -75,13 +75,19 @@ class User implements UserInterface
 
 
     /**
-     * @ORM\Column(type="integer", length=14, nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *      min = 14,
+     *      max = 14,
+     *      minMessage = "Votre prénom doit contenir au moins {{ limit }} caractères",
+     *      maxMessage = "Votre prénom ne doit pas contenir plus de {{ limit }} caractères"
+     * )
      */
     private $siret;
 
 
     /**
-     * @ORM\Column(type="string", length=10, nullable=true)
+     * @ORM\Column(type="string", length=255, nullable=true)
      * @Assert\Length(
      *      min = 10,
      *      max = 10,
@@ -281,7 +287,7 @@ class User implements UserInterface
         return $this->siret;
     }
 
-    public function setSiret(?int $siret): self
+    public function setSiret(?string $siret): self
     {
         $this->siret = $siret;
 
