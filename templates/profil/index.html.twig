@@ -5,20 +5,35 @@
 {% block body %}
     <div class="container">
         <div class="row">
-            <div class="col-sm">
-                <h1>Mon Profil</h1>
+            <div class="profil">
+                <div class="col-sm">
+                    <h1>Mon Profil</h1>
 
-                {{ user.email }}
-                
-              <div class="progress">
-                <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><p> {{ stats }} %</p></div>
-              </div>
-                <p>vous avez remplit votre profil a hauteur de {{ stats }} %.</p>
+                    {{ user.email }}
+
+                  <div class="progress">
+                      <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><p> {{ stats }} %</p></div>
+                  </div>
+                  <div class="stat">
+                      <p>Vous avez remplit votre profil a hauteur de {{ stats }} %.</p>
+                  </div>
+                </div>
+                <div class="explication">
+                    <p>
+                      Ce formulaire n'a pas pour vocation de servir à des tiers dans un but commerciale.
+                      Parce que nous sommes soucieux de la sécurité de notre site, et que nous souhaitons une totale transparence pour les consommateurs.<br><br>
+                      Nous vous invitons à renseigner le champs : votre numéro de siret qui permet d'autocomplèter ce formulaire.
+                      La barre de progression, vous indique le status de votre profil pour être visible, compléter le formulaire à 100% afin d'apparaître sur notre site.<br><br>
+                      Nous vous remercions de la confiance que vous nous accordez.
+
+                      <!-- Message flash : N'oubliez pas de compléter tous les champs du formulaire! -->
+                    </p>
+                </div>
             </div>
-            <div class="col-sm">
-
-
-                {{ form(form) }}
+            <div class ="formulaire">
+                <div class="col-sm">
+                    {{ form(form) }}
+                </div>
             </div>
         </div>
     </div>
