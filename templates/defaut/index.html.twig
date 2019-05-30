@@ -1,10 +1,14 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Trouves ta ferme{% endblock %}
+{% block title %}Trouves ta ferme
+{% endblock %}
 
 {% block body %}
 
     <section id="accueil">
+
+        <img src="{{ asset('asset/img/champs.jpg') }}" alt="">
+
         <div class="visiteurs">
             <button class="btn btn-primary" data-target="#exampleModalCenter" data-toggle="modal" type="button">
                 Consommateurs
@@ -21,7 +25,8 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>Sélectionnez votre département sur la carte pour retrouver les producteurs, les fermes et les produits locaux proches de chez vous.</p>
+                        Sélectionnez votre département sur la carte pour retrouver les producteurs, les fermes et les
+                                                produits locaux proches de chez vous.
                     </div>
                     <div class="modal-footer">
                         <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
@@ -46,50 +51,53 @@
                         </button>
                     </div>
                     <div class="modal-body">
-                        <p>
-                            L'inscription sur notre site, vous fera gagner en visbilité et accroître votre développement locale, grâce à notre service entiérement gratuit.<br><br>
-                            Pour cela il vous suffit de compléter l'inscription.<br>
-                                <a href="{{ path('app_register') }}">
-                                    <i class="fas fa-user-plus"></i>Inscription</a>
-                            </br><br>
-                            Vos données ne seront pas utilisées à des fins commerciales.</p>
-                    </div>
+                        En vous inscrivant sur notre site vous gagnerez en visibilité et ainsi accroître votre
+                                                développement locale grâce à notre service entiérement gratuit.
+                                                Pour cela il vous suffit de compléter l'inscription.
+                        <a href="{{ path('app_register') }}">
+                            <i class="fas fa-user-plus"></i>Inscription</a>
+                    </br>
+                    Vos données ne seront pas utilisé à des fins commerciales.
+                </div>
+                <div class="modal-footer">
+                    <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
                 </div>
             </div>
         </div>
-        <div class="search">
-            <div class="navbar_principal">
-                <nav class="navbar navbar-light bg-light">
-                    <form class="form-inline" action="{{ path('anonyme2') }}">
+    </div>
 
-                        <select id="profil_dep_id" name="departement">
-                            <option value="">Departements</option>
-                            {% for depall in depalls %}
+    <div class="search">
+        <div class="navbar_principal">
+            <nav class="navbar navbar-light bg-light">
+                <form class="form-inline" action="{{ path('anonyme2') }}">
 
-                                <option value="{{ depall.numero }}">{{ depall.numero }}
-                                    -
-                                    {{ depall.nom }}</option>
-                            {% endfor %}
-                        </select>
+                    <select id="profil_dep_id" name="departement">
+                        <option value="">Departements</option>
+                        {% for depall in depalls %}
 
-                        <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
-                    </form>
-                </nav>
-            </div>
+                            <option value="{{ depall.numero }}">{{ depall.numero }}
+                                -
+                                {{ depall.nom }}</option>
+                        {% endfor %}
+                    </select>
+
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Rechercher</button>
+                </form>
+            </nav>
         </div>
 
         {#////////////////////////////////////////////////////////////////////////////////////////////#}
         {#/////   CARTE DE FRANCE #}
         {#////////////////////////////////////////////////////////////////////////////////////////////#}
 
-        <div class="carte" encoding="UTF-8" standalone="no" version="1.0" xml> 
+            <div class="carte"> <? xml version = "1.0" encoding = "UTF-8" standalone = "no"?>
             <svg id="map" version="1.1" viewbox="0 0 492 543">
 
-            <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
-                <g fill-rule="evenodd" fill="none" id="Page-1" mspage"" sketch="type=" stroke-width="1" stroke="none">
-                    <g id="france" mslayergroup"" sketch="type=" transform="translate(0.000000, 1.000000)">
-                        <g id="complete_map" msshapegroup"" sketch="type=">
-                        <a>
+                <description>Created with Sketch (http://www.bohemiancoding.com/sketch)</description>
+                <defs></defs>
+                <g fill-rule="evenodd" fill="none" id="Page-1" sketch="type="MSPage"" stroke-width="1" stroke="none">
+                    <g id="france" sketch="type="MSLayerGroup"" transform="translate(0.000000, 1.000000)">
+                        <g id="complete_map" sketch="type="MSShapeGroup"">
                             <path class="separator" d="M424,541.25 L424,471 L488.25,429" id="corsica_separating_line"></path>
                         </a>
                         <a href="{{ path('anonyme',{'dep': 20}) }}">
@@ -475,14 +483,13 @@
                         <a href="{{ path('anonyme',{'dep': 90}) }}">
                             <title>TERRITOIRE-DE-BELFORT</title>
                             <path d="M443.4375,182.03125 L441.625,182.96875 L440.09375,184.09375 L440.09375,186.59375 L440.9375,189.5625 L440.9375,191.5 L440.46875,194.625 L439.40625,195.71875 L451.4375,201.15625 L452.1875,200.28125 L454.78125,199.875 L453.8125,195.71875 L453.21875,193.5625 L450.46875,193.96875 L450.09375,191.625 L451.0625,189.84375 L451.25,187.5 L450.6875,186.15625 L447.15625,183.40625 L444.03125,183.21875 L443.4375,182.03125 L443.4375,182.03125 L443.4375,182.03125 L443.4375,182.03125 Z M443.4375,182.03125" data-num="90"></path>
-                        </a></g>
+                        </a>
                     </g>
                 </g>
-            </svg>
-</div>
-<div class="clear"></div>
-
-    </section>
+            </g>
+        </svg>
+    </div>
 
 
-{% endblock %}
+</div></section><div class="clear"></div>{% endblock %}
+
