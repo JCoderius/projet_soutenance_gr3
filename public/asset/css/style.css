@@ -13,43 +13,58 @@ body {
     width: 100%;
 }
 
+
 /* ****************************************** */
+
+
 /* ***************** HEADER ***************** */
+
+
 /* ****************************************** */
+
 header {
-    background-color: #228B22;/* par defaut les cotés du back-ground du header sont 'beige' */
+    background-color: #228B22;
+    /* par defaut les cotés du back-ground du header sont 'beige' */
     position: relative;
 }
+
 header .inscription {
     float: right;
     margin: 20px 15px 20px;
 }
-header .inscription ul li{
+
+header .inscription ul li {
     float: left;
     margin: 0 20px;
 }
+
 header .fa-user-plus {
     padding-right: 10px;
 }
+
 header .fa-user {
     padding-right: 10px;
 }
-header .fa-user-cog{
-  padding-right: 10px;
+
+header .fa-user-cog {
+    padding-right: 10px;
 }
-header .fa-user-slash{
-  padding-right: 10px;
+
+header .fa-user-slash {
+    padding-right: 10px;
 }
-header .titre h1{
-  position: absolute;
-  top: 46%;
-  left: 35%;
-  font-family: 'Luckiest Guy', cursive;
-  font-size: 4em;
-  color: darkorange;
-  z-index: 1000;
-  text-shadow: 3px 3px 0 black;
+
+header .titre h1 {
+    position: absolute;
+    top: 46%;
+    left: 35%;
+    font-family: 'Luckiest Guy', cursive;
+    font-size: 320%;
+    color: darkorange;
+    z-index: 1000;
+    text-shadow: 3px 3px 0 black;
 }
+
 header a {
     text-decoration: none;
     font-size: 1.2em;
@@ -57,19 +72,23 @@ header a {
     font-family: 'Nunito', sans-serif;
     text-underline-position: under;
 }
+
 header a:hover {
     color: darkorange;
 }
+
 header .logo a img {
     position: absolute;
     z-index: 1000;
     top: -4.5%;
-    left: 18%;
+    left: 5%;
 }
+
 .flexslider-header .slides img {
     width: 100%;
     vertical-align: middle;
 }
+
 header button.btn.btn-primary {
     background-color: darkorange;
     border-color: darkorange;
@@ -87,34 +106,43 @@ header button.btn.btn-primary:hover {
     font-family: 'Nunito', sans-serif;
 }
 
-
 header .modal-header h5 {
-  text-align: center;
-  font-family: 'Nunito', sans-serif;
-  font-size: 1.2em;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    font-size: 1.2em;
 }
-header .modal-body {
-  text-align: center;
-  line-height: 20px;
-  font-family: 'Nunito', sans-serif;
-}
-header .modal-body a{
-  color: black;
-  padding-top: 4%;
-  padding-bottom: 4%;
 
+header .modal-body {
+    text-align: center;
+    line-height: 20px;
+    font-family: 'Nunito', sans-serif;
 }
+
+header .modal-body a {
+    color: black;
+    padding-top: 4%;
+    padding-bottom: 4%;
+}
+
 header .modal-body a:hover {
-  color: darkorange;
+    color: darkorange;
 }
+
 header .modal-footer button {
-  background-color: orange;
+    background-color: orange;
 }
+
 header .modal-footer button:hover {
-  background-color: darkorange;
+    background-color: darkorange;
 }
+
+
 /* ****************************************** */
+
+
 /* ***************** INDEX ***************** */
+
+
 /* ****************************************** */
 
 #accueil {
@@ -137,20 +165,25 @@ header .modal-footer button:hover {
     display: none;
 }
 
+
 /*Explication page accueil*/
-.explication  {
-  position: absolute;
-  font-family: 'Nunito', sans-serif;
-  font-weight: bolder;
-  margin-top: -64%;
-  margin-left: 10%;
-  z-index: 1001;
-}
-.explication{
-  font-weight: bolder;
+
+.explication {
+    position: absolute;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+    margin-top: -64%;
+    margin-left: 10%;
+    z-index: 1001;
 }
 
+.explication {
+    font-weight: bolder;
+}
+
+
 /* CSS concernant la carte de France */
+
 .carte {
     width: 52%;
     height: 100%;
@@ -186,8 +219,14 @@ header .modal-footer button:hover {
 path {
     width: 100%;
 }
+
+
 /* ******************************************* */
+
+
 /***************** Producteur **************** */
+
+
 /* ******************************************* */
 
 section .lien {
@@ -229,8 +268,13 @@ section .texte p {
     text-align: justify;
 }
 
+
 /* ******************************************* */
+
+
 /* *************** LES SELECTIONS ************ */
+
+
 /* ******************************************* */
 
 #les_selections {
@@ -291,7 +335,11 @@ section .texte p {
 
 
 /* ******************************* */
+
+
 /*****register***/
+
+
 /* ***************************** */
 
 .inscription {
@@ -331,22 +379,31 @@ button.btn1:hover {
     margin-top: 2%;
     margin-left: -50%;
 }
-.row2{
-  margin-top: -2%;
-  margin-left: 24.5%;
-}
-#registration_form_email {
-  width: 245%;
-}
-#registration_form_password_first {
-  width: 245%;
-}
-#registration_form_password_second {
-  width: 235%;
+
+.row2 {
+    margin-top: -2%;
+    margin-left: 24.5%;
 }
 
+#registration_form_email {
+    width: 245%;
+}
+
+#registration_form_password_first {
+    width: 245%;
+}
+
+#registration_form_password_second {
+    width: 235%;
+}
+
+
 /* ******************************* */
+
+
 /*****css. login ***/
+
+
 /* ***************************** */
 
 .container {
@@ -380,338 +437,419 @@ button.btn.btn-success:hover {
     background-color: darkorange;
     border-color: darkorange;
 }
+
+
 /* .input-group-addon i{
     padding-top: 25%;
 }
 .form-group.has-danger {
   padding-top: 5%;
 } */
+
 .col-md-3.field-label-responsive label {
-  margin-top: 2%;
+    margin-top: 2%;
 }
 
+
 /* ******************************************* */
+
+
 /* ********  forgotten password *********** */
-/* *******************************************  */
-.contenu h1.h3.mb-3.font-weight {
-  text-align: center;
-  font-size: 1.5em;
-  text-decoration: underline;
-  text-underline-position: under;
-  font-weight: bold;
-}
-.email{
-  width: 10%;
-  float: left;
-  padding-top: 2.5%;
-  padding-left: 21%;
-}
-#inputEmail1 {
-  width: 50%;
-  float: left;
-  margin-top: 2%;
-  margin-left: 3%;
-}
-.contenu button{
-  margin: 4% 40% 10% 47%;
-  font-size: 1em;
-  color: white;
-  background-color: #228B22;
-  border-color: #228B22;
-  box-shadow: 2px 2px 0 black;
-}
-.contenu button:hover{
-  border-color: darkorange;
-  background-color: darkorange;
-  color: white;
-}
-.contenu {
-  width: 70%;
-  margin-top: 5%;
-  margin-left: 15%; ;
-  font-family: 'Nunito', sans-serif;
-  font-weight: bolder;
-}
-.icon {
- width: 100%;
- margin-left: 2%;
 
+
+/* *******************************************  */
+
+.contenu h1.h3.mb-3.font-weight {
+    text-align: center;
+    font-size: 1.5em;
+    text-decoration: underline;
+    text-underline-position: under;
+    font-weight: bold;
 }
-.icon i{
-  width: 10%;
-  float: left;
-  padding-top: 3%;
-  padding-left: 20%;
+
+.email {
+    width: 10%;
+    float: left;
+    padding-top: 2.5%;
+    padding-left: 21%;
 }
+
+#inputEmail1 {
+    width: 50%;
+    float: left;
+    margin-top: 2%;
+    margin-left: 3%;
+}
+
+.contenu button {
+    margin: 4% 40% 10% 47%;
+    font-size: 1em;
+    color: white;
+    background-color: #228B22;
+    border-color: #228B22;
+    box-shadow: 2px 2px 0 black;
+}
+
+.contenu button:hover {
+    border-color: darkorange;
+    background-color: darkorange;
+    color: white;
+}
+
+.contenu {
+    width: 70%;
+    margin-top: 5%;
+    margin-left: 15%;
+    ;
+    font-family: 'Nunito', sans-serif;
+    font-weight: bolder;
+}
+
+.icon {
+    width: 100%;
+    margin-left: 2%;
+}
+
+.icon i {
+    width: 10%;
+    float: left;
+    padding-top: 3%;
+    padding-left: 20%;
+}
+
 
 /* ******************************************* */
+
+
 /* *************** profil ******************** */
+
+
 /* ******************************************* */
 
 .progress-bar {
-  background-color: #228B22;
-  color: darkorange;
-  font-size: 1.5em;
+    background-color: #228B22;
+    color: darkorange;
+    font-size: 1.5em;
+}
 
+.progress {
+    margin: 2% 0 2% 0;
+    box-shadow: 2px 2px 0 black;
 }
-.progress{
-  margin: 2% 0 2% 0;
-  box-shadow: 2px 2px 0 black;
+
+.stat p {
+    font-style: italic;
+    font-size: 0.9em;
+    text-align: center;
 }
-.stat p{
-  font-style: italic;
-  font-size: 0.9em;
-  text-align: center;
-}
+
 .profil {
-  width: 50%;
-  float: left;
-  line-height: 140%;
+    width: 50%;
+    float: left;
+    line-height: 140%;
 }
+
 .formulaire {
-  width: 50%;
-  float: left;
+    width: 50%;
+    float: left;
 }
-.profil h1{
-  font-size: 1.5em;
-  text-align: center;
-  padding-bottom: 5%;
-  text-decoration: underline;
-  text-underline-position: under;
+
+.profil h1 {
+    font-size: 1.5em;
+    text-align: center;
+    padding-bottom: 5%;
+    text-decoration: underline;
+    text-underline-position: under;
 }
+
 .texte p {
-  font-family: 'Nunito', sans-serif;
-  text-align: justify;
-  padding: 2%;
+    font-family: 'Nunito', sans-serif;
+    text-align: justify;
+    padding: 2%;
 }
+
 
 /* ******************************************* */
+
+
 /* *************** FOOTER ******************** */
+
+
 /* ******************************************* */
 
 footer {
-    background-color: #228B22; /* par defaut les cotés du back-ground du footer sont 'beige' */
+    background-color: #228B22;
+    /* par defaut les cotés du back-ground du footer sont 'beige' */
     text-align: center;
     font-family: 'Nunito', sans-serif;
     color: white;
     margin-top: -0.2%;
+}
 
-}
 footer a {
-  color: white;
-  font-family: 'Nunito', sans-serif;
+    color: white;
+    font-family: 'Nunito', sans-serif;
 }
+
 
 /******* Bloc footer ******/
-.bigbox-footer{
+
+.bigbox-footer {
     width: 100%;
     padding-top: 3%;
 }
 
-.box-footer{
+.box-footer {
     float: left;
     width: 33.33%;
 }
-footer h2{
-  padding-bottom: 5%;
-  text-decoration: underline;
-  text-underline-position: under;
-  text-shadow: 2px 2px 0 black;
-}
-/****** modal *********/
-footer .modalune{
-  margin-top: 5%;
-}
-footer .modaldeux{
-  margin-top: 10%;
-  margin-bottom: 5%;
-}
-footer .modal-content{
-  color: black;
-}
-footer .modal-header h5 {
-  margin-left: 30%;
-  font-size: 1.5em;
-  text-decoration: underline;
-  text-underline-position: under;
-}
-footer .modal-body h6 {
-  font-size: 1.1em;
-  font-family: 'Nunito', sans-serif;
-  line-height: 140%;
-  text-align: center;
-  padding-bottom: 2%;
+
+footer h2 {
+    padding-bottom: 5%;
+    text-decoration: underline;
+    text-underline-position: under;
+    text-shadow: 2px 2px 0 black;
 }
 
-footer ul li a{
-  font-family: 'Nunito', sans-serif;
-  line-height: 140%;
-  text-align: center;
+
+/****** modal *********/
+
+footer .modalune {
+    margin-top: 5%;
 }
+
+footer .modaldeux {
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+footer .modal-content {
+    color: black;
+}
+
+footer .modal-header h5 {
+    margin-left: 30%;
+    font-size: 1.5em;
+    text-decoration: underline;
+    text-underline-position: under;
+}
+
+footer .modal-body h6 {
+    font-size: 1.1em;
+    font-family: 'Nunito', sans-serif;
+    line-height: 140%;
+    text-align: center;
+    padding-bottom: 2%;
+}
+
+footer ul li a {
+    font-family: 'Nunito', sans-serif;
+    line-height: 140%;
+    text-align: center;
+}
+
 footer li a.partenaire {
-  color: black;
-  text-decoration: underline;
+    color: black;
+    text-decoration: underline;
 }
-button.btn.btn-primary{
-  background-color: #9ACD32;
-  border-color: #9ACD32;
-  color: white;
-  box-shadow: 2px 2px 0 black;
+
+button.btn.btn-primary {
+    background-color: #9ACD32;
+    border-color: #9ACD32;
+    color: white;
+    box-shadow: 2px 2px 0 black;
 }
-button.btn.btn-primary:hover{
-  background-color: darkorange;
+
+button.btn.btn-primary:hover {
+    background-color: darkorange;
 }
-footer button.btn.btn-secondary{
-background-color: darkorange;
-border-color: darkorange;
+
+footer button.btn.btn-secondary {
+    background-color: darkorange;
+    border-color: darkorange;
 }
-footer button.btn.btn-secondary:hover{
-background-color: orange;
-border-color: orange;
+
+footer button.btn.btn-secondary:hover {
+    background-color: orange;
+    border-color: orange;
 }
-.box-footer.informations_legales p{
-  padding-top: 3px;
+
+.box-footer.informations_legales p {
+    padding-top: 3px;
 }
-footer .adress{
-  margin-top: 5%;
-  line-height: 20px;
+
+footer .adress {
+    margin-top: 5%;
+    line-height: 20px;
 }
-footer .mentions{
-  padding-top: 10%;
+
+footer .mentions {
+    padding-top: 10%;
 }
-footer .mentions a:hover{
-  color: orange;
+
+footer .mentions a:hover {
+    color: orange;
 }
-p.titre2{
-  text-shadow: 2px 2px 0 black;
+
+p.titre2 {
+    text-shadow: 2px 2px 0 black;
 }
+
 
 /******* Favicon******/
-.fa-envelope-square{
-  text-shadow: 2px 2px 0 black;
+
+.fa-envelope-square {
+    text-shadow: 2px 2px 0 black;
 }
-.fa-phone-square{
-  margin-right: 2%;
-  text-shadow: 2px 2px 0 black;
+
+.fa-phone-square {
+    margin-right: 2%;
+    text-shadow: 2px 2px 0 black;
 }
-footer .fa-facebook-square{
-  font-size: 2em;
-  text-shadow: 2px 2px 0 black;
+
+footer .fa-facebook-square {
+    font-size: 2em;
+    text-shadow: 2px 2px 0 black;
 }
-footer .fa-facebook-square:hover{
-  color: darkorange;
+
+footer .fa-facebook-square:hover {
+    color: darkorange;
 }
+
 footer .fa-twitter-square {
-  font-size: 2em;
-  text-shadow: 2px 2px 0 black;
+    font-size: 2em;
+    text-shadow: 2px 2px 0 black;
 }
-footer .fa-twitter-square:hover{
-  color: darkorange;
+
+footer .fa-twitter-square:hover {
+    color: darkorange;
 }
-footer .fa-instagram{
-  font-size: 2em;
-  text-shadow: 2px 2px 0 black;
+
+footer .fa-instagram {
+    font-size: 2em;
+    text-shadow: 2px 2px 0 black;
 }
-footer .fa-instagram:hover{
-  color: darkorange;
+
+footer .fa-instagram:hover {
+    color: darkorange;
 }
-footer .fa-pinterest-square{
-  font-size: 2em;
-  text-shadow: 2px 2px 0 black;
+
+footer .fa-pinterest-square {
+    font-size: 2em;
+    text-shadow: 2px 2px 0 black;
 }
-footer .fa-pinterest-square:hover{
-  color: darkorange;
+
+footer .fa-pinterest-square:hover {
+    color: darkorange;
 }
+
+
 /****** bloc réseaux sociaux *******/
+
 footer .sociaux ul li {
-  width: 25%;
-  float: left;
-  margin-top: 5%;
+    width: 25%;
+    float: left;
+    margin-top: 5%;
 }
-footer .copyright{
-  margin-top: 20px;
-  padding-bottom: 3%;
+
+footer .copyright {
+    margin-top: 20px;
+    padding-bottom: 3%;
 }
 
 footer .contact {
-  padding-top: 25%;
-  margin-left: 15px;
-  text-shadow: 2px 2px 0 black;
+    padding-top: 25%;
+    margin-left: 15px;
+    text-shadow: 2px 2px 0 black;
 }
-footer .contact a:hover{
-  color: orange;
+
+footer .contact a:hover {
+    color: orange;
 }
+
 footer .fa-address-card {
-  padding-right: 2%;
+    padding-right: 2%;
 }
+
 footer .partenaire {
-  text-decoration: none;
+    text-decoration: none;
 }
-footer .partenaire a{
-  color: black;
-  text-decoration: underline;
+
+footer .partenaire a {
+    color: black;
+    text-decoration: underline;
 }
-footer .partenaire a:hover{
-  color: orange;
+
+footer .partenaire a:hover {
+    color: orange;
 }
+
+
 /*Logos partenaires  */
-.partenaires1 img{
-  width: 95%;
+
+.partenaires1 img {
+    width: 95%;
 }
-.partenaires1 ul{
-  width: 100%;
-  margin-left: 3%;
+
+.partenaires1 ul {
+    width: 100%;
+    margin-left: 3%;
 }
-.partenaires1 ul li{
-  width: 33.3%;
-  float: left;
-  padding-top: 5%;
-  padding-left: 2%;
+
+.partenaires1 ul li {
+    width: 33.3%;
+    float: left;
+    padding-top: 5%;
+    padding-left: 2%;
 }
-.partenaires2 img{
-  width: 100%;
+
+.partenaires2 img {
+    width: 100%;
 }
+
 .partenaires2 ul {
-  width: 100%;
-  margin-left: 5%;
-
+    width: 100%;
+    margin-left: 5%;
 }
+
 .partenaires2 ul li {
-  width: 33.3%;
-  float: left;
-  padding-top: 10%;
-  padding-left: 8%;
+    width: 33.3%;
+    float: left;
+    padding-top: 10%;
+    padding-left: 8%;
 }
-img.poleemploi{
-  width: 80%;
-  margin-top: -15%;
 
+img.poleemploi {
+    width: 80%;
+    margin-top: -15%;
 }
-img.departement{
-  width: 90%;
+
+img.departement {
+    width: 90%;
 }
+
 h2 {
-  font-weight: bold;
-  padding-bottom: 5px;
+    font-weight: bold;
+    padding-bottom: 5px;
 }
-p.copyright{
-  padding-top: 20px;
+
+p.copyright {
+    padding-top: 20px;
 }
+
 
 /* ******************************************* */
+
+
 /* *************** RESPONSIVE ******************** */
+
+
 /* ******************************************* */
 
 @media screen and (max-width: 950px) {
     header .logo a img {
         left: -1.5%;
     }
-    /*header .inscription{*/
-    /*margin: 0 auto;*/
-    /*margin-left: 2%;*/
-    /*}*/
-    /*header .topsite{*/
-    /*float: right;*/
     header .topsite.liens {
         width: 80%;
         left: 20%;
@@ -729,9 +867,6 @@ p.copyright{
         width: 100%;
         text-align: center;
     }
-    /*header .titre h1{*/
-    /*width: 100%;*/
-    /*}*/
     #les_selections .navbar1 {
         width: 100%;
     }
@@ -749,6 +884,14 @@ p.copyright{
         left: 25%;
         top: 15%;
     }
+    header div.inscription {
+      margin-left: 17%;
+    }
+    header div.inscription ul li.producteur{
+      width: 80%;
+      margin: 2% auto;
+      text-align: center;
+    }
     #accueil .search .navbar {
         display: none;
     }
@@ -756,13 +899,6 @@ p.copyright{
         width: 100%;
         margin: 20px 0;
     }
-    /*header .inscription ul li a span{*/
-    /*display: none;*/
-    /*}*/
-    /*header img{*/
-    /*width: 100%;*/
-    /*float: left;*/
-    /*}*/
     header .logo a img {
         width: 20%;
         left: -1%;
@@ -781,24 +917,6 @@ p.copyright{
         left: 70%;
         z-index: 1001;
     }
-    /*header .topsite{*/
-    /*width: 50%;*/
-    /*}*/
-    /*header .liens ul{*/
-    /*!*width: 33%;*!*/
-    /*text-align: center;*/
-    /*}*/
-    /*header .liens ul li{*/
-    /*width: 33%;*/
-    /*float: left;*/
-    /*}*/
-    /*header .titre{*/
-    /*width: 100%;*/
-    /*}*/
-    /*header .titre h1{*/
-    /*width: 100%;*/
-    /*text-align: justify;*/
-    /*}*/
     #les_selections {
         text-align: center;
         width: 80%;
@@ -833,14 +951,26 @@ p.copyright{
         width: 31%;
         float: left;
     }
-    header .topsite.titre {
-        width: 60%;
-        /*font-size: 20px;*/
-        margin: 0 20% 2% 20%;
-        text-align: justify;
+    header .titre h1{
+        font-size: 250%;
+        margin: 6% auto;
     }
     header .logo a img {
         width: 20%;
+    }
+    header div.inscription{
+      width:100%;
+      margin-left: auto;
+    }
+    header div.inscription ul li a span{
+      display: none;
+    }
+    header div.inscription ul li button{
+      margin-left: 40%;
+    }
+    header div.inscription ul li.symboles{
+      width: 100%;
+      margin-left: 40%;
     }
     #les_selections {
         width: 100%;
@@ -865,10 +995,8 @@ p.copyright{
         width: 100%;
     }
     header .titre h1 {
-        width: 100%;
-        font-size: 20px;
-        margin-left: 20%;
-        text-align: justify;
+        font-size: 220%;
+        margin: 10% auto;
     }
     #accueil {
         position: relative;
@@ -877,7 +1005,7 @@ p.copyright{
     #accueil .visiteurs {
         position: absolute;
         width: 100%;
-        top: 10%;
+        top: 20%;
         left: 5%;
         z-index: 1001;
     }
@@ -892,7 +1020,7 @@ p.copyright{
         position: relative;
         z-index: 1;
     }
-    #accueil .search .carte {
+    #accueil .carte {
         display: none;
     }
     #accueil .search .navbar_principal .navbar {
@@ -940,10 +1068,7 @@ p.copyright{
         float: left;
     }
     header .titre h1 {
-        margin: 0 -5%;
-        width: 80%;
-        font-size: 18px;
-        text-align: justify;
+        font-size: 100%;
     }
     #les_selections .navbar1 .navbar form .form-inline button {
         width: 100%;

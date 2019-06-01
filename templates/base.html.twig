@@ -55,71 +55,73 @@
                                         En vous inscrivant sur notre site vous gagnerez en visibilité pour accroître votre
                                                                               développement locale grâce à notre service entiérement gratuit.</br>
                                     Pour cela il vous suffit de compléter l'inscription.</br>
-                                <a href="{{ path('app_register') }}">
-                                    <i class="fas fa-user-plus"></i>Inscription</a>
-                            </br>
-                            Vos données ne seront pas utilisé à des fins commerciales.
-                        </div>
-                        <div class="modal-footer">
-                            <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-                        </div>
-                    </div>
-                </div>
+                                            <a href="{{ path('app_register') }}">
+                                                <i class="fas fa-user-plus"></i>Inscription</a>
+                                        </br>
+                                        Vos données ne seront pas utilisé à des fins commerciales.
+                                    </div>
+                                    <div class="modal-footer">
+                                        <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+                                    </div>
+                                  </div>
+                              </div>
+                          </div><li class="symboles">
+<ul>
+
+
+                    {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                        <li>
+                            <a href="{{ path('app_register') }}">
+                                <i class="fas fa-user-plus"></i><span>Inscription</span></a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_login') }}">
+                                <i class="fas fa-user"></i><span>Connexion</span></a>
+                        </li>
+                    {% else %}
+                        <li>
+                            <a href="{{ path('admin') }}">
+                                <i class="fas fa-user-cog"></i><span>Administration</span></a>
+                        </li>
+                        <li>
+                            <a href="{{ path('app_logout') }}">
+                                <i class="fas fa-user-slash"></i><span>Deconnexion</span></a>
+                        </li>
+                        <li>
+                            <a href="{{ path('profil') }}">
+                                <i class="fas fa-user"></i><span>Profil</span></a>
+                        </li>
+                    {% endif %}</ul></li>
+                </ul>
+            </div>
+            <div class="clear"></div>
+
+            {#################################### FLEXSLIDER #############################################}
+
+            <div class="flexslider-header">
+                <ul class="slides">
+                    <li>
+                        <img src="{{ asset('asset/img/background1.jpg') }}"/>
+                    </li>
+                    <li>
+                        <img src="{{ asset('asset/img/background2.jpg') }}"/>
+                    </li>
+                    <li>
+                        <img src="{{ asset('asset/img/background3.jpg') }}"/>
+                    </li>
+                </ul>
+            </div>
+        </div>
+        <!-- end wrap-w1200 wrap-header-->
+        <div class="clear"></div>
+
+        {####################################### titre ###################################################}
+            <div class="titre">
+                <h1>Trouves ta ferme</h1>
             </div>
 
-            {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                <li>
-                    <a href="{{ path('app_register') }}">
-                        <i class="fas fa-user-plus"></i>Inscription</a>
-                </li>
-                <li>
-                    <a href="{{ path('app_login') }}">
-                        <i class="fas fa-user"></i>Connexion</a>
-                </li>
-            {% else %}
-                <li>
-                    <a href="{{ path('admin') }}">
-                        <i class="fas fa-user-cog"></i>Administration</a>
-                </li>
-                <li>
-                    <a href="{{ path('app_logout') }}">
-                        <i class="fas fa-user-slash"></i>Deconnexion</a>
-                </li>
-                <li>
-                    <a href="{{ path('profil') }}">
-                        <i class="fas fa-user"></i>Profil</a>
-                </li>
-            {% endif %}
-        </ul>
-    </div>
-    <div class="clear"></div>
-
-    {#################################### FLEXSLIDER #############################################}
-
-    <div class="flexslider-header">
-        <ul class="slides">
-            <li>
-                <img src="{{ asset('asset/img/background1.jpg') }}"/>
-            </li>
-            <li>
-                <img src="{{ asset('asset/img/background2.jpg') }}"/>
-            </li>
-            <li>
-                <img src="{{ asset('asset/img/background3.jpg') }}"/>
-            </li>
-        </ul>
-    </div>
-</div>
-<!-- end wrap-w1200 wrap-header-->
-<div class="clear"></div>
-
-{####################################### titre ###################################################}
-    <div class="titre">
-        <h1>Trouves ta ferme</h1>
-    </div>
-
-    <div class="clear"></div>
-</header>
+            <div class="clear"></div>
+        </header>
 {####################################### body ###################################################}
 {% block body %}{% endblock %}
 {####################################### footer ###################################################}
@@ -266,7 +268,6 @@ class="modaldeux">
 <div class="clear"></div>
 <!-- end wrap-w1200 wrap-footer -->
 </footer>
-<div class="clear"></div>
 
 
 <!-- jQuery CDN - Slim version (=without AJAX) -->
@@ -278,4 +279,3 @@ class="modaldeux">
 {% block javascripts %}{% endblock %}
 </body>
 </html>
-
