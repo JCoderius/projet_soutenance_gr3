@@ -28,59 +28,56 @@
         <header>
             <div class="wrap-w1200 wrap-header">
 
-                <div class="inscription">
-
-                    <div class="topsite titre">
-                        <h1>Trouves ta ferme</h1>
-                    </div>
-
-                    <div class="topsite liens">
-                        <ul>
-                            {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                                <li>
-                                    <a href="{{ path('app_register') }}">
-                                        <i class="fas fa-user-plus"></i>
-                                        <span>Inscription</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="">
-                                        <span></span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('app_login') }}">
-                                        <i class="fas fa-user"></i>
-                                        <span>Connexion</span>
-                                    </a>
-                                </li>
-                            {% else %}
-                                <li>
-                                    <a href="{{ path('admin') }}">
-                                        <i class="fas fa-user-cog"></i>
-                                        <span>Administration</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('app_logout') }}">
-                                        <i class="fas fa-user-slash"></i>
-                                        <span>Deconnexion</span>
-                                    </a>
-                                </li>
-                                <li>
-                                    <a href="{{ path('profil') }}">
-                                        <i class="fas fa-user-slash"></i>
-                                        <span>Profil</span>
-                                    </a>
-                                </li>
-                            {% endif %}
-                        </ul>
-                    </div>
-
+                <div class="logo">
+                  <a href="{{ path('defaut') }}"><img src="{{ asset('asset/img/logoprojet.png') }}"/></a>
                 </div>
-                <div class="clear"></div>
 
-                {#################################### FLEXSLIDER #############################################}
+             <div class="clear"></div>
+{####################################### Modal producteur ###################################################}
+    <div class="inscription">
+        <ul>
+                <li class="producteur"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter2">
+                    Producteurs
+                    </button>
+                </li>
+                      <!-- Modal -->
+                      <div class="modal fade" id="exampleModalCenter2" tabindex="-1" role="dialog"
+                           aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+                          <div class="modal-dialog modal-dialog-centered" role="document">
+                              <div class="modal-content">
+                                  <div class="modal-header">
+                                      <h5 class="modal-title" id="exampleModalLongTitle">Producteurs</h5>
+                                      <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                                          <span aria-hidden="true">&times;</span>
+                                      </button>
+                                  </div>
+                                  <div class="modal-body">
+                                      En vous inscrivant sur notre site vous gagnerez en visibilité pour accroître votre
+                                      développement locale grâce à notre service entiérement gratuit.</br>
+                                      Pour cela il vous suffit de compléter l'inscription.</br>
+                                      <a href="{{ path('app_register') }}"><i class="fas fa-user-plus"></i>Inscription</a></br>
+                                      Vos données ne seront pas utilisé à des fins commerciales.
+                                  </div>
+                                  <div class="modal-footer">
+                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+
+                    {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
+                        <li><a href="{{ path('app_register') }}"><i class="fas fa-user-plus"></i>Inscription</a></li>
+                        <li><a href="{{ path('app_login') }}"><i class="fas fa-user"></i>Connexion</a></li>
+                    {% else %}
+                        <li><a href="{{ path('admin') }}"><i class="fas fa-user-cog"></i>Administration</a></li>
+                        <li><a href="{{ path('app_logout') }}"><i class="fas fa-user-slash"></i>Deconnexion</a></li>
+                        <li><a href="{{ path('profil') }}"><i class="fas fa-user"></i>Profil</a></li>
+                    {% endif %}
+                </ul>
+           </div>
+          <div class="clear"></div>
+
+{#################################### FLEXSLIDER #############################################}
 
                 <div class="flexslider-header">
                     <ul class="slides">
@@ -99,154 +96,144 @@
             <!-- end wrap-w1200 wrap-header-->
             <div class="clear"></div>
 
-            {####################################### LOGO ###################################################}
-
-            <div class="logo">
-                <a href="{{ path('defaut') }}"><img src="{{ asset('asset/img/logoprojet.png') }}"/></a>
-
-                <div class="clear"></div>
+{####################################### titre ###################################################}
+            <div class="titre">
+                <h1>Trouves ta ferme</h1>
             </div>
-        </header>
-        {% block body %}{% endblock %}
-        <footer>
-            <div class="wrap-w1200 wrap-footer">
-                <div class="bigbox-footer">
-                    <div class="box-footer a_propos_de_nous">
-                        <h2>A PROPOS DE NOUS</h2>
-                        <div
-                            class="modalune">
-                            <!-- Modal qui sommes nous -->
-                            <button class="btn btn-primary" data-target="#exampleModalCenter3" data-toggle="modal" type="button">
-                                Qui sommes nous
+
+            <div class="clear"></div>
+
+      </header>
+              {% block body %}{% endblock %}
+
+{####################################### footer ###################################################}
+      <footer>
+              <div class="wrap-w1200 wrap-footer">
+                  <div class="bigbox-footer">
+                      <div class="box-footer a_propos_de_nous">
+                          <h2>A PROPOS DE NOUS</h2>
+                      <div class="modalune">
+                              <!-- Modal qui sommes nous -->
+                              <button class="btn btn-primary" data-target="#exampleModalCenter3" data-toggle="modal" type="button">
+                                  Qui sommes nous
+                              </button>
+                          </div>
+                          <!-- Modal -->
+                          <div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="exampleModalCenter3" role="dialog" tabindex="-1">
+                              <div class="modal-dialog modal-dialog-centered" role="document">
+                                  <div class="modal-content">
+                                      <div class="modal-header">
+                                          <h5 class="modal-title" id="exampleModalLongTitle">Qui sommes nous</h5>
+                                          <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                              <span aria-hidden="true">&times;</span>
+                                          </button>
+                                      </div>
+                                      <div class="modal-body">
+                                          Notre finalité en tant qu'association est né d'un projet commun lors de notre formation de développeur/codeur web, de la théorie nous sommes passés à une réalité largement
+                                          augmentée.</br>
+                                          </br>
+                                          Motivés par une idée lancée, nous avons construit un site à notre image : simple,conviviale, accessible à tous.
+                                          A travers notre site, nous souhaitons reconnecter l'urbain au rural et ainsi perpétuer la transmission des savoirs qui se perdent dans le temps.</br>
+                                          </br>
+                                          L'ère du digitale absorbe tout, l'innovation est en marche ...maintenant place à la révolution dans nos assiettes !
+                                      </div>
+                                      <div class="modal-footer">
+                                        <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
+                                      </div>
+                                  </div>
+                              </div>
+                           </div>
+
+                          <div class="modaldeux">
+                            <!-- Modal Nos partenaires -->
+                            <button class="btn btn-primary" data-target="#exampleModalCenter4" data-toggle="modal" type="button">
+                                Nos partenaires
                             </button>
-                        </div>
-                        <!-- Modal -->
-                        <div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="exampleModalCenter3" role="dialog" tabindex="-1">
-                            <div class="modal-dialog modal-dialog-centered" role="document">
-                                <div class="modal-content">
-                                    <div class="modal-header">
-                                        <h5 class="modal-title" id="exampleModalLongTitle">Qui sommes nous</h5>
-                                        <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                                            <span aria-hidden="true">&times;</span>
-                                        </button>
+
+                            <!-- Modal -->
+                            <div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="exampleModalCenter4" role="dialog" tabindex="-1">
+                                <div class="modal-dialog modal-dialog-centered" role="document">
+                                    <div class="modal-content">
+                                        <div class="modal-header">
+                                            <h5 class="modal-title" id="exampleModalLongTitle">Nos partenaires</h5>
+                                            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
+                                                <span aria-hidden="true">&times;</span>
+                                            </button>
+                                        </div>
+                                        <div class="modal-body">
+                                            <h6>Nous sommes en partenariat avec :</h6>
+                                          <div class="partenaire">
+                                            <ul>
+                                                <li><a  href="http://www.weblitzer.fr/">www.weblitzer.fr</a></li>
+                                                <li><a href="#"></a>Gamepad</li>
+                                                <li><a href="#"></a>Bandtogether</li>
+                                            </ul>
+                                          </div>
+                                        </div>
                                     </div>
-                                    <div class="modal-body">
-                                        Notre finalité en tant qu'association est né d'un projet commun lors de notre formation
-                                                                        de développeur/codeur web, de la théorie nous sommes passés à une réalité largement
-                                                                        augmentée.</br>
-                                </br>
-                                Motivés par une idée lancée, nous avons construit un site à notre image : simple,
-                                                                conviviale, accessible à tous.
-                                                                A travers notre site, nous souhaitons reconnecter l'urbain au rural et ainsi perpétuer
-                                                                la transmission des savoirs qui se perdent dans le temps.</br>
-                        </br>
-                        L'ère du digitale absorbe tout, l'innovation est en marche ...maintenant place à la
-                                                        révolution dans nos assiettes !
-                    </div>
-                    <div class="modal-footer">
-                        <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <div
-            class="modaldeux">
-            <!-- Modal Nos partenaires -->
-            <button class="btn btn-primary" data-target="#exampleModalCenter4" data-toggle="modal" type="button">
-                Nos partenaires
-            </button>
-
-            <!-- Modal -->
-            <div aria-hidden="true" aria-labelledby="exampleModalCenterTitle" class="modal fade" id="exampleModalCenter4" role="dialog" tabindex="-1">
-                <div class="modal-dialog modal-dialog-centered" role="document">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLongTitle">Nos partenaires</h5>
-                            <button aria-label="Close" class="close" data-dismiss="modal" type="button">
-                                <span aria-hidden="true">&times;</span>
-                            </button>
+                                </div>
+                            </div>
                         </div>
-                        <div class="modal-body">
-                            Nous sommes en partenariat avec :
-                            <ul>
-                                <li>weblitzer<a href="http://www.weblitzer.fr"></a>weblitzer</li>
-                                <li>
-                                    <a href="#"></a>Gamepad</li>
-                                <li>
-                                    <a href="#"></a>Bandtogether</li>
-                            </ul>
+                        <div class="partenaires1">
+                                <ul>
+                                    <li><a href="https://www.portesdenormandie.cci.fr/"><img class="cci" src="asset/img/cci.png" alt="cci"></a></li>
+                                    <li><a href="https://www.wf3.fr/"><img class="force" src="asset/img/Webforce.png" alt="webforce"></a></li>
+                                    <li><a href="https://www.normandie.fr/"><img class="region" src="asset/img/region.jpg" alt="region"></a></li>
+                                </ul>
                         </div>
                     </div>
+
+                    <div class="box-footer informations_legales">
+                        <h2>INFORMATIONS</h2>
+                         <div class="adress">
+                              <p class="titre2">Trouves ta ferme</p>
+                              <p><i class="fas fa-envelope-square"></i>
+                              13, rue de Pont Audemer</p>
+                              <p>27 260 Épaignes</p>
+                        </div>
+
+                        <p><i class="fas fa-phone-square"></i>02.32.33.34.35</p>
+                        <div class="mentions">
+                            <nav>
+                                <ul>
+                                    <li>
+                                        <a href="{{ path('mentions') }}">Mentions légales</a>
+                                    </li>
+                                </ul>
+                            </nav>
+                        </div>
+                    </div>
+                    <div class="box-footer sociaux">
+                        <h2>RETROUVEZ-NOUS</h2>
+                        <ul>
+                                  <li><a href="https://www.facebook.com/virginie.epaignes.1"><i class="fab fa-facebook-square"></i></a></li>
+                                  <li><a href="https://twitter.com/TrouvesF"><i class="fab fa-twitter-square"></i></a></li>
+                                  <li><a href="https://www.instagram.com/trouvestaferme/"><i class="fab fa-instagram"></i></a></li>
+                                  <li><a href="https://www.pinterest.fr/contacttrouvestaferme/"><i class="fab fa-pinterest-square"></i></a></li>
+                              </ul>
+                        <div class="contact">
+                            <p>
+                                <i class="fas fa-address-card"></i>
+                                <a href="mailto:trouvestaferme@gmail.com">trouvestaferme@gmail.com</a>
+                            </p>
+                        </div>
+                        <div class="partenaires2">
+                              <ul>
+                                  <li><a href="https://www.pole-emploi.fr/"><img class="poleemploi" src="asset/img/poleemploi.png" alt="poleemploi"></a></li>
+                                  <li><a href="http://www.eure.gouv.fr/"><img class="departement" src="asset/img/departement.png" alt="departement"></a></li>
+                                  <li><a href="https://www.mission-locale-ouest-eure.com/"><img class="mission" src="asset/img/mission.png" alt="mission"></a></li>
+                             </ul>
+                        </div>
+
+                    </div>
+                    <!-- end bigbox-footer -->
+                    <div class="clear"></div>
+
+
                 </div>
-            </div>
-        </div>
-    </div>
-
-    <div class="box-footer informations_legales">
-        <h2>INFORMATIONS</h2>
-        <p class="titre2">Trouves ta ferme</p>
-        <p>
-            <i class="fas fa-envelope-square"></i>
-            13, rue de Pont Audemer</p>
-        <p>27 260 Épaignes</p>
-        <p>
-            <i class="fas fa-phone-square"></i>
-            02.32.33.34.35</p>
-        <p>Hébergeur : OVH</p>
-    </div>
-    <div class="box-footer sociaux">
-        <h2>RETROUVEZ-NOUS</h2>
-        <ul>
-            <li>
-                <a href="https://www.facebook.com/trouve.ferme.7">
-                    <i class="fab fa-facebook-square"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fab fa-twitter-square"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fab fa-instagram"></i>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <i class="fab fa-pinterest-square"></i>
-                </a>
-            </li>
-        </ul>
-        <div class="contact">
-            <p>
-                <i class="fas fa-address-card"></i>
-                <a href="mailto:trouvestaferme@gmail.com">trouvestaferme@gmail.com</a>
-            </p>
-        </div>
-
-    </div>
-    <!-- end bigbox-footer -->
-    <div class="clear"></div>
-
-
-</div>
-<div class="copyright">
-    <nav>
-        <ul>
-            <li>
-                <p>
-                    <i class="far fa-copyright"></i>
-                    Copyright 2019</p>
-            </li>
-            <li>
-                -
-            </li>
-            <li>
-                <a href="{{ path('mentions') }}">Mentions légales</a>
-            </li>
-        </ul>
-    </nav>
-</div>
-<div class="clear"></div></div><!-- end wrap-w1200 wrap-footer --></footer><!-- jQuery CDN - Slim version (=without AJAX) --><script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><!-- Bootstrap min --><script crossorigin="anonymous" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script><!-- flexslider --><script src="{{ asset('asset/flexslider/jquery.flexslider.js') }}"></script><!-- main.js --><script src="{{ asset('asset/js/main.js') }}"></script>{% block javascripts %}{% endblock %}</body></html>
+                <div class="copyright">
+                   <p><i class="far fa-copyright"></i> Copyright 2019</p>
+                </div>
+    <div class="clear"></div></div><!-- end wrap-w1200 wrap-footer --></footer><!-- jQuery CDN - Slim version (=without AJAX) -->
+    <script crossorigin="anonymous" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" src="https://code.jquery.com/jquery-3.3.1.slim.min.js"></script><!-- Bootstrap min --><script crossorigin="anonymous" integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm" src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"></script><!-- flexslider -->
+    <script src="{{ asset('asset/flexslider/jquery.flexslider.js') }}"></script><!-- main.js --><script src="{{ asset('asset/js/main.js') }}"></script>{% block javascripts %}{% endblock %}</body></html>
