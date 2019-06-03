@@ -72,7 +72,12 @@
                         <li><a href="{{ path('app_register') }}"><title>inscription</title><i class="fas fa-user-plus"></i><span>Inscription</span></a></li>
                         <li><a href="{{ path('app_login') }}"><i class="fas fa-user"></i><span>Connexion</span></a></li>
                     {% else %}
-                        <li><a href="{{ path('admin') }}"><i class="fas fa-user-cog"></i><span>Administration</span></a></li>
+                        {% if is_granted('ROLE_ADMIN') %}
+                            <li>
+                                <li><a href="{{ path('admin') }}"><i class="fas fa-user-cog"></i><span> Administration</span></a></li>
+                            </li>
+                        {% endif %}
+                        <!-- <li><a href="{{ path('admin') }}"><i class="fas fa-user-cog"></i>Administration</a></li> -->
                         <li><a href="{{ path('app_logout') }}"><i class="fas fa-user-slash"></i><span>Deconnexion</span></a></li>
                         <li><a href="{{ path('profil') }}"><i class="fas fa-user"></i><span>Profil</span></a></li>
                     {% endif %}
