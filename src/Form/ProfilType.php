@@ -10,6 +10,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
 
 class ProfilType extends AbstractType
 {
@@ -17,15 +18,32 @@ class ProfilType extends AbstractType
     {
         $builder
             ->add('email')
-            ->add('lastname')
-            ->add('firstname')
+            ->add('lastname', TextType::class, [
+                'label' =>'Nom',
+            ])
+            ->add('firstname', TextType::class, [
+                'label' =>'Prénom',
+            ])
             ->add('siret')
-            ->add('phone')
-            ->add('adress')
-            ->add('horaire')
-            ->add('category')
+            ->add('phone', TextType::class, [
+                'label' =>'Téléphone',
+            ])
+            ->add('adress', TextType::class, [
+                'label' =>'Adresse',
+            ])
+            
+            // ->add('horaire', TextType::class, [
+            //     'label' =>'Horaires',
+            // ])
+
+            // ->add('category', TextType::class, [
+            //     'label' =>'Catégories',
+            // ])
+
             ->add('site')
-            ->add('cp')
+            ->add('cp', TextType::class, [
+                'label' =>'Code Postal',
+            ])
             ->add('ville')
             ->add('dep_id', EntityType::class, [
                 // looks for choices from this entity
@@ -42,7 +60,7 @@ class ProfilType extends AbstractType
             ->add('cat', EntityType::class, [
                 // looks for choices from this entity
                 'class' => Category::class,
-                'label' => 'Category',
+                'label' => 'Categories:',
 
                 // uses the User.username property as the visible option string
                 'choice_label' => 'produit',
