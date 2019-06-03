@@ -33,6 +33,29 @@ class UserRepository extends ServiceEntityRepository
             ->getQuery()
             ->getSingleScalarResult();
     }
+
+    public function countUsersFromThisDep($dep)
+    {
+        return $this->createQueryBuilder('u')
+            ->select('COUNT(u)')
+            ->andWhere('u.dep_id = :val')
+            ->setParameter('val', $dep)
+            ->getQuery()
+            ->getSingleScalarResult();
+    }
+
+    public function getUserPaginate($dep,$itemsPerPage,$offset)
+    {
+      return $this->createQueryBuilder('u')
+                 ->andWhere('u.dep_id = :val')
+                 ->setParameter('val', $dep)
+                 //->orderBy('u.id', 'ASC')
+                 ->setFirstResult($offset)
+                 ->setMaxResults($itemsPerPage)
+                 ->getQuery()
+                 ->getResult()
+             ;
+    }
 //     /**
 //      * @return User[] Returns an array of User objects
 //      */

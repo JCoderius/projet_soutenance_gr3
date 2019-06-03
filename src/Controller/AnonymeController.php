@@ -17,30 +17,29 @@ class AnonymeController extends AbstractController
     /**
      * @Route("/anonyme/{dep}", name="anonyme", methods={"GET"})
      */
-    public function show(DepartementsRepository $repoDepartements, $dep, Request $request): Response
+    public function show(DepartementsRepository $repoDepartements,UserRepository $repoUser, $dep, Request $request): Response
     {
+
+        $itemsPerPage = 6;
         $departement = $repoDepartements->findOneByNumero($dep);
         if (!$departement) {
             throw $this->createNotFoundException('The departement does not exist');
         }
+        $page = $request->query->get('page', 1);
+        $offset = ($page - 1) * $itemsPerPage;
 
-        $users = $departement->getUsers();
+        $users = $repoUser->getUserPaginate($dep,$itemsPerPage,$offset);
+        $totalItems = $repoUser->countUsersFromThisDep($dep);
 
-        $depalls = $repoDepartements->findAll();
-
-        $totalItems = 10;
-        $itemsPerPage = 1;
         $currentPage = $request->query->get('page', 1);
         $urlPattern = '?page=(:num)';
-
-
         $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
 
         return $this->render('anonyme/index.html.twig', [
             'departement' => $departement,
             'depalls'     => $repoDepartements->findAll(),
-            'users' => $users,
-            'paginator' => $paginator
+            'users'       => $users,
+            'paginator'   => $paginator
         ]);
     }
 
@@ -49,6 +48,7 @@ class AnonymeController extends AbstractController
      */
     public function show2(DepartementsRepository $repodepartements, Request $request): Response
     {
+
         $numero = $request->query->get('departement', 1);
 
         $departement = $repodepartements->findOneByNumero($numero);
@@ -57,11 +57,10 @@ class AnonymeController extends AbstractController
             throw $this->createNotFoundException('The departement does not exist');
         }
 
-        $depalls = $repodepartements->findAll();
         return $this->render('anonyme/index.html.twig', [
             'users'       => $departement->getUsers(),
             'departement' => $departement,
-            'depalls'     => $depalls,
+            'depalls'     => $repodepartements->findAll()
         ]);
     }
 }
