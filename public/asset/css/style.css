@@ -698,6 +698,7 @@ p.copyright{
   padding-top: 20px;
 }
 
+
 /* ******************************************* */
 /* *************** RESPONSIVE ******************** */
 /* ******************************************* */
@@ -706,12 +707,6 @@ p.copyright{
     header .logo a img {
         left: -1.5%;
     }
-    /*header .inscription{*/
-    /*margin: 0 auto;*/
-    /*margin-left: 2%;*/
-    /*}*/
-    /*header .topsite{*/
-    /*float: right;*/
     header .topsite.liens {
         width: 80%;
         left: 20%;
@@ -729,9 +724,6 @@ p.copyright{
         width: 100%;
         text-align: center;
     }
-    /*header .titre h1{*/
-    /*width: 100%;*/
-    /*}*/
     #les_selections .navbar1 {
         width: 100%;
     }
@@ -749,6 +741,14 @@ p.copyright{
         left: 25%;
         top: 15%;
     }
+    header div.inscription {
+      margin-left: 17%;
+    }
+    header div.inscription ul li.producteur{
+      width: 80%;
+      margin: 2% auto;
+      text-align: center;
+    }
     #accueil .search .navbar {
         display: none;
     }
@@ -756,13 +756,6 @@ p.copyright{
         width: 100%;
         margin: 20px 0;
     }
-    /*header .inscription ul li a span{*/
-    /*display: none;*/
-    /*}*/
-    /*header img{*/
-    /*width: 100%;*/
-    /*float: left;*/
-    /*}*/
     header .logo a img {
         width: 20%;
         left: -1%;
@@ -781,24 +774,6 @@ p.copyright{
         left: 70%;
         z-index: 1001;
     }
-    /*header .topsite{*/
-    /*width: 50%;*/
-    /*}*/
-    /*header .liens ul{*/
-    /*!*width: 33%;*!*/
-    /*text-align: center;*/
-    /*}*/
-    /*header .liens ul li{*/
-    /*width: 33%;*/
-    /*float: left;*/
-    /*}*/
-    /*header .titre{*/
-    /*width: 100%;*/
-    /*}*/
-    /*header .titre h1{*/
-    /*width: 100%;*/
-    /*text-align: justify;*/
-    /*}*/
     #les_selections {
         text-align: center;
         width: 80%;
@@ -833,14 +808,26 @@ p.copyright{
         width: 31%;
         float: left;
     }
-    header .topsite.titre {
-        width: 60%;
-        /*font-size: 20px;*/
-        margin: 0 20% 2% 20%;
-        text-align: justify;
+    header .titre h1{
+        font-size: 250%;
+        margin: 6% auto;
     }
     header .logo a img {
         width: 20%;
+    }
+    header div.inscription{
+      width:100%;
+      margin-left: auto;
+    }
+    header div.inscription ul li a span{
+      display: none;
+    }
+    header div.inscription ul li button{
+      margin-left: 40%;
+    }
+    header div.inscription ul li.symboles{
+      width: 100%;
+      margin-left: 40%;
     }
     #les_selections {
         width: 100%;
@@ -865,10 +852,8 @@ p.copyright{
         width: 100%;
     }
     header .titre h1 {
-        width: 100%;
-        font-size: 20px;
-        margin-left: 20%;
-        text-align: justify;
+        font-size: 220%;
+        margin: 10% auto;
     }
     #accueil {
         position: relative;
@@ -877,7 +862,7 @@ p.copyright{
     #accueil .visiteurs {
         position: absolute;
         width: 100%;
-        top: 10%;
+        top: 20%;
         left: 5%;
         z-index: 1001;
     }
@@ -892,7 +877,7 @@ p.copyright{
         position: relative;
         z-index: 1;
     }
-    #accueil .search .carte {
+    #accueil .carte {
         display: none;
     }
     #accueil .search .navbar_principal .navbar {
@@ -940,10 +925,7 @@ p.copyright{
         float: left;
     }
     header .titre h1 {
-        margin: 0 -5%;
-        width: 80%;
-        font-size: 18px;
-        text-align: justify;
+        font-size: 100%;
     }
     #les_selections .navbar1 .navbar form .form-inline button {
         width: 100%;
