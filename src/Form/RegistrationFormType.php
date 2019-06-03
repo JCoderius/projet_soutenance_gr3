@@ -22,7 +22,7 @@ class RegistrationFormType extends AbstractType
             ->add('password', RepeatedType::class, [
                   'type' => PasswordType::class,
                   'invalid_message' => 'Les deux champs mot de passe doivent être identique.',
-                  'options' => ['attr' => ['class' => 'password-field']],
+                  'options' => ['label' => 'Entrez votre mot de passe'],
                   'required' => true,
                   'second_options' => ['label' => 'Confirmez votre mot de passe'],
                 'error_bubbling'  => false,
