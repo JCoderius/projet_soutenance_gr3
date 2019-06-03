@@ -484,7 +484,31 @@ button.btn.btn-success:hover {
   text-align: justify;
   padding: 2%;
 }
+/* ******************************************* */
+/* ***************MENTIONS LEGALES************ */
+/* ******************************************* */
+.mentions {
+  width: 60%;
+  margin-left: 20%;
 
+}
+.mentions h1{
+  font-size: 2em;
+  font-weight: bolder;
+  text-align: center;
+  font-family: 'Nunito', sans-serif;
+  padding: 2%;
+}
+.mentions h2{
+  font-family: 'Nunito', sans-serif;
+  padding: 2%;
+}
+.mentions p {
+  font-family: 'Nunito', sans-serif;
+  text-align: justify;
+  padding: 2%;
+
+}
 /* ******************************************* */
 /* *************** FOOTER ******************** */
 /* ******************************************* */
