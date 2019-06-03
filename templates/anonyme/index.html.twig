@@ -8,9 +8,8 @@
             <nav class="navbar navbar-light bg-light">
                 <form class="form-inline" action="{{ path('anonyme2')}}">
 
-                    <select
-                        id="profil_dep_id" name="departement">
-                        {#                            <option value="">Departements</option>#}
+                    <select id="profil_dep_id" name="departement">
+                        <option value="">Departements</option>
                         {% for depall in depalls %}
 
                             <option {% if(depall.numero == departement.numero) %} selected="selected" {% endif %} value="{{ depall.numero }}">{{ depall.numero }}
