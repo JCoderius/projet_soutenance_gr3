@@ -609,6 +609,11 @@ button.btn.btn-success:hover {
   box-shadow: 2px 2px 0 black;
   margin: 4% 40% 4% 40%;
 }
+.texte2 p {
+  font-family: 'Nunito', sans-serif;
+  text-align: justify;
+  padding: 4% 4% 4% 25%;
+}
 .save:hover {
   background-color: darkorange;
   color: white;
