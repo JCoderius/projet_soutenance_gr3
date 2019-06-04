@@ -34,6 +34,7 @@ class UserType extends AbstractType
             ->add('siret')
             ->add('phone', TextType::class, [
                 'label' =>'Téléphone',
+
             ])
             ->add('adress', TextType::class, [
                 'label' =>'Adresse',

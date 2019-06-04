@@ -27,11 +27,12 @@ class ProfilType extends AbstractType
             ->add('siret')
             ->add('phone', TextType::class, [
                 'label' =>'Téléphone',
+                'required' => false,
             ])
             ->add('adress', TextType::class, [
                 'label' =>'Adresse',
             ])
-            
+
             // ->add('horaire', TextType::class, [
             //     'label' =>'Horaires',
             // ])
@@ -44,7 +45,9 @@ class ProfilType extends AbstractType
             ->add('cp', TextType::class, [
                 'label' =>'Code Postal',
             ])
-            ->add('ville')
+            ->add('ville', TextType::class, [
+                'label' =>'Ville',
+            ])
             ->add('dep_id', EntityType::class, [
                 // looks for choices from this entity
                 'class' => Departements::class,
