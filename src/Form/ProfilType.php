@@ -74,7 +74,8 @@ class ProfilType extends AbstractType
             ])
 
            ->add('save', SubmitType::class, [
-               'attr' => ['class' => 'Save'],
+               'attr' => ['class' => 'save'],
+               'label' => 'Envoyer',
            ])
         ;
     }

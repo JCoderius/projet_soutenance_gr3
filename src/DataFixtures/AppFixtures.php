@@ -46,6 +46,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user2->setToken($this->tokenGenerator->generateToken());
         $user2->setLastname('Dupont');
         $user2->setFirstname('Albert');
+        $user2->setSiret('12345678900000');
         $user2->setPhone('0611111111');
         $user2->setAdress('Le Paradis');
         $user2->setCp('27300');
@@ -74,6 +75,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
             $user->setPassword($this->passwordEncoder->encodePassword($user, 'user' . $i));
             $user->setLastname('Durand'.$i);
             $user->setFirstname('Francois'.$i);
+            $user->setSiret('12345678900000');
             $user->setPhone('0600010203');
             $user->setAdress('La briqueterie');
             $user->setCp('27500');
