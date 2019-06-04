@@ -584,6 +584,9 @@ button.btn.btn-success:hover {
     width: 50%;
     float: left;
 }
+.formulaire div#profil_cat{
+  margin-left: 35%;
+}
 
 .profil h1 {
     font-size: 1.5em;
