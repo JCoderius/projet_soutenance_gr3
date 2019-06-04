@@ -64,13 +64,16 @@
                           </div>
                       </div>
 
+
+                <li class="symboles">
+                  <ul>
                     {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
 
 
                     {% else %}
                         {% if is_granted('ROLE_ADMIN') %}
                             <li>
-                                <li><a href="{{ path('admin') }}"><i class="fas fa-user-cog"></i>Administration</a></li>
+                                <li><a href="{{ path('admin') }}"><i class="fas fa-user-cog"></i><span> Administration</span></a></li>
                             </li>
                         {% endif %}
                         <!-- <li><a href="{{ path('admin') }}"><i class="fas fa-user-cog"></i>Administration</a></li> -->
@@ -78,8 +81,10 @@
                         <li><a href="{{ path('app_logout') }}"><i class="fas fa-user-slash"></i>Deconnexion</a></li>
                         <li><a href="{{ path('profil') }}"><i class="fas fa-user"></i>Profil</a></li>
                     {% endif %}
-                </ul>
-           </div>
+                  </ul>
+                </li>
+            </ul>
+          </div>
           <div class="clear"></div>
 
 {#################################### FLEXSLIDER #############################################}

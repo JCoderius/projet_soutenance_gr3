@@ -27,6 +27,9 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=180, unique=true)
+     * @Assert\Email(
+     *     message = "The email '{{ value }}' is not a valid email.",
+     * )
      */
     private $email;
 
@@ -79,8 +82,8 @@ class User implements UserInterface
      * @Assert\Length(
      *      min = 14,
      *      max = 14,
-     *      minMessage = "Votre prénom doit contenir au moins {{ limit }} caractères",
-     *      maxMessage = "Votre prénom ne doit pas contenir plus de {{ limit }} caractères"
+     *      minMessage = "Votre Siret doit contenir au moins {{ limit }} caractères",
+     *      maxMessage = "Votre Siret ne doit pas contenir plus de {{ limit }} caractères"
      * )
      */
     private $siret;
