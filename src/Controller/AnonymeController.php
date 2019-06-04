@@ -37,7 +37,6 @@ class AnonymeController extends AbstractController
         $urlPattern = '?page=(:num)';
         $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
         // helper form
-        $depalls = $repoDepartements->findAll();
 
 
         return $this->render('anonyme/index.html.twig', [
@@ -71,13 +70,13 @@ class AnonymeController extends AbstractController
         $totalItems = $repoUser->countUsersFromThisDep($numero);
         //dd($users);
         $currentPage = $request->query->get('page', 1);
-        $urlPattern = '?page=(:num)';
+        $urlPattern = '&page=(:num)';
 
         $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
-       dd($users);
-       
+       //dd($users);
+
         return $this->render('anonyme/index.html.twig', [
-            'users'       => $departement->getUsers(),
+            'users'       => $users,
             'departement' => $departement,
             'depalls'     => $repodepartements->findAll(),
             'paginator' => $paginator
