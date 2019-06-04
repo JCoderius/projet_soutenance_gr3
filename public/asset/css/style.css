@@ -301,6 +301,7 @@ section .texte p {
 #les_selections .navbar1 form.form-inline {
     width: 80%;
     margin: 0 auto;
+    display: block;
 }
 
 #les_selections .navbar1 form.form-inline select {
@@ -328,9 +329,30 @@ section .texte p {
 }
 
 #les_selections .image img {
-    width: 70%;
+    width: 30%;
     opacity: 0.8;
     margin-top: 50px;
+}
+#les_selections div.paginator div.global.prod{
+  float: left;
+  width: 29%;
+  margin: 1% 1% 1% 2%;
+}
+#les_selections ul.pagination{
+  width: 50%;
+  margin: 5% auto;
+}
+#les_selections ul.pagination li a{
+  text-align: center;
+  background-color: green;
+  border-radius: 0.5em;
+  border: 1px solid grey;
+  color: white;
+  padding: 8% 30%;
+}
+#les_selections ul.pagination li{
+  width: 10%;
+  margin: 0 auto;
 }
 
 

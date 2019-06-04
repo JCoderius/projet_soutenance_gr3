@@ -1,3 +1,2 @@
 # projet_soutenance_gr3
 
-# Ne pas puller avant ordre...
