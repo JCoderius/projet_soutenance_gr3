@@ -333,26 +333,45 @@ section .texte p {
     opacity: 0.8;
     margin-top: 50px;
 }
-#les_selections div.paginator div.global.prod{
-  float: left;
-  width: 29%;
-  margin: 1% 1% 1% 2%;
+
+#les_selections div.paginator div.global.prod {
+    float: left;
+    width: 29%;
+    margin: 1% 1% 1% 2%;
 }
-#les_selections ul.pagination{
-  width: 50%;
-  margin: 5% auto;
+
+#les_selections div.paginator img {
+    width: 40%;
+    float: left;
+    border-radius: 50%;
 }
-#les_selections ul.pagination li a{
-  text-align: center;
-  background-color: green;
-  border-radius: 0.5em;
-  border: 1px solid grey;
-  color: white;
-  padding: 8% 30%;
+
+#les_selections div.paginator p {
+    line-height: 1.7em;
 }
-#les_selections ul.pagination li{
-  width: 10%;
-  margin: 0 auto;
+
+#les_selections div.paginator p.ident {
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 20px;
+    margin: 2%;
+}
+
+.pagin {
+    width: 15%;
+    margin: 10px auto;
+}
+
+.pagin ul {
+    text-align: center;
+    margin: 0 auto;
+}
+
+.pagin ul li a {
+    background-color: green;
+    margin: auto 2px;
+    color: white;
+    padding: 5px 15px;
 }
 
 

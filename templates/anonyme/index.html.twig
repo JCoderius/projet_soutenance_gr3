@@ -34,6 +34,7 @@
         {% for user in users %}
             <div class="paginator">
                 <div class="global prod">
+                  <img src="{{ asset('asset/img/default-avatar.png') }}" alt="">
                     <p class="ident">{{ user.lastname }}
                         {{ user.firstname }}</p>
                     <p>{{ user.email }}</p>
@@ -53,7 +54,8 @@
     </div>
 
     <div class="clear"></div>
-
+<div class="pagin">
   {{ paginator|raw }}
+  </div>
 
 </section>{% endblock %}

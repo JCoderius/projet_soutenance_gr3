@@ -33,6 +33,12 @@
                 </div>
 
              <div class="clear"></div>
+
+             {% for message in app.flashes('notice') %}
+    <div class="flash-notice">
+        {{ message }}
+    </div>
+{% endfor %}
 {####################################### Modal producteur ###################################################}
           <div class="inscription">
             <ul>
