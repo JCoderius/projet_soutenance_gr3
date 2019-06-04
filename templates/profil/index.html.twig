@@ -11,7 +11,7 @@
                       {{ user.email }}
 
                     <div class="progress">
-                        <div class="progress-bar" role="progressbar" style="width: 25%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><p> {{ stats }} %</p></div>
+                        <div class="progress-bar" role="progressbar" style="width: {{ stats }}%;" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"><p> {{ stats }} %</p></div>
                     </div>
                     <div class="stat">
                         <p>Vous avez remplit votre profil a hauteur de {{ stats }} %.</p>
@@ -28,6 +28,7 @@
                       <!-- Message flash : N'oubliez pas de compléter tous les champs du formulaire! -->
 
                 </div>
+                <img src="asset/img/margueritte.JPG"/>
             </div>
             <div class ="formulaire">
                 <div class="col-sm">

@@ -53,9 +53,9 @@ class AnonymeController extends AbstractController
     public function show2(DepartementsRepository $repodepartements, UserRepository $repoUser, Request $request): Response
     {
         $itemsPerPage = 6;
-        $numero = $request->query->get('departement', 1);
+        $dep = $request->query->get('departement', 1);
        //dd($dep);
-        $departement = $repodepartements->findOneByNumero($numero);
+        $departement = $repodepartements->findOneByNumero($dep);
         if (!$departement) {
 
             throw $this->createNotFoundException('The departement does not exist');
@@ -65,20 +65,22 @@ class AnonymeController extends AbstractController
         $offset = ($page - 1) * $itemsPerPage;
         //dd($departement);
 
-        $users = $repoUser->getUserPaginate($numero, $itemsPerPage,$offset);
+        $users = $repoUser->getUserPaginate($dep, $itemsPerPage, $offset);
         $useralls = $departement->getUsers();
-        $totalItems = $repoUser->countUsersFromThisDep($numero);
+        $totalItems = $repoUser->countUsersFromThisDep($dep);
         //dd($users);
         $currentPage = $request->query->get('page', 1);
-        $urlPattern = '&page=(:num)';
+        //on concatène afin de garder un mémoire qu'on est sur ce departement
+        $urlPattern = '?departement='.$dep.'&page=(:num)';
 
         $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
        //dd($users);
+       $depalls =  $repodepartements->findAll();
 
         return $this->render('anonyme/index.html.twig', [
             'users'       => $users,
             'departement' => $departement,
-            'depalls'     => $repodepartements->findAll(),
+            'depalls'     => $depalls,
             'paginator' => $paginator
         ]);
     }

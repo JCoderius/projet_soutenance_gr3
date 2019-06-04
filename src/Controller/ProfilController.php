@@ -39,13 +39,15 @@ class ProfilController extends AbstractController
            return $this->redirectToRoute('profil');
         }
 
-
+        $form_row = $this->createForm(ProfilType::class, $user);
+        $form_row->handleRequest($request);
 
 
         return $this->render('profil/index.html.twig', [
             'user' => $user,
             'stats' => $stats,
             'form' => $form->createView(),
+            'formrow' => $form_row->createView()
         ]);
     }
 }
