@@ -19,18 +19,20 @@ class ProfilType extends AbstractType
         $builder
             ->add('email')
             ->add('lastname', TextType::class, [
-                'label' =>'Nom',
+                'label' =>'Nom*',
             ])
             ->add('firstname', TextType::class, [
-                'label' =>'Prénom',
+                'label' =>'Prénom*',
             ])
-            ->add('siret')
+            ->add('siret', TextType::class, [
+                'label' =>'Siret*',
+            ])
             ->add('phone', TextType::class, [
                 'label' =>'Téléphone',
                 'required' => false,
             ])
             ->add('adress', TextType::class, [
-                'label' =>'Adresse',
+                'label' =>'Adresse*',
             ])
 
             // ->add('horaire', TextType::class, [
@@ -43,15 +45,15 @@ class ProfilType extends AbstractType
 
             ->add('site')
             ->add('cp', TextType::class, [
-                'label' =>'Code Postal',
+                'label' =>'Code Postal*',
             ])
             ->add('ville', TextType::class, [
-                'label' =>'Ville',
+                'label' =>'Ville*',
             ])
             ->add('dep_id', EntityType::class, [
                 // looks for choices from this entity
                 'class' => Departements::class,
-                'label' => 'Départements',
+                'label' => 'Départements*',
 
                 // uses the User.username property as the visible option string
                 'choice_label' => 'nom',

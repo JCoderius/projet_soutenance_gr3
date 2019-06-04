@@ -7,6 +7,7 @@ use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
 use Symfony\Component\Form\Extension\Core\Type\CheckboxType;
 use Symfony\Component\Form\Extension\Core\Type\RepeatedType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Validator\Constraints\NotBlank;
@@ -18,13 +19,29 @@ class RegistrationFormType extends AbstractType
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
         $builder
-            ->add('email')
+            ->add('email',EmailType::class,array(
+                'label' => false,
+                'attr' => array(
+                    'placeholder' => 'vous@exemple.fr'
+                )
+            ))
             ->add('password', RepeatedType::class, [
                   'type' => PasswordType::class,
                   'invalid_message' => 'Les deux champs mot de passe doivent être identique.',
-                  'options' => ['label' => 'Entrez votre mot de passe'],
+                  'options' => [
+                      'label' => false,
+                      'attr' => array(
+                          'placeholder' => 'Entrez votre mot de passe'
+                      ),
+                  ],
                   'required' => true,
-                  'second_options' => ['label' => 'Confirmez votre mot de passe'],
+
+                  'second_options' => [
+                      'label' => false,
+                      'attr' => array(
+                          'placeholder' => 'Confirmez votre mot de passe'
+                      ),
+                  ],
                 'error_bubbling'  => false,
                   'constraints' => [
                       new NotBlank([
