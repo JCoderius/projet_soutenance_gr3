@@ -17,24 +17,27 @@ class AnonymeController extends AbstractController
     /**
      * @Route("/anonyme/{dep}", name="anonyme", methods={"GET"})
      */
-    public function show(DepartementsRepository $repoDepartements, $dep, Request $request): Response
+    public function show(DepartementsRepository $repoDepartements,UserRepository $repoUser, $dep, Request $request): Response
     {
+
+        $itemsPerPage = 6;
         $departement = $repoDepartements->findOneByNumero($dep);
         if (!$departement) {
             throw $this->createNotFoundException('The departement does not exist');
         }
+        $page = $request->query->get('page', 1);
+        $offset = ($page - 1) * $itemsPerPage;
 
-        $users = $departement->getUsers();
+        $users = $repoUser->getUserPaginate($dep,$itemsPerPage,$offset);
 
-        $depalls = $repoDepartements->findAll();
+        $useralls = $departement->getUsers();
+        $totalItems = $repoUser->countUsersFromThisDep($dep);
 
-        $totalItems = 10;
-        $itemsPerPage = 1;
         $currentPage = $request->query->get('page', 1);
         $urlPattern = '?page=(:num)';
-
-
         $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
+        // helper form
+
 
         return $this->render('anonyme/index.html.twig', [
             'departement' => $departement,
@@ -47,21 +50,36 @@ class AnonymeController extends AbstractController
     /**
      * @Route("/anonyme2", name="anonyme2", methods={"GET"})
      */
-    public function show2(DepartementsRepository $repodepartements, Request $request): Response
+    public function show2(DepartementsRepository $repodepartements, UserRepository $repoUser, Request $request): Response
     {
+        $itemsPerPage = 6;
         $numero = $request->query->get('departement', 1);
-
+       //dd($dep);
         $departement = $repodepartements->findOneByNumero($numero);
         if (!$departement) {
 
             throw $this->createNotFoundException('The departement does not exist');
         }
+    
+        $page = $request->query->get('page', 1);
+        $offset = ($page - 1) * $itemsPerPage;
+        //dd($departement);
 
-        $depalls = $repodepartements->findAll();
+        $users = $repoUser->getUserPaginate($numero, $itemsPerPage,$offset);
+        $useralls = $departement->getUsers();
+        $totalItems = $repoUser->countUsersFromThisDep($numero);
+        //dd($users);
+        $currentPage = $request->query->get('page', 1);
+        $urlPattern = '&page=(:num)';
+
+        $paginator = new Paginator($totalItems, $itemsPerPage, $currentPage, $urlPattern);
+       //dd($users);
+
         return $this->render('anonyme/index.html.twig', [
-            'users'       => $departement->getUsers(),
+            'users'       => $users,
             'departement' => $departement,
-            'depalls'     => $depalls,
+            'depalls'     => $repodepartements->findAll(),
+            'paginator' => $paginator
         ]);
     }
 }

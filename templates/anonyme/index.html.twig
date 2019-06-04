@@ -23,8 +23,8 @@
 
             </nav>
         </div>
-        <h1>bienvenue dans le département
-            {{ departement.numero }}</h1>
+        <h2>bienvenue dans le département
+            {{ departement.numero }}</h2>
         <div class="clear"></div>
 
         <div class="global image">
@@ -54,6 +54,6 @@
 
     <div class="clear"></div>
 
-    <?php echo $paginator ?>
+  {{ paginator|raw }}
 
 </section>{% endblock %}
