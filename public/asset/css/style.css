@@ -87,11 +87,10 @@ header button.btn.btn-primary:hover {
     font-family: 'Nunito', sans-serif;
 }
 
-
 header .modal-header h5 {
-  text-align: center;
   font-family: 'Nunito', sans-serif;
   font-size: 1.2em;
+  margin-left: 35%;
 }
 header .modal-body {
   text-align: center;
@@ -100,19 +99,12 @@ header .modal-body {
 }
 header .modal-body a{
   color: black;
-  padding-top: 4%;
-  padding-bottom: 4%;
-
+  padding: 4%;
 }
 header .modal-body a:hover {
   color: darkorange;
 }
-header .modal-footer button {
-  background-color: orange;
-}
-header .modal-footer button:hover {
-  background-color: darkorange;
-}
+
 /* ****************************************** */
 /* ***************** INDEX ***************** */
 /* ****************************************** */
@@ -142,12 +134,13 @@ header .modal-footer button:hover {
   position: absolute;
   font-family: 'Nunito', sans-serif;
   font-weight: bolder;
-  margin-top: -64%;
-  margin-left: 10%;
+  margin-top: -65%;
+  color: black;
   z-index: 1001;
 }
-.explication{
+.explication h3{
   font-weight: bolder;
+  font-size: 1.5em;
 }
 
 /* CSS concernant la carte de France */
@@ -450,13 +443,13 @@ button.btn.btn-success:hover {
 
 .progress-bar {
   background-color: #228B22;
-  color: darkorange;
+  color: white;
   font-size: 1.5em;
 
 }
 .progress{
-  margin: 2% 0 2% 0;
-  box-shadow: 2px 2px 0 black;
+  margin: 4% 0 4% 0;
+  height:2rem;
 }
 .stat p{
   font-style: italic;
@@ -467,6 +460,10 @@ button.btn.btn-success:hover {
   width: 50%;
   float: left;
   line-height: 140%;
+}
+.profil img{
+  width: 90%;
+  margin: 4% 0 4% 0;
 }
 .formulaire {
   width: 50%;
@@ -482,7 +479,7 @@ button.btn.btn-success:hover {
 .texte p {
   font-family: 'Nunito', sans-serif;
   text-align: justify;
-  padding: 2%;
+  padding: 4%;
 }
 /* ******************************************* */
 /* ***************MENTIONS LEGALES************ */
@@ -554,10 +551,10 @@ footer .modal-content{
   color: black;
 }
 footer .modal-header h5 {
-  margin-left: 30%;
-  font-size: 1.5em;
-  text-decoration: underline;
-  text-underline-position: under;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2em;
+  margin-left: 35%;
+  font-weight: bold;
 }
 footer .modal-body h6 {
   font-size: 1.1em;

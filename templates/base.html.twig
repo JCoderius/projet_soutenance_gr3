@@ -29,7 +29,7 @@
             <div class="wrap-w1200 wrap-header">
 
                 <div class="logo">
-                  <a href="{{ path('defaut') }}"><img src="{{ asset('asset/img/logoprojet.png') }}"/></a>
+                  <a href="{{ path('defaut') }}"><img src="{{ asset('asset/img/logoprojet.png') }}" title="Accueil"/></a>
                 </div>
 
              <div class="clear"></div>
@@ -37,7 +37,7 @@
           <div class="inscription">
             <ul>
                 <li class="producteur"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter2">
-                    Producteurs
+                    Espace Producteur
                     </button>
                 </li>
                       <!-- Modal -->
@@ -46,28 +46,27 @@
                           <div class="modal-dialog modal-dialog-centered" role="document">
                               <div class="modal-content">
                                   <div class="modal-header">
-                                      <h5 class="modal-title" id="exampleModalLongTitle">Producteurs</h5>
+                                      <h5 class="modal-title" id="exampleModalLongTitle">Espace Producteur</h5>
                                       <button type="button" class="close" data-dismiss="modal" aria-label="Close">
                                           <span aria-hidden="true">&times;</span>
                                       </button>
                                   </div>
                                   <div class="modal-body">
                                       En vous inscrivant sur notre site vous gagnerez en visibilité pour accroître votre
-                                      développement locale grâce à notre service entiérement gratuit.</br>
+                                      développement locale grâce à notre service entièrement gratuit.</br>
                                       Pour cela il vous suffit de compléter l'inscription.</br>
-                                      <a href="{{ path('app_register') }}"><i class="fas fa-user-plus"></i>Inscription</a></br>
-                                      Vos données ne seront pas utilisé à des fins commerciales.
-                                  </div>
-                                  <div class="modal-footer">
-                                      <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+                                      Vos données ne seront pas utilisées à des fins commerciales.</br></br>
+                                      <a href="{{ path('app_register') }}"><i class="fas fa-user-plus"></i>Inscription</a>
+                                      <a href="{{ path('app_login') }}"><i class="fas fa-user"></i>Connexion</a></br></br>
+
                                   </div>
                               </div>
                           </div>
                       </div>
 
                     {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
-                        <li><a href="{{ path('app_register') }}"><i class="fas fa-user-plus"></i>Inscription</a></li>
-                        <li><a href="{{ path('app_login') }}"><i class="fas fa-user"></i>Connexion</a></li>
+
+
                     {% else %}
                         {% if is_granted('ROLE_ADMIN') %}
                             <li>
@@ -75,6 +74,7 @@
                             </li>
                         {% endif %}
                         <!-- <li><a href="{{ path('admin') }}"><i class="fas fa-user-cog"></i>Administration</a></li> -->
+
                         <li><a href="{{ path('app_logout') }}"><i class="fas fa-user-slash"></i>Deconnexion</a></li>
                         <li><a href="{{ path('profil') }}"><i class="fas fa-user"></i>Profil</a></li>
                     {% endif %}
@@ -142,9 +142,6 @@
                                           </br>
                                           L'ère du digitale absorbe tout, l'innovation est en marche ...maintenant place à la révolution dans nos assiettes !
                                       </div>
-                                      <div class="modal-footer">
-                                        <button class="btn btn-secondary" data-dismiss="modal" type="button">Close</button>
-                                      </div>
                                   </div>
                               </div>
                            </div>
@@ -181,9 +178,9 @@
                         </div>
                         <div class="partenaires1">
                                 <ul>
-                                    <li><a href="https://www.portesdenormandie.cci.fr/"><img class="cci" src="asset/img/cci.png" alt="cci"></a></li>
-                                    <li><a href="https://www.wf3.fr/"><img class="force" src="asset/img/Webforce.png" alt="webforce"></a></li>
-                                    <li><a href="https://www.normandie.fr/"><img class="region" src="asset/img/region.jpg" alt="region"></a></li>
+                                    <li><a href="https://www.portesdenormandie.cci.fr/"><img class="cci" src="asset/img/cci.png" alt="cci" title="CCI"></a></li>
+                                    <li><a href="https://www.wf3.fr/"><img class="force" src="asset/img/Webforce.png" alt="webforce" title="Webforce3"></a></li>
+                                    <li><a href="https://www.normandie.fr/"><img class="region" src="asset/img/region.jpg" alt="region" title="Région Haute Normandie"></a></li>
                                 </ul>
                         </div>
                     </div>
@@ -211,22 +208,22 @@
                     <div class="box-footer sociaux">
                         <h2>RETROUVEZ-NOUS</h2>
                         <ul>
-                                  <li><a href="https://www.facebook.com/virginie.epaignes.1"><i class="fab fa-facebook-square"></i></a></li>
-                                  <li><a href="https://twitter.com/TrouvesF"><i class="fab fa-twitter-square"></i></a></li>
-                                  <li><a href="https://www.instagram.com/trouvestaferme/"><i class="fab fa-instagram"></i></a></li>
-                                  <li><a href="https://www.pinterest.fr/contacttrouvestaferme/"><i class="fab fa-pinterest-square"></i></a></li>
+                                  <li><a href="https://www.facebook.com/virginie.epaignes.1" title="Facebook"><i class="fab fa-facebook-square"></i></a></li>
+                                  <li><a href="https://twitter.com/TrouvesF" title="Twitter"><i class="fab fa-twitter-square" ></i></a></li>
+                                  <li><a href="https://www.instagram.com/trouvestaferme/" title="Instagram"><i class="fab fa-instagram"></i></a></li>
+                                  <li><a href="https://www.pinterest.fr/contacttrouvestaferme/" title="Pinterest"><i class="fab fa-pinterest-square"></i></a></li>
                               </ul>
                         <div class="contact">
                             <p>
                                 <i class="fas fa-address-card"></i>
-                                <a href="mailto:trouvestaferme@gmail.com">trouvestaferme@gmail.com</a>
+                                <a href="mailto:trouvestaferme@gmail.com" title="Adresse pour nous contacter">trouvestaferme@gmail.com</a>
                             </p>
                         </div>
                         <div class="partenaires2">
                               <ul>
-                                  <li><a href="https://www.pole-emploi.fr/"><img class="poleemploi" src="asset/img/poleemploi.png" alt="poleemploi"></a></li>
-                                  <li><a href="http://www.eure.gouv.fr/"><img class="departement" src="asset/img/departement.png" alt="departement"></a></li>
-                                  <li><a href="https://www.mission-locale-ouest-eure.com/"><img class="mission" src="asset/img/mission.png" alt="mission"></a></li>
+                                  <li><a href="https://www.pole-emploi.fr/"><img class="poleemploi" src="asset/img/poleemploi.png" alt="poleemploi" title="Pole Emploi"></a></li>
+                                  <li><a href="http://www.eure.gouv.fr/"><img class="departement" src="asset/img/departement.png" alt="departement" title="Département de l'Eure"></a></li>
+                                  <li><a href="https://www.mission-locale-ouest-eure.com/"><img class="mission" src="asset/img/mission.png" alt="mission" title="Mission Locale"></a></li>
                              </ul>
                         </div>
 
