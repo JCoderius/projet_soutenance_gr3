@@ -561,7 +561,7 @@ button.btn.btn-success:hover {
 
 }
 .progress{
-  margin: 4% 0 4% 0;
+  margin: 12% 0 4% 0;
   height:2rem;
 }
 
@@ -578,11 +578,14 @@ button.btn.btn-success:hover {
 }
 .profil img{
   width: 90%;
-  margin: 4% 0 4% 0;
+  margin: 20% 0 4% 0;
 }
 .formulaire {
     width: 50%;
     float: left;
+}
+.formulaire div#profil_cat{
+  margin-left: 35%;
 }
 
 .profil h1 {
@@ -596,7 +599,7 @@ button.btn.btn-success:hover {
 .texte p {
   font-family: 'Nunito', sans-serif;
   text-align: justify;
-  padding: 4%;
+  padding: 15% 4% 4% 4%;
 }
 .save {
   background-color: orange;
@@ -875,7 +878,7 @@ footer .partenaire a:hover {
 .partenaires1 ul li {
     width: 31.3%;
     float: left;
-    padding-top: 5%;
+    padding-top: 8%;
     padding-left: 2%;
 }
 
