@@ -82,9 +82,9 @@ class SecurityController extends AbstractController
                );
 
            $mailer->send($message);
-           $this->addFlash('notice', 'Mail envoyé');
+           $this->addFlash('success', 'Un email vient de vous être envoyé!');
 
-           //return $this->redirectToRoute('defaut');
+           return $this->redirectToRoute('defaut');
        }
 
        return $this->render('security/forgotten_password.html.twig');
