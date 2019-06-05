@@ -8,6 +8,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class UserType extends AbstractType
 {
@@ -25,11 +26,20 @@ class UserType extends AbstractType
             ))
             //->add('password')
             //->add('token')
+            ->add('title', TextType::class, [
+                'label' =>'Titre',
+            ])
             ->add('lastname', TextType::class, [
                 'label' =>'Nom',
             ])
             ->add('firstname', TextType::class, [
                 'label' =>'Prénom',
+            ])
+            ->add('description', TextareaType::class, [
+                'label' =>'Description',
+            ])
+            ->add('title', TextType::class, [
+                'label' =>'Titre',
             ])
             ->add('siret')
             ->add('phone', TextType::class, [
