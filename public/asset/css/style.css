@@ -321,12 +321,13 @@ section .texte p {
     text-transform: uppercase;
 }
 
-#les_selections .prod {
+
+#les_selections div.prod {
     text-align: center;
     margin: 10px auto;
     color: white;
     background-color: green;
-    width: 30%;
+    width: 10%;
     padding: 10px;
 }
 
@@ -342,25 +343,26 @@ section .texte p {
 }
 
 #les_selections div.paginator div.global.prod {
-    float: left;
-    width: 29%;
-    margin: 1% 1% 1% 2%;
+    width: 70%;
+    padding: 1%;
+    background-color: white;
+    border: 1px solid green;
+    color: black;
+    text-align: justify;
+}
+#les_selections div.paginator div.global.prod h2,p {
+  margin-left: 2%;
 }
 
 #les_selections div.paginator img {
-    width: 40%;
+    width: 17%;
     float: left;
-    border-radius: 50%;
-}
-
-#les_selections div.paginator p {
-    line-height: 1.7em;
 }
 
 #les_selections div.paginator p.ident {
     text-transform: uppercase;
     font-weight: bold;
-    font-size: 20px;
+    font-size: 16px;
     margin: 2%;
 }
 

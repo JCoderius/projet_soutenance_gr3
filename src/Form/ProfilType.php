@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class ProfilType extends AbstractType
 {
@@ -27,6 +28,16 @@ class ProfilType extends AbstractType
             ->add('siret', TextType::class, [
                 'label' =>'Siret*',
             ])
+            ->add('title', TextType::class, [
+                'label' =>'titre',
+            ])
+
+            ->add('images', FileType::class, array(
+                'label' => 'Images',
+                'data_class' => null,
+                'required' => false,
+            ))
+            ->add('siret')
             ->add('phone', TextType::class, [
                 'label' =>'Téléphone',
                 'required' => false,
@@ -53,7 +64,7 @@ class ProfilType extends AbstractType
             ->add('dep_id', EntityType::class, [
                 // looks for choices from this entity
                 'class' => Departements::class,
-                'label' => 'Départements*',
+                'label' => 'Département*',
 
                 // uses the User.username property as the visible option string
                 'choice_label' => 'nom',
@@ -62,6 +73,11 @@ class ProfilType extends AbstractType
                 // 'multiple' => true,
                 // 'expanded' => true,
             ])
+
+            ->add('description', TextType::class, [
+                'label' =>'Description',
+            ])
+            
             ->add('cat', EntityType::class, [
                 // looks for choices from this entity
                 'class' => Category::class,
