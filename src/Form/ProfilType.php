@@ -12,6 +12,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ProfilType extends AbstractType
 {
@@ -19,25 +20,27 @@ class ProfilType extends AbstractType
     {
         $builder
             ->add('email')
+            ->add('title', TextType::class, [
+                'label' =>'Titre*',
+            ])
             ->add('lastname', TextType::class, [
                 'label' =>'Nom*',
             ])
             ->add('firstname', TextType::class, [
                 'label' =>'Prénom*',
             ])
+            ->add('description', TextareaType::class, [
+                'label' =>'Description*',
+            ])
             ->add('siret', TextType::class, [
                 'label' =>'Siret*',
             ])
-            ->add('title', TextType::class, [
-                'label' =>'titre',
-            ])
-
             ->add('images', FileType::class, array(
                 'label' => 'Images',
                 'data_class' => null,
                 'required' => false,
             ))
-            ->add('siret')
+            // ->add('siret')
             ->add('phone', TextType::class, [
                 'label' =>'Téléphone',
                 'required' => false,
@@ -74,10 +77,8 @@ class ProfilType extends AbstractType
                 // 'expanded' => true,
             ])
 
-            ->add('description', TextType::class, [
-                'label' =>'Description',
-            ])
-            
+
+
             ->add('cat', EntityType::class, [
                 // looks for choices from this entity
                 'class' => Category::class,

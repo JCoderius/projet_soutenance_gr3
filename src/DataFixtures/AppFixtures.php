@@ -44,6 +44,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user2->setRoles(array('ROLE_USER'));
         $user2->setPassword($this->passwordEncoder->encodePassword($user2, 'user'));
         $user2->setToken($this->tokenGenerator->generateToken());
+        $user2->setTitle('La Ferme Dupont');
         $user2->setLastname('Dupont');
         $user2->setFirstname('Albert');
         $user2->setSiret('12345678900000');
@@ -73,8 +74,10 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
             $user->setEmail('user' . $i . '@user' . $i . '.fr');
             $user->setRoles(array('ROLE_USER'));
             $user->setPassword($this->passwordEncoder->encodePassword($user, 'user' . $i));
+            $user->setTitle('La ferme Durand'.$i);
             $user->setLastname('Durand'.$i);
             $user->setFirstname('Francois'.$i);
+            $user->setDescription('Nous vous proposons différents produits de la ferme');
             $user->setSiret('12345678900000');
             $user->setPhone('0600010203');
             $user->setAdress('La briqueterie');
