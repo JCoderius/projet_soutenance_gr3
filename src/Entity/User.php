@@ -76,11 +76,6 @@ class User implements UserInterface
      */
     private $firstname;
 
-    /**
-    * @ORM\Column(type="string", length=255)
-    */
-    private $images;
-
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -179,6 +174,11 @@ class User implements UserInterface
      * @ORM\Column(type="string", length=255, nullable=true)
      */
     private $description;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $images;
 
     public function __construct()
     {
@@ -296,19 +296,6 @@ class User implements UserInterface
     public function setFirstname(?string $firstname): self
     {
         $this->firstname = $firstname;
-
-        return $this;
-    }
-
-    public function getImages()
-    {
-        return $this->images;
-    }
-
-
-    public function setImages($images)
-    {
-        $this->images = $images;
 
         return $this;
     }
@@ -465,6 +452,18 @@ class User implements UserInterface
     public function setDescription(?string $description): self
     {
         $this->description = $description;
+
+        return $this;
+    }
+
+    public function getImages()
+    {
+        return $this->images;
+    }
+
+    public function setImages(?string $images): self
+    {
+        $this->images = $images;
 
         return $this;
     }

@@ -118,12 +118,27 @@ header .modal-body {
     font-family: 'Nunito', sans-serif;
 }
 header .modal-body a{
-  color: black;
-  padding: 4%;
+  background-color: darkorange;
+  border-radius: 5px;
+  color: white;
+  padding: 2%;
+  text-decoration: none;
+  box-shadow: 2px 2px 0 black;
+  margin-left: 2%;
+
 }
 
 header .modal-body a:hover {
-    color: darkorange;
+    color: white;
+    text-decoration: none;
+    background-color: orange;
+}
+.alert.alert-success {
+  text-align: center;
+  color: black;
+  font-family: 'Nunito', sans-serif;
+  font-size: 1.2em;
+  background-color: grey;
 }
 /* ****************************************** */
 
@@ -152,7 +167,12 @@ header .modal-body a:hover {
 #accueil .search .navbar_principal .navbar {
     display: none;
 }
-
+.evidence {
+  font-style: italic;
+  font-size: 1em;
+  color: darkorange;
+  text-shadow: 2px 2px black;
+}
 
 /*Explication page accueil*/
 .explication  {
@@ -324,20 +344,19 @@ section .texte p {
 
 #les_selections div.paginator div.global.prod {
     width: 70%;
-    padding: 2%;
+    padding: 1%;
     background-color: white;
     border: 1px solid green;
     color: black;
+    text-align: justify;
+}
+#les_selections div.paginator div.global.prod h2,p {
+  margin-left: 2%;
 }
 
 #les_selections div.paginator img {
-    width: 10%;
+    width: 17%;
     float: left;
-    margin: 2%;
-}
-
-#les_selections div.paginator p {
-    line-height: 1.5em;
 }
 
 #les_selections div.paginator p.ident {

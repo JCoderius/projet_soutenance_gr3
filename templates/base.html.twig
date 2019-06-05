@@ -46,7 +46,7 @@
 
 
               {% else %}
-                <li class="producteur"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter2">
+                <li class="producteur"><button type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModalCenter2" title="Rejoignez-nous">
                     Espace Producteur
                     </button>
                 </li>
@@ -62,12 +62,12 @@
                                       </button>
                                   </div>
                                   <div class="modal-body">
-                                      En vous inscrivant sur notre site vous gagnerez en visibilité pour accroître votre
+                                      En vous inscrivant sur notre site, vous gagnerez en visibilité pour accroître votre
                                       développement locale grâce à notre service entièrement gratuit.</br>
                                       Pour cela il vous suffit de compléter l'inscription.</br>
                                       Vos données ne seront pas utilisées à des fins commerciales.</br></br>
-                                      <a href="{{ path('app_register') }}"><i class="fas fa-user-plus"></i>Inscription</a>
-                                      <a href="{{ path('app_login') }}"><i class="fas fa-user"></i>Connexion</a></br></br>
+                                      <a href="{{ path('app_register') }}" title="Pour être visible inscrivez vous"><i class="fas fa-user-plus"></i>Inscription</a>
+                                      <a href="{{ path('app_login') }}" title="Modifiez votre profil"><i class="fas fa-user"></i>Connexion</a></br></br>
 
                                   </div>
                               </div>
@@ -124,6 +124,13 @@
             <div class="clear"></div>
 
       </header>
+
+      {% for message in app.flashes('success') %}
+             <div class="alert alert-success">
+                 {{ message }}
+             </div>
+         {% endfor %}
+
               {% block body %}{% endblock %}
 
 {####################################### footer ###################################################}
@@ -134,8 +141,8 @@
                           <h2>A PROPOS DE NOUS</h2>
                       <div class="modalune">
                               <!-- Modal qui sommes nous -->
-                              <button class="btn btn-primary" data-target="#exampleModalCenter3" data-toggle="modal" type="button">
-                                  Qui sommes nous
+                              <button class="btn btn-primary" data-target="#exampleModalCenter3" data-toggle="modal" type="button" title="Informations">
+                                  Qui sommes nous ?
                               </button>
                           </div>
                           <!-- Modal -->
@@ -143,19 +150,19 @@
                               <div class="modal-dialog modal-dialog-centered" role="document">
                                   <div class="modal-content">
                                       <div class="modal-header">
-                                          <h5 class="modal-title" id="exampleModalLongTitle">Qui sommes nous</h5>
+                                          <h5 class="modal-title" id="exampleModalLongTitle">Qui sommes nous ?</h5>
                                           <button aria-label="Close" class="close" data-dismiss="modal" type="button">
                                               <span aria-hidden="true">&times;</span>
                                           </button>
                                       </div>
                                       <div class="modal-body">
-                                          Notre finalité en tant qu'association est né d'un projet commun lors de notre formation de développeur/codeur web, de la théorie nous sommes passés à une réalité largement
+                                          Notre finalité en tant qu'association est né d'un projet commun lors de notre formation de développeur/codeur web. De la théorie nous sommes passés à une réalité largement
                                           augmentée.</br>
                                           </br>
                                           Motivés par une idée lancée, nous avons construit un site à notre image : simple,conviviale, accessible à tous.
                                           A travers notre site, nous souhaitons reconnecter l'urbain au rural et ainsi perpétuer la transmission des savoirs qui se perdent dans le temps.</br>
                                           </br>
-                                          L'ère du digitale absorbe tout, l'innovation est en marche ...maintenant place à la révolution dans nos assiettes !
+                                          L'ère du digital absorbe tout, l'innovation est en marche ...maintenant place à la révolution dans nos assiettes !
                                       </div>
                                   </div>
                               </div>
@@ -163,7 +170,7 @@
 
                           <div class="modaldeux">
                             <!-- Modal Nos partenaires -->
-                            <button class="btn btn-primary" data-target="#exampleModalCenter4" data-toggle="modal" type="button">
+                            <button class="btn btn-primary" data-target="#exampleModalCenter4" data-toggle="modal" type="button" title="Nos collaborateurs">
                                 Nos partenaires
                             </button>
 
