@@ -35,6 +35,13 @@
                 </div>
             </div>
             <div class ="formulaire">
+                <h2>{{ user.title }}</h2>
+                <p>{{ user.description }}</p>
+                {% if user.images %}
+                  <img src="{{ asset('asset/img/photos/%s'|format(user.images)) }}" alt="">
+                {% else %}
+                  <img src="{{ asset('asset/img/default-avatar.png') }}">
+                {% endif %}
                 <div class="col-sm">
                     {{ form(form) }}
                 </div>

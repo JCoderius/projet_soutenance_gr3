@@ -29,6 +29,12 @@ class ProfilController extends AbstractController
 
         if ($form->isSubmitted() && $form->isValid()) {
             $entityManager = $this->getDoctrine()->getManager();
+
+            $file = $user->getImages();
+            $fileName = md5(uniqid()).'.'.$file->guessExtension();
+            $file->move($this->getParameter('upload_directory'), $fileName);
+            $user->setImages($fileName);
+
             $entityManager->persist($user);
             $entityManager->flush();
 
@@ -39,15 +45,10 @@ class ProfilController extends AbstractController
            return $this->redirectToRoute('profil');
         }
 
-        $form_row = $this->createForm(ProfilType::class, $user);
-        $form_row->handleRequest($request);
-
-
         return $this->render('profil/index.html.twig', [
             'user' => $user,
             'stats' => $stats,
             'form' => $form->createView(),
-            'formrow' => $form_row->createView()
         ]);
     }
 }

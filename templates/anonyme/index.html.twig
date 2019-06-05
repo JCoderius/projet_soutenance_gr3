@@ -28,13 +28,17 @@
         <div class="clear"></div>
 
         <div class="global image">
-            <img src="{{ asset('asset/img/ble.jpg') }}" alt="">
+            <img src="{{ asset('asset/img/ble.jpg') }}" alt="blé">
         </div>
 
         {% for user in users %}
             <div class="paginator">
                 <div class="global prod">
-                  <img src="{{ asset('asset/img/default-avatar.png') }}" alt="">
+                  {% if user.images %}
+                    <img src="{{ asset('asset/img/photos/%s'|format(user.images)) }}" alt="">
+                  {% else %}
+                    <img src="{{ asset('asset/img/default-avatar.png') }}">
+                  {% endif %}
                     <p class="ident">{{ user.lastname }}
                         {{ user.firstname }}</p>
                     <p>{{ user.email }}</p>
@@ -44,7 +48,7 @@
                     {% endfor %}
                     <p>Adresse :
                         {{ user.adress }}</p>
-                    <p>Code Postale :
+                    <p>Code Postal :
                         {{ user.cp }}</p>
                     <p>Tel : {{ user.phone }}</p>
                 </div>
