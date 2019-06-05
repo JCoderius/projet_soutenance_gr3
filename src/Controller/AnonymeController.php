@@ -60,7 +60,7 @@ class AnonymeController extends AbstractController
 
             throw $this->createNotFoundException('The departement does not exist');
         }
-    
+
         $page = $request->query->get('page', 1);
         $offset = ($page - 1) * $itemsPerPage;
         //dd($departement);

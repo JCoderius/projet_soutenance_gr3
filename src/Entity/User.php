@@ -76,6 +76,11 @@ class User implements UserInterface
      */
     private $firstname;
 
+    /**
+    * @ORM\Column(type="string", length=255)
+    */
+    private $images;
+
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
@@ -164,6 +169,16 @@ class User implements UserInterface
      * @ORM\ManyToMany(targetEntity="App\Entity\Category", inversedBy="users")
      */
     private $cat;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $title;
+
+    /**
+     * @ORM\Column(type="string", length=255, nullable=true)
+     */
+    private $description;
 
     public function __construct()
     {
@@ -281,6 +296,19 @@ class User implements UserInterface
     public function setFirstname(?string $firstname): self
     {
         $this->firstname = $firstname;
+
+        return $this;
+    }
+
+    public function getImages()
+    {
+        return $this->images;
+    }
+
+
+    public function setImages($images)
+    {
+        $this->images = $images;
 
         return $this;
     }
@@ -413,6 +441,30 @@ class User implements UserInterface
         if ($this->cat->contains($cat)) {
             $this->cat->removeElement($cat);
         }
+
+        return $this;
+    }
+
+    public function getTitle(): ?string
+    {
+        return $this->title;
+    }
+
+    public function setTitle(?string $title): self
+    {
+        $this->title = $title;
+
+        return $this;
+    }
+
+    public function getDescription(): ?string
+    {
+        return $this->description;
+    }
+
+    public function setDescription(?string $description): self
+    {
+        $this->description = $description;
 
         return $this;
     }
