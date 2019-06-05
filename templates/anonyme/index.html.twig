@@ -39,25 +39,25 @@
                     {% else %}
                       <img src="{{ asset('asset/img/default-avatar.png') }}">
                     {% endif %}
-                    <h2>{{ user.title }}</h2>
-                    <p>{{ user.description }}</p>
-                    <p class="ident">{{ user.lastname }}
-                        {{ user.firstname }}</p>
-                    <p>{{ user.email }}</p>
-                    {% for catt in user.cat %}
-                        <p>Produits proposés :
-                            {{ catt.produit }}</p>
-                    {% endfor %}
-                    <p>Adresse :
-                        {{ user.adress }}</p>
-                    <p>Code Postal :
-                        {{ user.cp }}</p>
-                    <p>Tel : {{ user.phone }}</p>
+                      <h2>{{ user.title }}</h2>
+                      <p>{{ user.description }}</p>
+                      <p class="ident">{{ user.lastname }}
+                          {{ user.firstname }}</p>
+                      <p>{{ user.email }}</p>
+                      {% for catt in user.cat %}
+                          <p>Produits proposés :
+                              {{ catt.produit }}</p>
+                      {% endfor %}
+                      <p>Adresse :
+                          {{ user.adress }}</p>
+                      <p>Code Postal :
+                          {{ user.cp }}</p>
+                      <p>Tel : {{ user.phone }}</p>
                 </div>
             </div>
         {% endfor %}
 
-    </div>
+
 
     <div class="clear"></div>
 <div class="pagin">

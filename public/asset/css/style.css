@@ -324,20 +324,19 @@ section .texte p {
 
 #les_selections div.paginator div.global.prod {
     width: 70%;
-    padding: 2%;
+    padding: 1%;
     background-color: white;
     border: 1px solid green;
     color: black;
+    text-align: justify;
+}
+#les_selections div.paginator div.global.prod h2,p {
+  margin-left: 2%;
 }
 
 #les_selections div.paginator img {
-    width: 10%;
+    width: 17%;
     float: left;
-    margin: 2%;
-}
-
-#les_selections div.paginator p {
-    line-height: 1.5em;
 }
 
 #les_selections div.paginator p.ident {
