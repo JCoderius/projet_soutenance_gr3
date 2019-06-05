@@ -77,7 +77,7 @@ class ProfilType extends AbstractType
             ->add('description', TextType::class, [
                 'label' =>'Description',
             ])
-            
+
             ->add('cat', EntityType::class, [
                 // looks for choices from this entity
                 'class' => Category::class,
