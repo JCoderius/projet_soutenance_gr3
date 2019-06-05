@@ -11,7 +11,7 @@ $(document).ready(function(){
             })
         }
     });
-    
+
     // ///////////////////////////////////
     // ////// FLEXSLIDER DU HEADER ///////
     // ///////////////////////////////////
@@ -26,5 +26,11 @@ $(document).ready(function(){
     $('#sidebarCollapse').on('click', function () {
         $('#sidebar').toggleClass('active');
     });
+
+    // ///////////////////////////////////
+    // ////// MESSAGES FLASH ///////
+    // ///////////////////////////////////
+    $('.flash-notice').delay(200).hide(20);
+    
 
 })

@@ -12,6 +12,7 @@ use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\FileType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 
 class ProfilType extends AbstractType
 {
@@ -74,10 +75,10 @@ class ProfilType extends AbstractType
                 // 'expanded' => true,
             ])
 
-            ->add('description', TextType::class, [
+            ->add('description', TextareaType::class, [
                 'label' =>'Description',
             ])
-            
+
             ->add('cat', EntityType::class, [
                 // looks for choices from this entity
                 'class' => Category::class,
