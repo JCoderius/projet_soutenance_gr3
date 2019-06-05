@@ -30,7 +30,7 @@ class ProfilType extends AbstractType
                 'label' =>'Siret*',
             ])
             ->add('title', TextType::class, [
-                'label' =>'titre',
+                'label' =>'titre*',
             ])
 
             ->add('images', FileType::class, array(
@@ -76,7 +76,7 @@ class ProfilType extends AbstractType
             ])
 
             ->add('description', TextareaType::class, [
-                'label' =>'Description',
+                'label' =>'Description*',
             ])
 
             ->add('cat', EntityType::class, [
