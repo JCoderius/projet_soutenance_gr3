@@ -34,11 +34,13 @@
         {% for user in users %}
             <div class="paginator">
                 <div class="global prod">
-                  {% if user.images %}
-                    <img src="{{ asset('asset/img/photos/%s'|format(user.images)) }}" alt="">
-                  {% else %}
-                    <img src="{{ asset('asset/img/default-avatar.png') }}">
-                  {% endif %}
+                    {% if user.images %}
+                      <img src="{{ asset('asset/img/photos/%s'|format(user.images)) }}" alt="">
+                    {% else %}
+                      <img src="{{ asset('asset/img/default-avatar.png') }}">
+                    {% endif %}
+                    <h2>{{ user.title }}</h2>
+                    <p>{{ user.description }}</p>
                     <p class="ident">{{ user.lastname }}
                         {{ user.firstname }}</p>
                     <p>{{ user.email }}</p>
