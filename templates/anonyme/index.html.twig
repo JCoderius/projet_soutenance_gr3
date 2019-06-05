@@ -32,31 +32,35 @@
         </div>
 
         {% for user in users %}
-            <div class="paginator">
                 <div class="global prod">
-                    {% if user.images %}
-                      <img src="{{ asset('asset/img/photos/%s'|format(user.images)) }}" alt="">
-                    {% else %}
-                      <img src="{{ asset('asset/img/default-avatar.png') }}">
-                    {% endif %}
-                      <h2>{{ user.title }}</h2>
-                      <p>{{ user.description }}</p>
-                      <p class="ident">{{ user.lastname }}
-                          {{ user.firstname }}</p>
-                      <p>{{ user.email }}</p>
-                      {% for catt in user.cat %}
-                          <p>Produits proposés :
-                              {{ catt.produit }}</p>
-                      {% endfor %}
-                      <p>Adresse :
-                          {{ user.adress }}</p>
-                      <p>Code Postal :
-                          {{ user.cp }}</p>
-                      <p>Tel : {{ user.phone }}</p>
-                </div>
+                    <div class="avatar">
+                      {% if user.images %}
+                        <img src="{{ asset('asset/img/photos/%s'|format(user.images)) }}" alt="">
+                      {% else %}
+                        <img src="{{ asset('asset/img/default-avatar.png') }}">
+                      {% endif %}
+                    </div>
+                    <div class="tx">
+                        {% for catt in user.cat %}
+                          <div class="prodt">
+                            <p>{{ catt.produit }}</p>
+                          </div>
+                          <h2>{{ user.title }}</h2>
+                          <p>{{ user.description }}</p>
+                          <p class="nom">{{ user.lastname }}
+                              {{ user.firstname }}</p>
+                          <p>{{ user.email }}</p>
+                          <p>Adresse :
+                              {{ user.adress }}</p>
+                          <p>Code Postal :
+                              {{ user.cp }}</p>
+                          <p>Tel : {{ user.phone }}</p>
+                          {% endfor %}
+
+                    </div>
+              <div class="clear"></div>
             </div>
         {% endfor %}
-
 
 
     <div class="clear"></div>
