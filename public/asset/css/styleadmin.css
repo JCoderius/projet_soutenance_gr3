@@ -35,6 +35,12 @@ a {
     color: white;
     padding: 5px 15px;
 }
+.pagin ul li.active a {
+    background-color: orange;
+    margin: auto 2px;
+    color: white;
+    padding: 5px 15px;
+}
 
 table.table tbody tr td img{
   width: 10%;
@@ -67,10 +73,13 @@ div.h5.mb-0.font-weight-bold.text-gray-800{
   width: 100%;
   word-wrap: normal;
 }
+div.col.mr-2{
+  padding-left: 1%;
+}
 div.col.mr-2 img{
-  width: 24%;
+  width: 28%;
   border-radius: 5em;
-  margin: 1% 2%;
+  margin: 1% 1%;
 }
 
 h6.text-primary{

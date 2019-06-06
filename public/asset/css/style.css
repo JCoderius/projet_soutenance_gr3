@@ -190,6 +190,15 @@ header .modal-body a:hover {
   font-weight: bolder;
   font-size: 1.5em;
 }
+.explication_responsive{
+  display: none;
+  position: absolute;
+  font-family: 'Nunito', sans-serif;
+  font-weight: bolder;
+  margin-top: -65%;
+  color: black;
+  z-index: 1001;
+}
 
 
 /* CSS concernant la carte de France */
@@ -312,12 +321,11 @@ section .texte p {
 
 #les_selections .navbar1 form.form-inline {
     width: 80%;
-    margin: 0 auto;
-    display: block;
+    margin: 0 10%;
 }
 
 #les_selections .navbar1 form.form-inline select {
-    margin: 10px 20px;
+    margin: 0 auto;
 }
 
 #les_selections h1 {
@@ -371,6 +379,9 @@ section .texte p {
     border: 3px solid green;
     margin: 2% 0 2% 0;
     border-radius: 5px;
+}
+#les_selections .global.image img{
+  width: 40%;
 }
 #les_selections .prodt {
   position: absolute;
@@ -1091,7 +1102,7 @@ p.copyright {
         padding: 0 5%;
         width: 100%;
     }
-.symboles{
+    .symboles{
       width: 40%;
       margin-left: 35%;
     }
@@ -1102,6 +1113,7 @@ p.copyright {
     header .titre h1 {
         font-size: 250%;
         margin-top: 3%;
+        margin-left: -5%;
     }
     header .logo a img {
         width: 20%;
@@ -1459,13 +1471,36 @@ p.copyright {
       width: 80%;
       margin: 0 auto;
     }
+    header div.inscription ul{
+      margin-left: -10%;
+    }
     header div.inscription ul li{
-      width: 30%;
+      width: 31%;
       margin: 10% auto;
       padding: 2%;
     }
     header div.inscription ul li span{
       display: none;
+    }
+    #accueil .carte {
+        display: none;
+    }
+    #accueil .search .navbar_principal .navbar {
+        display: block;
+        position: absolute;
+        z-index: 1001;
+        width: 100%;
+        top: 40%;
+        background-color: lightgrey;
+    }
+    #accueil div.explication{
+      display: none;
+    }
+    #accueil div.explication_responsive{
+      display:block;
+    }
+    select#profil_dep_id{
+      margin: 0 auto;
     }
 /* footer*/
       .box-footer {
