@@ -290,6 +290,7 @@ section .texte p {
     width: 100%;
     position: relative;
     z-index: 100;
+    font-family: 'Nunito', sans-serif;
 }
 
 #les_selections .navbar1 {
@@ -299,6 +300,7 @@ section .texte p {
     opacity: 0.8;
     padding: 5px 0;
     text-align: center;
+    font-family: 'Nunito', sans-serif;
 }
 
 #les_selections .navbar1 nav {
@@ -356,15 +358,16 @@ section .texte p {
     border-radius: 5px;
 }
 #les_selections .prodt {
-  background-color: darkorange;
-  width: 20%;
   position: absolute;
   right: 5%;
-  font-weight: bold;
-  border-radius: 0px 0 5px 5px;
+
 }
 #les_selections .prodt p{
-  padding: 2%;
+  background-color: darkorange;
+  padding: 2% 0 2% 4%;
+  border-radius: 0px 0 5px 5px;
+  font-size: 2em;
+  font-weight: bolder;
 }
 /* #les_selections div.paginator img {
     width: 17%;
@@ -964,7 +967,7 @@ p.copyright {
 
 /* ******************************************* */
 
-@media screen and (max-width: 950px) {
+/* @media screen and (max-width: 950px) {
     header .logo a img {
         left: -1.5%;
     }
@@ -994,9 +997,9 @@ p.copyright {
     #les_selections .navbar1 nav select option {
         width: 100%;
     }
-}
+} */
 
-@media screen and (max-width: 850px) {
+/* @media screen and (max-width: 850px) {
     .carte {
         width: 50%;
         left: 25%;
@@ -1055,9 +1058,9 @@ p.copyright {
         width: 50%;
         margin: 5px auto;
     }
-}
+} */
 
-@media screen and (max-width: 768px) {
+@media screen and (max-width: 769px) {
     header .liens ul li span {
         display: none;
     }
@@ -1065,13 +1068,17 @@ p.copyright {
         padding: 0 5%;
         width: 100%;
     }
+.symboles{
+      width: 40%;
+      margin-left: 35%;
+    }
     header .liens ul li {
         width: 31%;
         float: left;
     }
     header .titre h1 {
         font-size: 250%;
-        margin: 6% auto;
+        margin-top: 3%;
     }
     header .logo a img {
         width: 20%;
@@ -1083,8 +1090,10 @@ p.copyright {
     header div.inscription ul li a span {
         display: none;
     }
-    header div.inscription ul li button {
-        margin-left: 40%;
+    header button.btn.btn-primary{
+      width: 30%;
+
+      margin-left: 90%;
     }
     header div.inscription ul li.symboles {
         width: 100%;
@@ -1101,9 +1110,91 @@ p.copyright {
         width: 50%;
         margin: 50px auto;
     }
+    /*profil*/
+    button.btn.btn-success {
+    margin-left: 25%;
+    float: left;
+
+  }
+    .form-check.mb-2.mr-sm-2.mb-sm-0 {
+      float: left;
+      margin-left: 55%;
+      margin-top: -40%;
+  }
+  .col-md-6-2 a {
+    width: 100%;
+    margin-left: 15%;
+  }
+  /*register*/
+  #registration_form_email {
+      width: 140%;
+      margin: 0 auto;
+  }
+  #registration_form_password_first {
+    width: 140%;
+    margin-top: -10%;
+    margin-left: 19%;
+  }
+  #registration_form_password_second {
+    width: 140%;
+    margin-top: -10%;
+    margin-left: 19%;
+  }
+  button.btn1 {
+    margin-left: 90%;;
+  }
+  .form-check {
+    margin: 40% 0 20% -80% ;
+  }
+  /*Forgotter password*/
+#inputEmail1 {
+  width: 80%;
+  margin: 7%;
+  }
+  .icon .fa.fa-at{
+    margin-top: 5%;
+    margin-left: -20%;
+  }
+  .contenu button {
+    width: 20%;
+    margin: 4% 40% 10% 40%;
+  }
+  /*profil*/
+  .formulaire div#profil_cat{
+  margin-left: 45%;
+  margin-top: -22%;
+  }
+  .formulaire img{
+    width: 100%;
+    margin: 5%;
+  }
+  #profil_save{
+    margin-left: 20%;
+  }
+  /*sélection*/
+  .global.image img{
+    width: 100%;
+  }
+  #les_selections .avatar img {
+    width: 100%;
+    padding: 2%;
+    margin-left: 0;
+  }
+  #les_selections .tx p{
+    font-size: 1em;
+    line-height: 30px;
+    margin-left: -40%;
+  }
+  #les_selections .prodt {
+    right: 10%;
+  }
+  .box-footer {
+      width: 100%;
+
+  }
 }
 
-@media screen and (max-width: 568px) {
+/* @media screen and (max-width: 568px) {
     header .liens ul {
         margin: 0 auto;
         width: 100%;
@@ -1169,26 +1260,160 @@ p.copyright {
         width: 50%;
         margin: 10px auto;
     }
-}
+} */
 
-@media screen and (max-width: 375px) {
-    header .liens {
-        width: 95%;
-        margin-left: 5%;
+@media screen and (max-width: 376px) {
+
+  header .liens ul li span {
+      display: none;
+  }
+  header .liens ul {
+      padding: 0 5%;
+      width: 100%;
+  }
+.symboles{
+    width: 40%;
+    margin-left: 35%;
+  }
+  header .liens ul li {
+      width: 31%;
+      float: left;
+  }
+  header .titre h1 {
+      font-size: 135%;
+      margin-top: 5%;
+      margin-left: -10%;
+  }
+  header .logo a img {
+      width: 20%;
+      margin-left: -15%
+  }
+  header div.inscription {
+      width: 100%;
+      margin-left: auto;
+  }
+  header div.inscription ul li a span {
+      display: none;
+  }
+  header button.btn.btn-primary{
+    width: 100%;
+    margin-top: -15%;
+    margin-left: 280%;
+    font-size: 0.5em;
+  }
+
+  header div.inscription ul li.symboles {
+      width: 100%;
+      margin-left: 40%;
+  }
+  /*index*/
+  .explication h3 {
+    font-size: 0.5em;
+  }
+  #les_selections {
+      width: 100%;
+      font-size: 0.5em;
+  }
+  #les_selections .navbar1 nav form select {
+      width: 100%;
+      font-size: 0.5em;
+      text-align: center;
+
+
+  }
+    .btn.btn-outline-success.my-2.my-sm-0{
+      font-size: 0.5em;
     }
-    header .liens ul li {
-        width: 31%;
-        /*float: left;*/
+      #les_selections .navbar1 nav button {
+          width: 50%;
+          margin: 50px auto;
+      }
+      /*profil*/
+      button.btn.btn-success {
+      margin-left: 25%;
+      float: left;
+
     }
-    header .liens ul li a i {
-        /*margin-left: 5%;*/
-        width: 100%;
+      .form-check.mb-2.mr-sm-2.mb-sm-0 {
         float: left;
+        margin-left: 55%;
+        margin-top: -40%;
     }
-    header .titre h1 {
-        font-size: 100%;
+    .col-md-6-2 a {
+      width: 100%;
+      margin-left: 15%;
     }
-    #les_selections .navbar1 .navbar form .form-inline button {
-        width: 100%;
+    /*register*/
+    #registration_form_email {
+        width: 140%;
+        margin: 0 auto;
     }
+    #registration_form_password_first {
+      width: 140%;
+      margin-top: -10%;
+      margin-left: 19%;
+    }
+    #registration_form_password_second {
+      width: 140%;
+      margin-top: -10%;
+      margin-left: 19%;
+    }
+    button.btn1 {
+      margin-left: 45%;
+    }
+    .form-check {
+      margin: 40% 0 20% -80% ;
+    }
+    /*Forgotter password*/
+    #inputEmail1 {
+    width: 90%;
+    margin: 7%;
+    }
+    .icon .fa.fa-at{
+      margin-top: 5%;
+      margin-left: -25%;
+    }
+
+    .contenu button {
+      width: 50%;
+      margin-left: 25%;
+    }
+    /*profil*/
+    .formulaire div#profil_cat{
+    margin-left: 45%;
+    margin-top: -22%;
+    }
+    .formulaire img{
+      width: 100%;
+      margin: 5%;
+    }
+    #profil_save{
+      margin-left: 20%;
+    }
+    /*sélection*/
+    .global.image img{
+      width: 100%;
+    }
+    #les_selections .global.prod{
+      border: 1px solid green;
+      margin-top: 2%;
+    }
+    #les_selections .avatar img {
+      width: 125%;
+      padding: 2%;
+      margin-left: 0;
+    }
+    #les_selections .tx p{
+      font-size: 1.5em;
+      line-height: 10px;
+      margin-left: -2%;
+    }
+    #les_selections .prodt {
+      right: 17%;
+    }
+/* footer*/
+      .box-footer {
+          width: 100%;
+          font-size: 1em;
+      }
 }
