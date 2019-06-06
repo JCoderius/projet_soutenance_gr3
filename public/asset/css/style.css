@@ -1087,18 +1087,20 @@ p.copyright {
     }
     header .logo a img {
         width: 20%;
+        left: 1%;
     }
     header div.inscription {
         width: 100%;
         margin-left: auto;
     }
+    header div.inscription ul{
+      margin-left: 5%;
+    }
     header div.inscription ul li a span {
         display: none;
     }
-    header button.btn.btn-primary{
-      width: 30%;
-
-      margin-left: 90%;
+    header div.inscription button.btn.btn-primary{
+      margin-left: 380%;
     }
     header div.inscription ul li.symboles {
         width: 100%;
@@ -1290,25 +1292,24 @@ p.copyright {
   }
   header .logo a img {
       width: 20%;
-      margin-left: -15%
+      margin-left: 1%
   }
   header div.inscription {
-      width: 100%;
-      margin-left: auto;
+      width: 80%;
+      margin-bottom: -50%;
   }
   header div.inscription ul li a span {
       display: none;
   }
-  header button.btn.btn-primary{
+  header div.inscription button.btn.btn-primary{
     width: 100%;
-    margin-top: -15%;
-    margin-left: 280%;
+    margin-top: -50%;
+    margin-left: 200%;
+    margin-bottom: -50%;
     font-size: 0.5em;
   }
-
-  header div.inscription ul li.symboles {
+  header div.inscription ul li {
       width: 100%;
-      margin-left: 40%;
   }
   /*index*/
   .explication h3 {
@@ -1436,10 +1437,16 @@ p.copyright {
     fieldset.form-group{
       margin-left: 1%;
     }
-    header.inscription u li{
-      width: 30%;
+    header div.inscription{
+      width: 80%;
+      margin: 0 auto;
     }
-    header.inscription u li span{
+    header div.inscription ul li{
+      width: 30%;
+      margin: 10% auto;
+      padding: 2%;
+    }
+    header div.inscription ul li span{
       display: none;
     }
 /* footer*/
