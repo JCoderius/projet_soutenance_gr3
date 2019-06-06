@@ -49,18 +49,18 @@
                           <div class="ds">
                             <p>{{ user.description }}</p>
                           </div>
-                          <div class="class="nom">
-                            <p>{{ user.lastname }}
-                                {{ user.firstname }}</p>
-                            <p>{{ user.email }}</p>
-                            <p>Adresse :
-                                {{ user.adress }}</p>
-                            <p>Code Postal :
-                                {{ user.cp }}</p>
-                            <p>Tel : {{ user.phone }}</p>
+                          <div class="nom">
+                              <p class="name">{{ user.lastname }}
+                                  {{ user.firstname }}</p>
+                              <p><i class="fa fa-at"></i>{{ user.email }}</p>
+                              <p><i class="far fa-address-card"></i>
+                                  {{ user.adress }}</p>
+                              <p class="cd">
+                                  {{ user.cp }}</p>
+                              <p><i class="fas fa-phone"></i>
+                              {{ user.phone }}</p>
                             {% endfor %}
                         </div>
-
                     </div>
               <div class="clear"></div>
             </div>

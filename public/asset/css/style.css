@@ -339,38 +339,52 @@ section .texte p {
 
 }
 #les_selections .tx {
-  float: left;
   width: 70%;
+  float: left;
+  margin-bottom: 2%;
 }
 #les_selections .tx h2 {
   font-size: 2em;
   font-size: bold;
+  margin-left: -30%;
+  text-decoration: underline;
 
+}
+#les_selections .ds{
+  float: left;
+  width:80%;
+  margin-left: -13%;
+
+}
+#les_selections .nom{
+  float: left;
+  width: 30%;
 }
 #les_selections .ds p{
-  float: left;
-  width: 50%;
-}
-#les_selections .nom p{
-  float: left;
-  width: 50%;
-  font-size: 1.5em;
-  font-family: 'Nunito', sans-serif;
-  line-height: 40px;
   text-align: justify;
+  font-size: 1.2em;
+  font-family: 'Nunito', sans-serif;
   font-weight: bold;
+  padding: 3% 4% 1% 4%;
+  line-height: 20px;
+  margin-top: 2%;
 
 }
-#les_selections p.nom{
-  font-size: 1.6em;
+#les_selections .nom p{
+  font-size: 1.2em;
+  font-family: 'Nunito', sans-serif;
+  text-align: right;
   font-weight: bold;
+  line-height: 30px;
+  padding-top: 1%;
+  margin-top: 2%;
 }
+
 #les_selections .avatar img {
-    width: 60%;
-    opacity: 0.8;
-    padding-top: 2%;
-    padding-bottom: 2%;
-    margin-left: -35%;
+    width: 70%;
+    padding: 6%;
+    margin-left: -30%;
+    margin-top: 12%;
 }
 
 #les_selections .global.prod {
@@ -385,15 +399,15 @@ section .texte p {
 }
 #les_selections .prodt {
   position: absolute;
-  right: 5%;
+  right: 10%;
 
 }
 #les_selections .prodt p{
   background-color: darkorange;
-  padding: 2% 0 2% 4%;
   border-radius: 0px 0 5px 5px;
-  font-size: 2em;
+  font-size: 1.5em;
   font-weight: bolder;
+  padding: 10%;
 }
 /* #les_selections div.paginator img {
     width: 17%;
@@ -461,7 +475,7 @@ button.btn1 {
     color: white;
     border-radius: 5px;
     margin-bottom: 10%;
-    margin-left: 60%;
+    margin-left: 75%;
     border-color: #228B22;
     padding: 10px 20px 10px 20px;
     font-family: 'Nunito', sans-serif;
@@ -474,7 +488,7 @@ button.btn1:hover {
 
 .form-check {
     margin-top: 2%;
-    margin-left: -50%;
+    margin-left: -5%;
 }
 
 .row2 {
@@ -491,7 +505,7 @@ button.btn1:hover {
 }
 
 #registration_form_password_second {
-    width: 235%;
+    width: 245%;
 }
 
 
