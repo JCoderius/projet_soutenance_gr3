@@ -1384,10 +1384,10 @@ p.copyright {
     }
     /*profil*/
     .formulaire div#profil_cat{
-margin-left: -10%;
+      margin-left: 5%;
     }
     .formulaire img{
-      width: 60%;
+      width: 90%;
       margin: 5%;
     }
     #profil_save{
@@ -1414,8 +1414,33 @@ margin-left: -10%;
     #les_selections .prodt {
       right: 17%;
     }
-    div.form-group button[type=submit]{
-      width: 50%;
+    div.form-group button.save.btn{
+      width: 60%;
+      margin: 0 auto;
+    }
+    div.profil{
+      width: 100%;
+    }
+    div.formulaire{
+      width: 100%;
+    }
+    .profil img{
+      margin: 0 4%;
+      width: 92%;
+    }
+    div.texte2 p{
+      width: 80%;
+      margin: 0 auto;
+      padding: 4% 4% 4% 4%;
+    }
+    fieldset.form-group{
+      margin-left: 1%;
+    }
+    header.inscription u li{
+      width: 30%;
+    }
+    header.inscription u li span{
+      display: none;
     }
 /* footer*/
       .box-footer {
