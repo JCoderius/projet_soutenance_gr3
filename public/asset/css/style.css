@@ -412,6 +412,12 @@ section .texte p {
     color: white;
     padding: 5px 15px;
 }
+.pagin ul li.active a {
+    background-color: orange;
+    margin: auto 2px;
+    color: white;
+    padding: 5px 15px;
+}
 
 
 /* ******************************* */
