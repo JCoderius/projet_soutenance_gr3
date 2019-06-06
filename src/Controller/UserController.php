@@ -76,10 +76,19 @@ class UserController extends AbstractController
      */
     public function edit(Request $request, User $user): Response
     {
+
+        $lastFile = $user->getImages();
+//Tu récupères les données du formulaire
+
+//là si le champ file est a nul tu lui remets l'ancienne valeur que tu as mis dans une variable avant la récupération des données du formulaire
+
         $form = $this->createForm(UserType::class, $user);
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
+            if($form['images']->getData() == null){
+                   $user->setImages($lastFile);
+            }
             $this->getDoctrine()->getManager()->flush();
 
             return $this->redirectToRoute('user_index', [
@@ -103,7 +112,7 @@ class UserController extends AbstractController
             $entityManager->remove($user);
             $entityManager->flush();
         }
-        
+
         return $this->redirectToRoute('user_index');
     }
 }
