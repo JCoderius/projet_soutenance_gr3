@@ -13,17 +13,20 @@
             <span class="evidence">produits locaux</span> proches de chez vous.</h3>
         </div>
 
+        <div class="explication_responsive">
+            <h3>Sélectionnez votre <span class="evidence">département</span> dans la liste déroulante pour retrouver <span class="evidence">les producteurs, les fermes</span> et les
+            <span class="evidence">produits locaux</span> proches de chez vous.</h3>
+        </div>
+
 
 
         <div class="search">
             <div class="navbar_principal">
                 <nav class="navbar navbar-light bg-light">
                     <form class="form-inline" action="{{ path('anonyme2') }}">
-
                         <select name="departement" id="profil_dep_id">
                             <option value="">Departements</option>
                             {% for depall in depalls %}
-
                                 <option value="{{ depall.numero }}">{{ depall.numero }} - {{ depall.nom }}</option>
                             {% endfor %}
                         </select>
