@@ -58,7 +58,7 @@ class ProfilType extends AbstractType
             // ])
 
             ->add('site', TextType::class, [
-              'label' => 'Site',
+              'label' => 'Site Internet',
             ])
             ->add('cp', TextType::class, [
                 'label' =>'Code Postal*',
