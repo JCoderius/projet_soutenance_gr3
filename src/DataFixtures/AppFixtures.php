@@ -75,7 +75,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $manager->persist($user3);
 
         $user4 = new User();
-        $user4->setEmail('user4@user4.fr');
+        $user4->setEmail('jprenaut@gmail.fr');
         $user4->setRoles(array('ROLE_USER'));
         $user4->setPassword($this->passwordEncoder->encodePassword($user4, 'user4'));
         $user4->setToken($this->tokenGenerator->generateToken());
@@ -94,14 +94,14 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $manager->persist($user4);
 
         $user5 = new User();
-        $user5->setEmail('user5@user5.fr');
+        $user5->setEmail('laboucheriecauchoise@orange.fr');
         $user5->setRoles(array('ROLE_USER'));
         $user5->setPassword($this->passwordEncoder->encodePassword($user5, 'user5'));
         $user5->setToken($this->tokenGenerator->generateToken());
         $user5->setTitle('La Boucherie Cauchoise');
         $user5->setLastname('Morin');
         $user5->setFirstname('Daniel');
-        $user5->setDescription('Viandes de boeufs de qualité et ventes en détails pour les particuliers.');
+        $user5->setDescription('Viande de boeuf de qualité et ventes en détails pour les particuliers.');
         $user5->setSiret('12846932547563');
         $user5->setPhone('0695847563');
         $user5->setAdress('Allée des jonquilles');
@@ -112,7 +112,62 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user5->addCat($this->getReference(CategoryFixtures::CATEGORY_REFERENCE3));
         $manager->persist($user5);
 
+        $user6 = new User();
+        $user6->setEmail('moureaux.virginie@yahoo.fr');
+        $user6->setRoles(array('ROLE_USER'));
+        $user6->setPassword($this->passwordEncoder->encodePassword($user6, 'user6'));
+        $user6->setToken($this->tokenGenerator->generateToken());
+        $user6->setTitle('Charcuterie du Roumois');
+        $user6->setLastname('Moureaux');
+        $user6->setFirstname('Virginie');
+        $user6->setDescription('Vente de plats de charcuteries divers et variés.');
+        $user6->setSiret('11236595632512');
+        $user6->setPhone('0652143263');
+        $user6->setAdress('Rue de la république');
+        $user6->setCp('27350');
+        $user6->setVille('Routot');
+        $user6->setImages('charcuterie_04.jpg');
+        $user6->setDepId($this->getReference(DepFixtures::DEPARTEMENT_REFERENCE1));
+        $user6->addCat($this->getReference(CategoryFixtures::CATEGORY_REFERENCE4));
+        $manager->persist($user6);
 
+        $user7 = new User();
+        $user7->setEmail('leprevert@gmail.fr');
+        $user7->setRoles(array('ROLE_USER'));
+        $user7->setPassword($this->passwordEncoder->encodePassword($user7, 'user7'));
+        $user7->setToken($this->tokenGenerator->generateToken());
+        $user7->setTitle('La ferme du pré vert');
+        $user7->setLastname('Dépré');
+        $user7->setFirstname('Pascal');
+        $user7->setDescription('Vente de lait en gros et détails.');
+        $user7->setSiret('15632659856325');
+        $user7->setPhone('0658213624');
+        $user7->setAdress('La bréhallerie');
+        $user7->setCp('27500');
+        $user7->setVille('Corneville sur Risle');
+        $user7->setImages('produits_laitier_01.jpg');
+        $user7->setDepId($this->getReference(DepFixtures::DEPARTEMENT_REFERENCE1));
+        $user7->addCat($this->getReference(CategoryFixtures::CATEGORY_REFERENCE5));
+        $manager->persist($user7);
+
+        $user8 = new User();
+        $user8->setEmail('desmaraissylvain@hotmail.fr');
+        $user8->setRoles(array('ROLE_USER'));
+        $user8->setPassword($this->passwordEncoder->encodePassword($user8, 'user8'));
+        $user8->setToken($this->tokenGenerator->generateToken());
+        $user8->setTitle('Desmarais SARL');
+        $user8->setLastname('Desmarais');
+        $user8->setFirstname('Sylvain');
+        $user8->setDescription('Tout un assortiment de biscuits et gateaux composés de produits locaux sont à votre disposition dans notre espace de vente.');
+        $user8->setSiret('11254865236598');
+        $user8->setPhone('0236528475');
+        $user8->setAdress('Le cantelou');
+        $user8->setCp('27210');
+        $user8->setVille('Foulbec');
+        $user8->setImages('douceurs_sucrees_01.jpg');
+        $user8->setDepId($this->getReference(DepFixtures::DEPARTEMENT_REFERENCE1));
+        $user8->addCat($this->getReference(CategoryFixtures::CATEGORY_REFERENCE6));
+        $manager->persist($user8);
 
 
         // for ($i = 1; $i < 20; $i++) {
