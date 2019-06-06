@@ -57,11 +57,12 @@ class DepartementsRepository extends ServiceEntityRepository
             ->getResult();
     }
 
-    public function countUsers()
+    public function countDepartements()
     {
-        return $this->createQueryBuilder('u')
-            ->select('COUNT(u)')
+        return $this->createQueryBuilder('d')
+            ->select('COUNT(d)')
             ->getQuery()
             ->getSingleScalarResult();
     }
+
 }

@@ -14,6 +14,15 @@ use Symfony\Bridge\Doctrine\RegistryInterface;
  */
 class CategoryRepository extends ServiceEntityRepository
 {
+  public function countProduits()
+  {
+      return $this->createQueryBuilder('c')
+          ->select('COUNT(c)')
+          ->getQuery()
+          ->getSingleScalarResult();
+  }
+
+
     public function __construct(RegistryInterface $registry)
     {
         parent::__construct($registry, Category::class);

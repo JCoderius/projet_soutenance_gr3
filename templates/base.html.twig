@@ -34,11 +34,6 @@
 
              <div class="clear"></div>
 
-             {% for message in app.flashes('success') %}
-                <div class="flash-notice">
-                    {{ message }}
-                </div>
-             {% endfor %}
 {####################################### Modal producteur ###################################################}
           <div class="inscription">
             <ul>
@@ -116,6 +111,7 @@
             <!-- end wrap-w1200 wrap-header-->
             <div class="clear"></div>
 
+
 {####################################### titre ###################################################}
             <div class="titre">
                 <h1>Trouves ta ferme</h1>
@@ -126,10 +122,10 @@
       </header>
 
       {% for message in app.flashes('success') %}
-             <div class="alert alert-success">
+             <div class="java alert alert-success">
                  {{ message }}
              </div>
-         {% endfor %}
+             {% endfor %}
 
               {% block body %}{% endblock %}
 
