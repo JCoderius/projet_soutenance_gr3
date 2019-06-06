@@ -139,7 +139,10 @@ header .modal-body a:hover {
   font-family: 'Nunito', sans-serif;
   font-size: 1.2em;
   background-color: grey;
+  text-transform: uppercase;
+  padding: 2%;
 }
+
 /* ****************************************** */
 
 
@@ -959,6 +962,7 @@ p.copyright {
 }
 
 
+
 /* ******************************************* */
 
 
@@ -966,6 +970,7 @@ p.copyright {
 
 
 /* ******************************************* */
+/* @media screen and (max-width: 1025px) { */
 
 /* @media screen and (max-width: 950px) {
     header .logo a img {

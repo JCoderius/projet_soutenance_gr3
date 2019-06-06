@@ -31,6 +31,7 @@ class RegistrationController extends AbstractController
                     $form->get('password')->getData()
                 )
             );
+            $this->addFlash('success', 'Vous êtes enregistré sur notre site');
 
             $entityManager = $this->getDoctrine()->getManager();
             $entityManager->persist($user);

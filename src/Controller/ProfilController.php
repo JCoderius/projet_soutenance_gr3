@@ -44,12 +44,13 @@ class ProfilController extends AbstractController
             $this->getDoctrine()->getManager()->flush();
             $this->addFlash(
                 'success',
-                'Your changes were saved!'
+                'Vos changements ont été enregistrés!'
             );
            return $this->redirectToRoute('profil');
         } else {
           $user->setImages($userfile);
         }
+
         return $this->render('profil/index.html.twig', [
             'user' => $user,
             'stats' => $stats,

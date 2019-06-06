@@ -30,7 +30,9 @@ $(document).ready(function(){
     // ///////////////////////////////////
     // ////// MESSAGES FLASH ///////
     // ///////////////////////////////////
-    $('.flash-notice').delay(200).hide(20);
-    
+    setTimeout(function() {  $('.java').hide(1000); }, 6000);
+
+
+
 
 })

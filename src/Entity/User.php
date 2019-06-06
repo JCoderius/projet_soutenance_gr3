@@ -373,7 +373,7 @@ class User implements UserInterface
         return $this;
     }
 
-    public function getSite(): ?string
+    public function getSite()
     {
         return $this->site;
     }

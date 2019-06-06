@@ -39,3 +39,38 @@ table.table tbody tr td img{
   width: 10%;
   border-radius: 50%;
 }
+
+div.container-fluid div.entete{
+  margin: 2%;
+}
+
+div.container-fluid div.entete h1.h3.mb-0.text-gray-800{
+  text-align: center;
+  font-size: 3em;
+}
+
+.text-warning, .text-info, .text-success, .text-primary{
+  font-size: 1em;
+}
+
+div.h5.mb-0.font-weight-bold.text-gray-800{
+  font-size: 2.5em;
+}
+
+.col-xl-8.col-lg-7{
+  width: 100%;
+  margin: 2% auto;
+}
+
+.card.border-left-primary.shadow.h-100.py-2{
+  width: 100%;
+  word-wrap: normal;
+}
+div.col.mr-2 img{
+  width: 30%;
+  border-radius: 5em;
+}
+
+h6.text-primary{
+  font-size: 2em;
+}
