@@ -23,7 +23,7 @@
 
             </nav>
         </div>
-        <h2>bienvenue dans le département
+        <h2>Bienvenue dans le département
             {{ departement.numero }}</h2>
         <div class="clear"></div>
 
@@ -45,17 +45,21 @@
                           <div class="prodt">
                             <p>{{ catt.produit }}</p>
                           </div>
-                          <h2>{{ user.title }}</h2>
-                          <p>{{ user.description }}</p>
-                          <p class="nom">{{ user.lastname }}
-                              {{ user.firstname }}</p>
-                          <p>{{ user.email }}</p>
-                          <p>Adresse :
-                              {{ user.adress }}</p>
-                          <p>Code Postal :
-                              {{ user.cp }}</p>
-                          <p>Tel : {{ user.phone }}</p>
-                          {% endfor %}
+                            <h2>{{ user.title }}</h2>
+                          <div class="ds">
+                            <p>{{ user.description }}</p>
+                          </div>
+                          <div class="class="nom">
+                            <p>{{ user.lastname }}
+                                {{ user.firstname }}</p>
+                            <p>{{ user.email }}</p>
+                            <p>Adresse :
+                                {{ user.adress }}</p>
+                            <p>Code Postal :
+                                {{ user.cp }}</p>
+                            <p>Tel : {{ user.phone }}</p>
+                            {% endfor %}
+                        </div>
 
                     </div>
               <div class="clear"></div>

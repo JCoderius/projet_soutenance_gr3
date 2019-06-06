@@ -334,12 +334,24 @@ section .texte p {
   float: left;
   width: 70%;
 }
-#les_selections .tx p{
+#les_selections .tx h2 {
+  font-size: 2em;
+  font-size: bold;
+
+}
+#les_selections .ds p{
+  float: left;
+  width: 50%;
+}
+#les_selections .nom p{
+  float: left;
+  width: 50%;
   font-size: 1.5em;
   font-family: 'Nunito', sans-serif;
   line-height: 40px;
+  text-align: justify;
   font-weight: bold;
-  margin-left: -40%;
+
 }
 #les_selections p.nom{
   font-size: 1.6em;
