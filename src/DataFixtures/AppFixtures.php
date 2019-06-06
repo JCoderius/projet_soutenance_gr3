@@ -48,7 +48,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user2->setTitle('La Ferme Dupont');
         $user2->setLastname('Dupont');
         $user2->setFirstname('Albert');
-        $user2->setDescription('Nous vous proposont différents légumes de saison, pommes de terre, carottes, navets, choux et salades.');
+        $user2->setDescription('Nous vous proposons différents légumes de saison, pommes de terre, carottes, navets, choux et salades.');
         $user2->setSiret('12345678900000');
         $user2->setPhone('0611111111');
         $user2->setAdress('Le Paradis');
@@ -82,7 +82,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user4->setTitle('La Ferme Renaut');
         $user4->setLastname('Renaut');
         $user4->setFirstname('Jean-Pierre');
-        $user4->setDescription('Les plus grandes variétés de fraises vous seront proposées à la cuillette ou en barquettes de 1, 2 et 5 Kg.');
+        $user4->setDescription('Les plus grandes variétés de fraises vous seront proposées à la cueillette ou en barquettes de 1, 2 et 5 Kg.');
         $user4->setSiret('12563268456856');
         $user4->setPhone('0629563584');
         $user4->setAdress('Chemin des Varets');
@@ -246,7 +246,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $manager->persist($user12);
 
         $user13 = new User();
-        $user13->setEmail('martin27500@gmail.com');
+        $user13->setEmail('martinmartial@gmail.com');
         $user13->setRoles(array('ROLE_USER'));
         $user13->setPassword($this->passwordEncoder->encodePassword($user13, 'user13'));
         $user13->setToken($this->tokenGenerator->generateToken());
@@ -263,6 +263,82 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user13->setDepId($this->getReference(DepFixtures::DEPARTEMENT_REFERENCE1));
         $user13->addCat($this->getReference(CategoryFixtures::CATEGORY_REFERENCE1));
         $manager->persist($user13);
+
+        $user14 = new User();
+        $user14->setEmail('rabatte27@gmail.com');
+        $user14->setRoles(array('ROLE_USER'));
+        $user14->setPassword($this->passwordEncoder->encodePassword($user14, 'user14'));
+        $user14->setToken($this->tokenGenerator->generateToken());
+        $user14->setTitle('Martin Martial SARL');
+        $user14->setLastname('Rabatte');
+        $user14->setFirstname('Michel');
+        $user14->setDescription('Eleveurs depuis 1983, nous sommes producteur d\'oeufs de qualités, qualibrés et bio.');
+        $user14->setSiret('12239500025423');
+        $user14->setPhone('0235856963');
+        $user14->setAdress('La raillerie');
+        $user14->setCp('76850');
+        $user14->setVille('Criquetot');
+        $user14->setImages('oeufs_05.jpg');
+        $user14->setDepId($this->getReference(DepFixtures::DEPARTEMENT_REFERENCE2));
+        $user14->addCat($this->getReference(CategoryFixtures::CATEGORY_REFERENCE9));
+        $manager->persist($user14);
+
+        $user15 = new User();
+        $user15->setEmail('martin27500@gmail.com');
+        $user15->setRoles(array('ROLE_USER'));
+        $user15->setPassword($this->passwordEncoder->encodePassword($user15, 'user15'));
+        $user15->setToken($this->tokenGenerator->generateToken());
+        $user15->setTitle('Vous aimez la viandes ?');
+        $user15->setLastname('Bouchard');
+        $user15->setFirstname('André');
+        $user15->setDescription('Si vous aimez la viande bovine, n\'hésitez pas à gouter nos variétés de viandes charolaises, nous sommes ouvert du lundi au samedi de 9h30 à 16h30.');
+        $user15->setSiret('13658000253021');
+        $user15->setPhone('0232652800');
+        $user15->setAdress('La sente aux chataigners');
+        $user15->setCp('27210');
+        $user15->setVille('Berville sur mer');
+        $user15->setImages('eleveurs_03.jpg');
+        $user15->setDepId($this->getReference(DepFixtures::DEPARTEMENT_REFERENCE1));
+        $user15->addCat($this->getReference(CategoryFixtures::CATEGORY_REFERENCE3));
+        $manager->persist($user15);
+
+        $user16 = new User();
+        $user16->setEmail('stephanehubert@gmail.com');
+        $user16->setRoles(array('ROLE_USER'));
+        $user16->setPassword($this->passwordEncoder->encodePassword($user16, 'user16'));
+        $user16->setToken($this->tokenGenerator->generateToken());
+        $user16->setTitle('Du Bio, rien que du Bio...');
+        $user16->setLastname('Hubert');
+        $user16->setFirstname('Stéphane');
+        $user16->setDescription('Tous les produits de la ferme proposés sont bio et garanti, nous vendons salade, courges et betteraves, venez nous voir à la ferme des 3 champs.');
+        $user16->setSiret('132658200014562');
+        $user16->setPhone('0632500256');
+        $user16->setAdress('route de Montfort');
+        $user16->setCp('27500');
+        $user16->setVille('Corneville sur Risle');
+        $user16->setImages('agriculteur_03.jpg');
+        $user16->setDepId($this->getReference(DepFixtures::DEPARTEMENT_REFERENCE1));
+        $user16->addCat($this->getReference(CategoryFixtures::CATEGORY_REFERENCE8));
+        $manager->persist($user16);
+
+        $user17 = new User();
+        $user17->setEmail('sebastiengorre27@gmail.com');
+        $user17->setRoles(array('ROLE_USER'));
+        $user17->setPassword($this->passwordEncoder->encodePassword($user17, 'user17'));
+        $user17->setToken($this->tokenGenerator->generateToken());
+        $user17->setTitle('Des légumes toute l\'année');
+        $user17->setLastname('Gorre');
+        $user17->setFirstname('Sébastien');
+        $user17->setDescription('Vous trouverez chez nous une grandes variété de légumes cultivés sous serres, mangez nos légumes toute l\'année.');
+        $user17->setSiret('11362596520326');
+        $user17->setPhone('0636583269');
+        $user17->setAdress('rue du bac');
+        $user17->setCp('27210');
+        $user17->setVille('Saint Pierre du Val');
+        $user17->setImages('agriculteurs_01.jpg');
+        $user17->setDepId($this->getReference(DepFixtures::DEPARTEMENT_REFERENCE1));
+        $user17->addCat($this->getReference(CategoryFixtures::CATEGORY_REFERENCE2));
+        $manager->persist($user17);
 
         // for ($i = 1; $i < 20; $i++) {
         //     $user = new User();
