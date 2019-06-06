@@ -174,7 +174,7 @@ header .modal-body a:hover {
   font-style: italic;
   font-size: 1em;
   color: darkorange;
-  text-shadow: 2px 2px black;
+
 }
 
 /*Explication page accueil*/
@@ -323,41 +323,53 @@ section .texte p {
     margin: 20px 0;
     text-transform: uppercase;
 }
+#les_selections .avatar{
+  float:left;
+  width: 30%;
 
-
-#les_selections div.prod {
-    text-align: center;
-    margin: 10px auto;
-    color: white;
-    background-color: green;
-    width: 10%;
-    padding: 10px;
 }
-
-#les_selections .prod .ident {
-    font-size: 18px;
-    font-weight: bolder;
+#les_selections .tx {
+  float: left;
+  width: 70%;
 }
-
-#les_selections .image img {
-    width: 30%;
+#les_selections .tx p{
+  font-size: 1.5em;
+  font-family: 'Nunito', sans-serif;
+  line-height: 40px;
+  font-weight: bold;
+  margin-left: -40%;
+}
+#les_selections p.nom{
+  font-size: 1.6em;
+  font-weight: bold;
+}
+#les_selections .avatar img {
+    width: 60%;
     opacity: 0.8;
-    margin-top: 50px;
+    padding-top: 2%;
+    padding-bottom: 2%;
+    margin-left: -35%;
 }
 
-#les_selections div.paginator div.global.prod {
-    width: 70%;
-    padding: 1%;
+#les_selections .global.prod {
+    width: 100%;
     background-color: white;
-    border: 1px solid green;
-    color: black;
-    text-align: justify;
+    border: 3px solid green;
+    margin: 2% 0 2% 0;
+    border-radius: 5px;
 }
-#les_selections div.paginator div.global.prod h2,p {
-  margin-left: 2%;
+#les_selections .prodt {
+  background-color: darkorange;
+  width: 20%;
+  position: absolute;
+  right: 5%;
+  font-weight: bold;
+  border-radius: 0px 0 5px 5px;
 }
-
-#les_selections div.paginator img {
+#les_selections .prodt p{
+  padding: 2%;
+}
+/* #les_selections div.paginator img {
     width: 17%;
     float: left;
 }
@@ -367,7 +379,7 @@ section .texte p {
     font-weight: bold;
     font-size: 16px;
     margin: 2%;
-}
+} */
 
 .pagin {
     width: 15%;

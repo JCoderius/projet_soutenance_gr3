@@ -167,11 +167,23 @@ class User implements UserInterface
 
     /**
      * @ORM\Column(type="string", length=255, nullable=true)
+     * @Assert\Length(
+     *      min = 2,
+    *      max = 80,
+    *      minMessage = "Votre titre doit contenir au moins {{ limit }} caractères",
+    *      maxMessage = "Votre titre ne doit pas contenir plus de {{ limit }} caractères"
+    * )
      */
     private $title;
 
     /**
      * @ORM\Column(type="text", nullable=true)
+     * @Assert\Length(
+     *      min = 2,
+     *      max = 300,
+     *      minMessage = "Votre description doit contenir au moins {{ limit }} caractères",
+     *      maxMessage = "Votre description ne doit pas contenir plus de {{ limit }} caractères"
+     * )
      */
     private $description;
 
