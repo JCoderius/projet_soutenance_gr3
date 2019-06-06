@@ -33,12 +33,15 @@
                 <div class="texte2">
                   <p>* Renseignements obligatoires</p>
                 </div>
-            </div>
-            <div class ="formulaire">
+
                 <h2>{{ user.title }}</h2>
                 <p>{{ user.description }}</p>
+            </div>
+            <div class ="formulaire">
                 {% if user.images %}
-                  <img src="{{ asset('asset/img/photos/%s'|format(user.images)) }}" alt="">
+                  <img src="{{ asset('/asset/img/photos/' ~ user.images)| imagine_filter('my_thumb') }}" alt="">
+
+
                 {% else %}
                   <img src="{{ asset('asset/img/default-avatar.png') }}">
                 {% endif %}

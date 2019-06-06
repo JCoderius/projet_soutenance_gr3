@@ -70,7 +70,7 @@
                       </div>{% endif %}
 
 
-                <li class="symboles">
+                <div class="symboles">
                   <ul>
                     {% if not is_granted('IS_AUTHENTICATED_REMEMBERED') %}
 
@@ -87,7 +87,7 @@
                         <li><a href="{{ path('profil') }}"><i class="fas fa-user"></i>Profil</a></li>
                     {% endif %}
                   </ul>
-                </li>
+                </div>
             </ul>
           </div>
           <div class="clear"></div>
