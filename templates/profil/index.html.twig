@@ -39,7 +39,9 @@
             </div>
             <div class ="formulaire">
                 {% if user.images %}
-                  <img src="{{ asset('asset/img/photos/%s'|format(user.images)) }}" alt="">
+                  <img src="{{ asset('/asset/img/photos/' ~ user.images)| imagine_filter('my_thumb') }}" alt="">
+
+
                 {% else %}
                   <img src="{{ asset('asset/img/default-avatar.png') }}">
                 {% endif %}

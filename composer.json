@@ -6,6 +6,7 @@
         "ext-ctype": "*",
         "ext-iconv": "*",
         "jasongrimes/paginator": "~1.0",
+        "liip/imagine-bundle": "^2.1",
         "phpmailer/phpmailer": "^6.0",
         "sensio/framework-extra-bundle": "^5.1",
         "swiftmailer/swiftmailer": "^6.0",
