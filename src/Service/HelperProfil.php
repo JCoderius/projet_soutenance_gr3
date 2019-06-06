@@ -18,7 +18,7 @@ class HelperProfil
         if(!empty($user->getDescription())) { $score++; }
         if(!empty($user->getAdress())) { $score++; }
         if(!empty($user->getHoraire())) { $score++; }
-        // if(!empty($user->getCategory())) { $score++; }
+        if(!empty($user->getCategory())) { $score++; }
         if(!empty($user->getVille())) { $score++; }
         if(!empty($user->getSite())) { $score++; }
         if(!empty($user->getCp())) { $score++; }
@@ -27,6 +27,6 @@ class HelperProfil
 
         $total = 13;
 
-        return round(($score/ $total) * 100,1);
+        return round(($score/ $total) * 100);
     }
 }

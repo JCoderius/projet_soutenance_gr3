@@ -1148,8 +1148,8 @@ p.copyright {
   button.btn1 {
     margin-left: 90%;;
   }
-  .form-check {
-    margin: 40% 0 20% -80% ;
+  form-check {
+    margin-top: 2% 0 2% 0 ;
   }
   /*Forgotter password*/
 #inputEmail1 {
@@ -1167,7 +1167,6 @@ p.copyright {
   /*profil*/
   .formulaire div#profil_cat{
   margin-left: 45%;
-  margin-top: -22%;
   }
   .formulaire img{
     width: 100%;
@@ -1367,7 +1366,7 @@ p.copyright {
       margin-left: 45%;
     }
     .form-check {
-      margin: 40% 0 20% -80% ;
+      margin: 2% 0 2% 0% ;
     }
     /*Forgotter password*/
     #inputEmail1 {
@@ -1385,11 +1384,10 @@ p.copyright {
     }
     /*profil*/
     .formulaire div#profil_cat{
-    margin-left: 45%;
-    margin-top: -22%;
+margin-left: -10%;
     }
     .formulaire img{
-      width: 100%;
+      width: 60%;
       margin: 5%;
     }
     #profil_save{
@@ -1415,6 +1413,9 @@ p.copyright {
     }
     #les_selections .prodt {
       right: 17%;
+    }
+    div.form-group button[type=submit]{
+      width: 50%;
     }
 /* footer*/
       .box-footer {
