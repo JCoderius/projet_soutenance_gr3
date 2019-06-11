@@ -1439,22 +1439,21 @@ p.copyright {
       margin-left: 20%;
     }
     /*sélection*/
-    .global.image img{
+    div.global.image img{
       width: 100%;
     }
-    #les_selections .global.prod{
+    #les_selections div.global.prod{
       border: 1px solid green;
       margin-top: 2%;
+      width: 100%;
     }
-    #les_selections .avatar img {
-      width: 125%;
-      padding: 2%;
-      margin-left: 0;
+    #les_selections div.avatar img {
+      width: 330%;
+      opacity:0.5;
     }
-    #les_selections .tx p{
-      font-size: 1.5em;
-      line-height: 10px;
-      margin-left: -2%;
+  
+    #les_selections div.tx h2{
+      margin-top: 10%;
     }
     #les_selections .prodt {
       right: 17%;
@@ -1514,6 +1513,23 @@ p.copyright {
       display:block;
     }
     select#profil_dep_id{
+      margin: 0 auto;
+    }
+    div.tx{
+      width: 100%;
+      position: relative;
+    }
+    div.tx div.prodt{
+      position: relative
+      width: 60%;
+      margin: 0 auto;
+    }
+    div.tx div.ds{
+      width: 100%;
+      position: relative;
+    }
+    div.tx div.nom p{
+      width: 100%;
       margin: 0 auto;
     }
 /* footer*/
