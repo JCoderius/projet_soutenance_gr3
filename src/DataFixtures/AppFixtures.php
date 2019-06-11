@@ -101,7 +101,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user5->setTitle('La Boucherie Cauchoise');
         $user5->setLastname('Morin');
         $user5->setFirstname('Daniel');
-        $user5->setDescription('Viande de boeuf de qualité et ventes en détails pour les particuliers.');
+        $user5->setDescription('Viande de boeuf de qualité et ventes au détail pour les particuliers.');
         $user5->setSiret('12846932547563');
         $user5->setPhone('0695847563');
         $user5->setAdress('Allée des jonquilles');
@@ -120,7 +120,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user6->setTitle('Charcuterie du Roumois');
         $user6->setLastname('Moureaux');
         $user6->setFirstname('Virginie');
-        $user6->setDescription('Vente de plats de charcuteries divers et variés.');
+        $user6->setDescription('Vente de plats de charcuterie divers et variés.');
         $user6->setSiret('11236595632512');
         $user6->setPhone('0652143263');
         $user6->setAdress('Rue de la république');
@@ -139,7 +139,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user7->setTitle('La ferme du pré vert');
         $user7->setLastname('Dépré');
         $user7->setFirstname('Pascal');
-        $user7->setDescription('Vente de lait en gros et détails.');
+        $user7->setDescription('Vente de lait pour les collectivités et particuliers.');
         $user7->setSiret('15632659856325');
         $user7->setPhone('0658213624');
         $user7->setAdress('La bréhallerie');
@@ -158,7 +158,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user8->setTitle('Desmarais SARL');
         $user8->setLastname('Desmarais');
         $user8->setFirstname('Sylvain');
-        $user8->setDescription('Tout un assortiment de biscuits et gateaux composés de produits locaux sont à votre disposition dans notre espace de vente.');
+        $user8->setDescription('Tout un assortiment de biscuits et gâteaux préparés avec des produits locaux sont à votre disposition dans notre espace de vente.');
         $user8->setSiret('11254865236598');
         $user8->setPhone('0236528475');
         $user8->setAdress('Le cantelou');
@@ -177,7 +177,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user9->setTitle('Leduc SA');
         $user9->setLastname('Leduc');
         $user9->setFirstname('Eric');
-        $user9->setDescription('Vente d\'oeufs en détail.');
+        $user9->setDescription('Vente d\'oeufs au détail et à la douzaine.');
         $user9->setSiret('11236985423658');
         $user9->setPhone('0695874532');
         $user9->setAdress('La butte aux loups');
@@ -253,7 +253,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user13->setTitle('Martin Martial SARL');
         $user13->setLastname('Martin');
         $user13->setFirstname('Martial');
-        $user13->setDescription('Ventes de fruits en détail pour les particuliers et en gros pour les collectivités.');
+        $user13->setDescription('Ventes de fruits au détail pour les particuliers et en gros pour les collectivités.');
         $user13->setSiret('12365985424568');
         $user13->setPhone('0603658245');
         $user13->setAdress('rue du sentier aux chênes');
@@ -269,10 +269,10 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user14->setRoles(array('ROLE_USER'));
         $user14->setPassword($this->passwordEncoder->encodePassword($user14, 'user14'));
         $user14->setToken($this->tokenGenerator->generateToken());
-        $user14->setTitle('Martin Martial SARL');
+        $user14->setTitle('Rabatte Michel SARL');
         $user14->setLastname('Rabatte');
         $user14->setFirstname('Michel');
-        $user14->setDescription('Eleveurs depuis 1983, nous sommes producteur d\'oeufs de qualités, qualibrés et bio.');
+        $user14->setDescription('Eleveurs depuis 1983, nous sommes producteurs d\'oeufs de qualité, calibrés et bio.');
         $user14->setSiret('12239500025423');
         $user14->setPhone('0235856963');
         $user14->setAdress('La raillerie');
@@ -288,10 +288,10 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user15->setRoles(array('ROLE_USER'));
         $user15->setPassword($this->passwordEncoder->encodePassword($user15, 'user15'));
         $user15->setToken($this->tokenGenerator->generateToken());
-        $user15->setTitle('Vous aimez la viandes ?');
+        $user15->setTitle('Vous aimez la viande ?');
         $user15->setLastname('Bouchard');
         $user15->setFirstname('André');
-        $user15->setDescription('Si vous aimez la viande bovine, n\'hésitez pas à gouter nos variétés de viandes charolaises, nous sommes ouvert du lundi au samedi de 9h30 à 16h30.');
+        $user15->setDescription('Si vous aimez la viande bovine, n\'hésitez pas à goûter nos variétés de viandes charolaises, nous sommes ouvert du lundi au samedi de 9h30 à 16h30.');
         $user15->setSiret('13658000253021');
         $user15->setPhone('0232652800');
         $user15->setAdress('La sente aux chataigners');
@@ -310,7 +310,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user16->setTitle('Du Bio, rien que du Bio...');
         $user16->setLastname('Hubert');
         $user16->setFirstname('Stéphane');
-        $user16->setDescription('Tous les produits de la ferme proposés sont bio et garanti, nous vendons salade, courges et betteraves, venez nous voir à la ferme des 3 champs.');
+        $user16->setDescription('Tous les produits de la ferme proposés sont bio et garantis, nous vendons salade, courges et betteraves, venez nous rendre visite à la ferme des 3 champs.');
         $user16->setSiret('132658200014562');
         $user16->setPhone('0632500256');
         $user16->setAdress('route de Montfort');
@@ -329,7 +329,7 @@ class AppFixtures extends Fixture implements DependentFixtureInterface
         $user17->setTitle('Des légumes toute l\'année');
         $user17->setLastname('Gorre');
         $user17->setFirstname('Sébastien');
-        $user17->setDescription('Vous trouverez chez nous une grandes variété de légumes cultivés sous serres, mangez nos légumes toute l\'année.');
+        $user17->setDescription('Vous trouverez chez nous une grande variété de légumes cultivés sous serres, mangez des légumes toute l\'année!');
         $user17->setSiret('11362596520326');
         $user17->setPhone('0636583269');
         $user17->setAdress('rue du bac');

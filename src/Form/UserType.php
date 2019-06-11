@@ -9,6 +9,7 @@ use Symfony\Component\OptionsResolver\OptionsResolver;
 use Symfony\Component\Form\Extension\Core\Type\ChoiceType;
 use Symfony\Component\Form\Extension\Core\Type\TextType;
 use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\FileType;
 
 class UserType extends AbstractType
 {
@@ -56,6 +57,12 @@ class UserType extends AbstractType
             ->add('ville', TextType::class, [
                 'label' =>'Ville',
             ])
+
+            ->add('images', FileType::class, array(
+                'label' => 'Images',
+                'data_class' => null,
+                'required' => false,
+            ))
             // ->add('horaire', TextType::class, [
             //     'label' =>'Horaires',
             // ])
